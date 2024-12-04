@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Header from "./(shared)/components/Header";
 import localFont from "next/font/local";
 
 const poppins = Poppins({
@@ -20,6 +19,16 @@ const gilroy = localFont({
     },
   ],
 });
+const deliciousHandrawn = localFont({
+  variable: "--font-delicious-handrawn",
+  src: [
+    {
+      path: "./(shared)/fonts/DeliciousHandrawn-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "JE Designs",
@@ -33,8 +42,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${gilroy.variable} font-poppins`}>
-        <Header />
+      <body
+        className={`${poppins.variable} ${gilroy.variable} ${deliciousHandrawn.variable} font-poppins`}
+      >
         {children}
       </body>
     </html>

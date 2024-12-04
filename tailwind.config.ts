@@ -11,6 +11,7 @@ export default {
     fontFamily: {
       poppins: ["var(--font-poppins)", "sans-serif"],
       gilroy: ["var(--font-gilroy)", "sans-serif"],
+      "delicious-handrawn": ["var(--font-delicious-handrawn)", "sans-serif"],
     },
     extend: {
       colors: {
