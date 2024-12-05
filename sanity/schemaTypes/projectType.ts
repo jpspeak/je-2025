@@ -1,4 +1,5 @@
 import { defineField, defineType } from "sanity";
+import { orderRankField } from "@sanity/orderable-document-list";
 
 export const projectType = defineType({
   name: "project",
@@ -18,6 +19,89 @@ export const projectType = defineType({
       options: {
         source: "title",
         maxLength: 96,
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+    // defineField({
+    //   name: "body",
+    //   title: "Body",
+    //   type: "array",
+    //   of: [
+    //     {
+    //       type: "block",
+    //       styles: [
+    //         { title: "Normal", value: "normal" },
+    //         { title: "Heading 1", value: "h1" },
+    //         { title: "Heading 2", value: "h2" },
+    //         { title: "Heading 3", value: "h3" },
+    //         { title: "Quote", value: "blockquote" },
+    //       ],
+    //       lists: [
+    //         { title: "Bullet", value: "bullet" },
+    //         { title: "Numbered", value: "number" },
+    //       ],
+    //       marks: {
+    //         decorators: [
+    //           { title: "Bold", value: "strong" },
+    //           { title: "Italic", value: "em" },
+    //           { title: "Underline", value: "underline" },
+    //         ],
+    //         annotations: [
+    //           {
+    //             name: "link",
+    //             type: "object",
+    //             title: "URL",
+    //             fields: [
+    //               {
+    //                 name: "href",
+    //                 type: "url",
+    //                 title: "URL",
+    //               },
+    //             ],
+    //           },
+    //         ],
+    //       },
+    //     },
+    //     {
+    //       type: "image",
+    //       options: { hotspot: true },
+    //       fields: [
+    //         {
+    //           name: "alt",
+    //           type: "string",
+    //           title: "Alternative text",
+    //           options: { isHighlighted: true },
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // }),
+    defineField({
+      name: "description",
+      title: "Description",
+      type: "array",
+      of: [
+        {
+          type: "block",
+          styles: [],
+          lists: [],
+          marks: {
+            decorators: [
+              {
+                title: "Bold",
+                value: "strong",
+              },
+            ],
+          },
+        },
+      ],
+    }),
+    defineField({
+      name: "mainImage",
+      title: "Main Image",
+      type: "image",
+      options: {
+        hotspot: true,
       },
       validation: (Rule) => Rule.required(),
     }),
@@ -76,35 +160,6 @@ export const projectType = defineType({
       ],
     }),
     defineField({
-      name: "mainImage",
-      title: "Main Image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-      validation: (Rule) => Rule.required(),
-    }),
-    // defineField({
-    //   name: "secondaryBody",
-    //   title: "Secondary Body",
-    //   type: "array",
-    //   of: [
-    //     {
-    //       type: "block",
-    //       styles: [],
-    //       lists: [],
-    //       marks: {
-    //         decorators: [
-    //           {
-    //             title: "Bold",
-    //             value: "strong",
-    //           },
-    //         ],
-    //       },
-    //     },
-    //   ],
-    // }),
-    defineField({
       name: "sliderImages",
       title: "Slider Images",
       type: "array",
@@ -152,7 +207,7 @@ export const projectType = defineType({
       type: "array",
       of: [{ type: "reference", to: { type: "review" } }],
     }),
-    // orderRankField({ type: "project" }),
+    orderRankField({ type: "project" }),
   ],
 
   //   preview: {

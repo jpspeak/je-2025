@@ -35,7 +35,7 @@ const navs = [
 ];
 function Header({ tickerLink }: { tickerLink?: string }) {
   return (
-    <header className="container mx-auto fixed left-1/2 -translate-x-1/2 z-[100]">
+    <header className="container mx-auto fixed left-1/2 -translate-x-1/2 z-[2]">
       <HeaderTicker link={tickerLink || ""} />
       <nav className="pl-[40px] bg-black h-[90px] flex items-center justify-between">
         <ul className="flex gap-[40px] text-white h-full font-light">

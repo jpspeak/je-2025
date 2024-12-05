@@ -84,3 +84,41 @@ body {
   opacity: 1;
   z-index: -1;
 }
+
+/* Start | Custom portable text  */
+
+.project-body h1 {
+  @apply text-3xl lg:text-4xl font-bold lg:px-[58px];
+}
+.project-body h2 {
+  @apply text-2xl lg:text-3xl font-bold lg:px-[58px];
+}
+.project-body h3 {
+  @apply text-xl lg:text-2xl font-bold lg:px-[58px];
+}
+.project-body p {
+  @apply lg:px-[58px];
+}
+
+.project-body ul {
+  list-style-type: disc; /* or circle, square, etc. */
+  @apply ml-4 pl-4 lg:px-[calc(58px+16px)];
+}
+
+.project-body ol {
+  list-style-type: decimal; /* or lower-alpha, upper-roman, etc. */
+
+  @apply ml-4 pl-4 lg:px-[calc(58px+16px)];
+}
+/* End */
+
+/*  */
+p:empty {
+  height: 18px;
+}
+@media only screen and (max-width: 1023px) {
+  p:empty {
+    height: 24px;
+  }
+}
+/*  */

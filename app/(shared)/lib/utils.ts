@@ -36,3 +36,11 @@ export function generateAvatarInitials(name: string): string {
 
   return initials;
 }
+
+export function formatRateNumber(num: number): string | number {
+  // Check if the number is an integer but not zero
+  if (num !== 0 && Number.isInteger(num)) {
+    return `${num}.0`; // Add `.0` for integers except 0
+  }
+  return num; // Return the number as-is for others
+}

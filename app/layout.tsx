@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
+import CalComModal from "./(shared)/components/CalComModal";
+import { Toaster } from "sonner";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -37,8 +39,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  project,
 }: Readonly<{
   children: React.ReactNode;
+  project: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -46,6 +50,12 @@ export default function RootLayout({
         className={`${poppins.variable} ${gilroy.variable} ${deliciousHandrawn.variable} font-poppins`}
       >
         {children}
+        {project}
+        <CalComModal />
+        <Toaster
+          toastOptions={{ className: "w-max right-0" }}
+          visibleToasts={1}
+        />
       </body>
     </html>
   );

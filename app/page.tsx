@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Header from "./(shared)/components/Header";
-import CalComModal from "./(shared)/components/CalComModal";
 import ProjectMarquee from "./(shared)/components/ProjectMarque";
 import { getHomePageSetting } from "@/sanity/query/homePageSetting";
 
@@ -103,7 +102,6 @@ export default async function Home() {
           </p>
         </div>
       </section>
-      <CalComModal />
     </>
   );
 }
