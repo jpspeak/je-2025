@@ -3,6 +3,7 @@ import Header from "./(shared)/components/Header";
 import ProjectMarquee from "./(shared)/components/ProjectMarque";
 import { getHomePageSetting } from "@/sanity/query/homePageSetting";
 import { Metadata } from "next";
+import StarRating from "./(shared)/components/StarRating";
 
 export const metadata: Metadata = {
   title: "Branding Without Boundaries & Forward-thinking Vehicle Wrap Designs",
@@ -25,19 +26,24 @@ export default async function Home() {
             alt="JE design logo sketch"
             className="w-[514px] pt-[28px] lg:pt-[48px] absolute"
           />
-          <h1 className="hidden lg:block max-w-[804px] text-center leading-[1.18] text-[68px] font-gilroy font-bold pt-[436px]">
+          {/* <h1 className="hidden lg:block max-w-[804px] text-center leading-[1.18] text-[68px] font-gilroy font-bold pt-[436px]">
             Igniting creativity, fueling brands since 2004
-          </h1>
-          <h1 className="lg:hidden max-w-[804px] text-center leading-[1.05] text-[55px] font-gilroy font-bold pt-[318px]">
-            Building brands that break the mold <br />
+          </h1> */}
+          <h1 className="max-w-[848px] text-center leading-[1.05] text-[55px] lg:text-[68px] font-gilroy font-bold pt-[318px] lg:pt-[450px]">
+            Building brands that break the mold <br className="lg:hidden" />
             since &apos;04
           </h1>
-          <p className="font-light text-[17px] leading-[1.65] max-w-[560px] text-center mt-[38px]">
+          <p className="hidden lg:block font-light text-[17px] leading-[1.65] max-w-[560px] text-center mt-[38px]">
+            We craft bold digital experiences that transform brands. Turning
+            visionary ideas into powerful visual stories that make businesses
+            stand out.
+          </p>
+          <p className="lg:hidden font-light text-[17px] leading-[1.65] max-w-[560px] text-center mt-[38px]">
             JE Designs LLC is a full-service design agency catering to
             businesses and individuals, with a focus on delivering high-quality,
             professional design solutions.
           </p>
-          <div className="flex items-center gap-[30px] mt-[50px]">
+          {/* <div className="flex items-center gap-[30px] mt-[50px]">
             <a
               href="https://web.facebook.com/jnellsworth"
               aria-label="Visit us on Facebook"
@@ -80,19 +86,39 @@ export default async function Home() {
                 <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z" />
               </svg>
             </a>
+          </div> */}
+          <div className="flex items-center gap-[19px] mt-[50px]">
+            <StarRating
+              value={5}
+              text={<StarRating.Text>5.0</StarRating.Text>}
+            />
+            <Image
+              src="/assets/images/google-black-icon.webp"
+              width={185}
+              height={62}
+              alt="Google logo"
+              className="w-[62px] h-[21px] mt-1"
+            />
+            <Image
+              src="/assets/images/facebook-black-icon.webp"
+              width={251}
+              height={48}
+              alt="Facebook logo"
+              className="w-[83.5px] h-[16px]"
+            />
           </div>
-          <p className="hidden lg:block font-delicious-handrawn absolute -bottom-[4%] z-[1] text-[20.8px] leading-none left-[8%] -rotate-[10deg] max-w-[137px] text-[#808080]">
+          <p className="hidden lg:block font-delicious-handrawn absolute bottom-0 z-[1] text-[20.8px] leading-none right-[4%] -rotate-[10deg] max-w-[137px] text-[#808080]">
             Have a look at some of our recent work!
             <Image
               src="/assets/images/arrow-down-gray.webp"
               width={81}
               height={176}
               alt="Arrow down"
-              className="absolute -left-[24%] top-[42%] w-[27px] h-[59px] rotate-[10deg]"
+              className="absolute -right-[16%] w-[27px] h-[59px] rotate-[10deg] scale-x-[-1]"
             />
           </p>
         </div>
-        <div className="mt-[62px] lg:mt-[118px] relative">
+        <div className="mt-[62px] lg:mt-[94px] relative">
           <ProjectMarquee projects={homePageSetting.projectMarquee} />
         </div>
         <div className="container mx-auto flex flex-col items-center relative mt-[66px] lg:mt-[120px]">

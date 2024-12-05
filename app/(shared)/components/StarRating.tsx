@@ -32,7 +32,7 @@ function StarRating({
     activeFillColor: "#000000",
   };
   return (
-    <Link href="reviews" className="flex items-center">
+    <Link href="reviews" className="flex items-center gap-1 lg:gap-2">
       {text}
       <div className="flex gap-[2.5px] items-center">
         <Rating
@@ -54,7 +54,7 @@ function Text(props: ComponentProps<"p">) {
   return (
     <p
       className={cn(
-        "grow text-sm mt-[2px] lg:text-[15px] lg:leading-none mr-1 lg:mr-2 leading-none font-light",
+        "grow text-base mt-[3px] lg:text-[17.5px] font-medium lg:leading-none leading-none",
         props.className
       )}
     >
