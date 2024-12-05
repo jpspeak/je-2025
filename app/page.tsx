@@ -95,7 +95,7 @@ export default async function Home() {
         <div className="mt-[62px] lg:mt-[118px] relative">
           <ProjectMarquee projects={homePageSetting.projectMarquee} />
         </div>
-        <div className="container mx-auto flex flex-col items-center relative mt-[66px] lg:mt-[123px]">
+        <div className="container mx-auto flex flex-col items-center relative mt-[66px] lg:mt-[120px]">
           <Image
             src="/assets/images/twentyyrs.webp"
             width={333}
