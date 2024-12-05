@@ -2,6 +2,13 @@ import Image from "next/image";
 import Header from "./(shared)/components/Header";
 import ProjectMarquee from "./(shared)/components/ProjectMarque";
 import { getHomePageSetting } from "@/sanity/query/homePageSetting";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Branding Without Boundaries & Forward-thinking Vehicle Wrap Designs",
+  description:
+    "Elevate your brand with our comprehensive creative solutions. We specialize in crafting eye-catching logos, developing cohesive brand identities, and designing head-turning vehicle wraps that make your business stand out on the streets. Our expert team also delivers stunning visual assets, from marketing materials to digital graphics, ensuring your brand shines across all platforms. Transform your vision into reality and leave a lasting impression with our innovative design services tailored to your unique business needs.",
+};
 
 export default async function Home() {
   const homePageSetting = await getHomePageSetting();
@@ -27,7 +34,10 @@ export default async function Home() {
             professional design solutions.
           </p>
           <div className="flex items-center gap-[30px] mt-[50px]">
-            <a href="https://web.facebook.com/jnellsworth">
+            <a
+              href="https://web.facebook.com/jnellsworth"
+              aria-label="Visit us on Facebook"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 21 38"
@@ -39,7 +49,10 @@ export default async function Home() {
                 />
               </svg>
             </a>
-            <a href="https://www.instagram.com/jnellsworth">
+            <a
+              href="https://www.instagram.com/jnellsworth"
+              aria-label="Visit us on Instagram"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 35 35"
@@ -51,7 +64,10 @@ export default async function Home() {
                 />
               </svg>
             </a>
-            <a href="https://www.x.com/jnellsworth_">
+            <a
+              href="https://www.x.com/jnellsworth_"
+              aria-label="Visit us on X/Twitter"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"

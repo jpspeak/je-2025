@@ -77,7 +77,7 @@ async function ProjectPage({ params }: { params: { slug: string } }) {
     "@context": "https://schema.org",
     "@type": "VisualArtwork",
     name: project.title,
-    url: `https://www.je.designs.com/projects/${project.slug?.current}`,
+    url: `https://je.designs.com/projects/${project.slug?.current}`,
     description:
       project.description && project.description.length > 0
         ? blockContentToPlainText(project.description as [any])
