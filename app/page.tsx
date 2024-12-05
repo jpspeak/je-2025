@@ -30,7 +30,7 @@ export default async function Home() {
           </h1>
           <h1 className="lg:hidden max-w-[804px] text-center leading-[1.05] text-[55px] font-gilroy font-bold pt-[318px]">
             Building brands that break the mold <br />
-            since '04
+            since &apos;04
           </h1>
           <p className="font-light text-[17px] leading-[1.65] max-w-[560px] text-center mt-[38px]">
             JE Designs LLC is a full-service design agency catering to
