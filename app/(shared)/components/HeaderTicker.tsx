@@ -17,8 +17,8 @@ function HeaderTicker({ link }: { link: string }) {
   return (
     <div
       className={cn(
-        "relative items-center gap-[12px] py-[22px] static-background-hard hidden",
-        showTicker && "flex"
+        "relative items-center gap-[12px] overflow-hidden static-background-hard flex h-0 transition-all",
+        showTicker && "h-[70px]"
       )}
     >
       <svg
