@@ -30,7 +30,7 @@ function ProjectMarquee({ projects }: { projects: any[] }) {
       {projects?.map((project, i) => (
         <div
           key={project._id + i}
-          className="w-[200px] md:w-[350px] xl:w-[350px] shrink-0 mx-[16.5px]"
+          className="w-[250px] md:w-[350px] xl:w-[350px] shrink-0 mx-[10px] lg:mx-[16.5px]"
         >
           <ProjectItem key={project._id} project={project} />
         </div>

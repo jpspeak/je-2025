@@ -17,8 +17,8 @@ function HeaderTicker({ link }: { link: string }) {
   return (
     <div
       className={cn(
-        "relative items-center gap-[12px] overflow-hidden static-background-hard flex h-0 transition-all",
-        showTicker && "h-[70px]"
+        "px-3 lg:px-8 relative items-center gap-[12px] overflow-hidden static-background-hard flex h-0 transition-all",
+        showTicker && "h-[54px] lg:h-[70px]"
       )}
     >
       <svg
@@ -33,9 +33,12 @@ function HeaderTicker({ link }: { link: string }) {
         />
       </svg>
 
-      <p className="font-medium text-[15px]">
+      <p className="hidden lg:block font-medium text-[15px]">
         JE Designs now accepts Bitcoin, Litecoin, Solana and XRP -{" "}
         <Link href={link}>Learn more</Link>
+      </p>
+      <p className="lg:hidden font-medium text-[13px]">
+        Now accepts Bitcoin, Litecoin, Solana and XRP
       </p>
     </div>
   );

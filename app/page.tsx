@@ -23,10 +23,14 @@ export default async function Home() {
             width={1542}
             height={1542}
             alt="JE design logo sketch"
-            className="w-[514px] pt-[48px] absolute"
+            className="w-[514px] pt-[28px] lg:pt-[48px] absolute"
           />
-          <h1 className="max-w-[804px] text-center leading-[1.18] text-[68px] font-gilroy font-bold pt-[436px]">
+          <h1 className="hidden lg:block max-w-[804px] text-center leading-[1.18] text-[68px] font-gilroy font-bold pt-[436px]">
             Igniting creativity, fueling brands since 2004
+          </h1>
+          <h1 className="lg:hidden max-w-[804px] text-center leading-[1.05] text-[55px] font-gilroy font-bold pt-[318px]">
+            Building brands that break the mold <br />
+            since '04
           </h1>
           <p className="font-light text-[17px] leading-[1.65] max-w-[560px] text-center mt-[38px]">
             JE Designs LLC is a full-service design agency catering to
@@ -77,7 +81,7 @@ export default async function Home() {
               </svg>
             </a>
           </div>
-          <p className="font-delicious-handrawn absolute -bottom-[4%] z-[1] text-[20.8px] leading-none left-[8%] -rotate-[10deg] max-w-[137px] text-[#808080]">
+          <p className="hidden lg:block font-delicious-handrawn absolute -bottom-[4%] z-[1] text-[20.8px] leading-none left-[8%] -rotate-[10deg] max-w-[137px] text-[#808080]">
             Have a look at some of our recent work!
             <Image
               src="/assets/images/arrow-down-gray.webp"
@@ -88,10 +92,10 @@ export default async function Home() {
             />
           </p>
         </div>
-        <div className="mt-[118px] relative">
+        <div className="mt-[62px] lg:mt-[118px] relative">
           <ProjectMarquee projects={homePageSetting.projectMarquee} />
         </div>
-        <div className="container mx-auto flex flex-col items-center relative mt-[123px]">
+        <div className="container mx-auto flex flex-col items-center relative mt-[66px] lg:mt-[123px]">
           <Image
             src="/assets/images/twentyyrs.webp"
             width={333}
@@ -99,13 +103,13 @@ export default async function Home() {
             alt="20 years"
             className="w-[111px] h-[114px]"
           />
-          <p className="font-gilroy text-[25px] font-bold mt-[20px] text-center">
+          <p className="font-gilroy text-[23px] lg:text-[25px] font-bold mt-[20px] text-center">
             Over 20 years of experience
           </p>
           <p className="mt-[8px] text-[15px] font-light text-center max-w-[300px]">
             Trusted by over 8,000 businesses across the United States
           </p>
-          <p className="relative max-w-[770px] mt-[40px] text-[50px] font-bold font-gilroy text-center leading-tight">
+          <p className="hidden lg:block relative max-w-[770px] mt-[40px] text-[50px] font-bold font-gilroy text-center leading-tight">
             When you want your project done right the first time, consider a
             companies experience.
             <Image
