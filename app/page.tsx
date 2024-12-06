@@ -39,11 +39,11 @@ export default async function Home() {
             stand out.
           </p>
           <p className="lg:hidden font-light text-[17px] leading-[1.65] max-w-[560px] text-center mt-[38px]">
-            JE Designs LLC is a full-service design agency catering to
-            businesses and individuals, with a focus on delivering high-quality,
-            professional design solutions.
+            je.design We craft bold digital experiences that transform brands.
+            Turning visionary ideas into powerful visual stories that make
+            businesses stand out.
           </p>
-          {/* <div className="flex items-center gap-[30px] mt-[50px]">
+          <div className="lg:hidden flex items-center gap-[30px] mt-[50px]">
             <a
               href="https://web.facebook.com/jnellsworth"
               aria-label="Visit us on Facebook"
@@ -86,8 +86,8 @@ export default async function Home() {
                 <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z" />
               </svg>
             </a>
-          </div> */}
-          <div className="flex items-center gap-[19px] mt-[50px]">
+          </div>
+          <div className="hidden lg:flex items-center gap-[19px] mt-[50px]">
             <StarRating
               value={5}
               text={<StarRating.Text>5.0</StarRating.Text>}
