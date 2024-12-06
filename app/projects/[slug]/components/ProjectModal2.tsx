@@ -6,8 +6,9 @@ import ShareModal from "@/app/(shared)/components/ShareModal";
 import ReviewCard from "@/app/(shared)/components/ReviewCard";
 import ModalCloseButton from "./ModalCloseButton";
 import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
-import ReplyBox from "@/app/(shared)/components/ReplyBox";
 import { cn, formatDate } from "@/app/(shared)/lib/utils";
+import Link from "next/link";
+import DisqusEmbed from "@/app/(shared)/components/DisqusEmbed";
 
 function ProjectModal2({
   project,
@@ -140,21 +141,27 @@ function ProjectModal2({
                 </h2>
                 <div className="grid grid-cols-3 gap-4 lg:gap-[25px]">
                   {sameIndustryProjects.map((project, i) => (
-                    <Image
-                      key={i}
-                      src={urlForImage(project.mainImage as any)}
-                      width={900}
-                      height={900}
-                      alt={project.image?.alt || ""}
-                      className="w-full object-cover"
-                      quality={100}
-                    />
+                    <Link replace href={`/projects/${project.slug?.current}`}>
+                      <Image
+                        key={i}
+                        src={urlForImage(project.mainImage as any)}
+                        width={900}
+                        height={900}
+                        alt={project.image?.alt || ""}
+                        className="w-full object-cover"
+                        quality={100}
+                      />
+                    </Link>
                   ))}
                 </div>
               </div>
             )}
             <div className="px-6 pb-8 pt-4 lg:px-[75px] lg:pt-[20px] lg:pb-[40px]">
-              <ReplyBox />
+              <DisqusEmbed
+                url={`/projects/${project.slug?.current}`}
+                identifier={project._id}
+                title={project.title}
+              />
             </div>
           </div>
         </div>
