@@ -44,3 +44,13 @@ export function formatRateNumber(num: number): string | number {
   }
   return num; // Return the number as-is for others
 }
+
+export function formatDate(dateStr: string): string {
+  const date: Date = new Date(dateStr);
+
+  return date.toLocaleDateString("en-US", {
+    month: "short", // Abbreviated month
+    day: "numeric", // Day of the month
+    year: "numeric", // Full year
+  });
+}

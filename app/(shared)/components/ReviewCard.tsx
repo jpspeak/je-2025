@@ -56,7 +56,7 @@ function ReviewCard({
     setCurrentSlideIndex(slideIndex);
   };
   return (
-    <Card className="p-4 lg:p-[35px] rounded-none shadow-none border-none h-max">
+    <Card className="p-4 lg:p-[25px] rounded-none shadow-none border-none h-max">
       <div className="flex gap-[10px] lg:gap-[18px] items-center">
         <Avatar className="size-[50px] lg:size-[70px]">
           <AvatarImage src={avatar} alt={reviewerName} />
@@ -78,7 +78,7 @@ function ReviewCard({
           </p>
         </div>
       </div>
-      <div className="py-[30px] text-sm font-light lg:text-[15px] leading-normal lg:leading-[1.67] w-full">
+      <div className="pb-[26px] pt-[22px] text-sm font-light lg:text-[15px] leading-normal lg:leading-[1.67] w-full">
         {/* <ShowMoreText
           lines={4}
           more="More"
@@ -142,7 +142,7 @@ function ReviewCard({
           currentIndex={currentSlideIndex}
         />
       </div>
-      <div className="border-t border-[#f0efed] pt-4 lg:pt-[35px] flex justify-between">
+      <div className="border-t border-[#f0efed] pt-4 lg:pt-[25px] flex justify-between">
         <StarRating
           value={rating}
           text={<StarRating.Text>{formatRateNumber(rating)}</StarRating.Text>}

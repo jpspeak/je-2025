@@ -8,9 +8,9 @@ function ModalCloseButton() {
   return (
     <button
       onClick={router.back}
-      className="text-white absolute top-[14px] right-[18px] outline-none"
+      className="text-white fixed bg-[#464646] size-[40px] rounded-full flex items-center justify-center right-4 top-4 lg:top-[30px] lg:right-[50px] outline-none"
     >
-      <X className="size-[20px]" strokeWidth={2} />
+      <X className="size-[24px]" strokeWidth={2} />
     </button>
   );
 }

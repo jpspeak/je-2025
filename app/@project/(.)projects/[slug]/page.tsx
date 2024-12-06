@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { VisualArtwork, WithContext } from "schema-dts";
 import Script from "next/script";
 import { getProject, getProjects } from "@/sanity/query/project";
-import ProjectModal from "@/app/projects/[slug]/components/ProjectModal";
+import ProjectModal2 from "@/app/projects/[slug]/components/ProjectModal2";
 
 export const revalidate = 60;
 
@@ -71,6 +71,13 @@ async function ProjectPage({ params }: { params: { slug: string } }) {
 
   const project = await getProject({ slug });
 
+  let sameIndustryProjects = await getProjects({
+    industrySlug: project.projectIndustry?.slug?.current,
+  });
+  sameIndustryProjects = sameIndustryProjects?.filter(
+    (sameIndustryProject) => sameIndustryProject._id !== project._id
+  );
+
   if (!project) return notFound();
 
   const structuredData: WithContext<VisualArtwork> = {
@@ -98,7 +105,10 @@ async function ProjectPage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <ProjectModal project={project} />
+      <ProjectModal2
+        project={project}
+        sameIndustryProjects={sameIndustryProjects}
+      />
     </>
   );
 }

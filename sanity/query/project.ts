@@ -64,7 +64,7 @@ export async function getProject({ slug }: { slug: string }): Promise<any> {
 }
 
 export async function getProjectsIndustries(): Promise<any[]> {
-  const query = `*[_type == "industry"] | order(title asc){
+  const query = `*[_type == "projectIndustry"] | order(title asc){
       ...
     }`;
 
@@ -72,7 +72,7 @@ export async function getProjectsIndustries(): Promise<any[]> {
 }
 
 export async function getProjectsIndustry(id: string): Promise<any> {
-  const query = `*[_type == "industry" && _id == $id][0]{
+  const query = `*[_type == "projectIndustry" && _id == $id][0]{
       ...
     }`;
 

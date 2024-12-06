@@ -49,14 +49,14 @@ export default defineConfig({
             // ),
             S.documentTypeListItem("faq").title("FAQs"),
             // Our singleton type has a list item with a custom child
-            // S.listItem().title("Home Page Setting").id("homePageSetting").child(
-            //   // Instead of rendering a list of documents, we render a single
-            //   // document, specifying the `documentId` manually to ensure
-            //   // that we're editing the single instance of the document
-            //   S.document()
-            //     .schemaType("homePageSetting")
-            //     .documentId("homePageSetting")
-            // ),
+            S.listItem().title("Home Page Setting").id("homePageSetting").child(
+              // Instead of rendering a list of documents, we render a single
+              // document, specifying the `documentId` manually to ensure
+              // that we're editing the single instance of the document
+              S.document()
+                .schemaType("homePageSetting")
+                .documentId("homePageSetting")
+            ),
           ]),
     }),
     // Vision is a tool that lets you query your content with GROQ in the studio
