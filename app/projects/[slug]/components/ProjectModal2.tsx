@@ -161,7 +161,7 @@ function ProjectModal2({
             )}
             <div className="px-6 pb-8 pt-4 lg:px-[75px] lg:pt-[20px] lg:pb-[40px]">
               <DisqusEmbed
-                url={`/projects/${project.slug?.current}`}
+                url={`https://je-2025-git-development-jpspeaks-projects-eea61f34.vercel.app/projects/${project.slug?.current}`}
                 identifier={project._id}
                 title={project.title}
               />
