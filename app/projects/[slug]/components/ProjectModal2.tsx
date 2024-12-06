@@ -153,7 +153,9 @@ function ProjectModal2({
                 </div>
               </div>
             )}
-            <ReplyBox />
+            <div className="px-6 pb-8 pt-4 lg:px-[75px] lg:pt-[20px] lg:pb-[40px]">
+              <ReplyBox />
+            </div>
           </div>
         </div>
       </DialogContent>
