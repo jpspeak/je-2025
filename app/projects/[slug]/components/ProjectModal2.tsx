@@ -141,9 +141,12 @@ function ProjectModal2({
                 </h2>
                 <div className="grid grid-cols-3 gap-4 lg:gap-[25px]">
                   {sameIndustryProjects.map((project, i) => (
-                    <Link replace href={`/projects/${project.slug?.current}`}>
+                    <Link
+                      key={i}
+                      replace
+                      href={`/projects/${project.slug?.current}`}
+                    >
                       <Image
-                        key={i}
                         src={urlForImage(project.mainImage as any)}
                         width={900}
                         height={900}
