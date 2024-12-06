@@ -14,7 +14,7 @@ function DisqusEmbed({
 }) {
   return (
     <DiscussionEmbed
-      shortname="blog-rjn0z6hplv"
+      shortname="jedesign"
       config={{
         url,
         identifier,
