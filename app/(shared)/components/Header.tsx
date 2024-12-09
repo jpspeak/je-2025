@@ -53,7 +53,7 @@ function Header({ tickerLink }: { tickerLink?: string }) {
           </ul>
           <CalComModalTrigger
             variant="secondary"
-            containerClass="h-full"
+            containerclass="h-full"
             className="flex gap-[11px] h-full pl-[37px] pr-[30px] text-[20px]"
           >
             <span>Let&apos;s talk</span>
@@ -71,7 +71,7 @@ function Header({ tickerLink }: { tickerLink?: string }) {
       </div>
       <CalComModalTrigger
         variant="secondary"
-        containerClass="h-full"
+        containerclass="h-full"
         className="flex gap-[11px] h-[60px] pl-[37px] pr-[30px] text-[20px] lg:hidden"
       >
         <span>Let&apos;s talk</span>

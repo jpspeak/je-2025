@@ -1,14 +1,20 @@
 import { urlForImage } from "@/sanity/lib/image";
-import { Dialog, DialogContent } from "@/app/(shared)/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+} from "@/app/(shared)/components/ui/dialog";
 import Image from "next/image";
 import PortableText from "react-portable-text";
 import ShareModal from "@/app/(shared)/components/ShareModal";
 import ReviewCard from "@/app/(shared)/components/ReviewCard";
 import ModalCloseButton from "./ModalCloseButton";
 import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
-import { cn, formatDate } from "@/app/(shared)/lib/utils";
+import { formatDate } from "@/app/(shared)/lib/utils";
 import Link from "next/link";
-import DisqusEmbed from "@/app/(shared)/components/DisqusEmbed";
+import Comments from "@/app/(shared)/components/Comments";
+import ProjectModal2Container from "./ProjectModal2Container";
+import ProjectModal2Images from "./ProjectModal2Images";
 
 function ProjectModal2({
   project,
@@ -22,10 +28,12 @@ function ProjectModal2({
   return (
     <Dialog open={true}>
       <DialogContent
+        aria-describedby="Project"
         hideCloseButton
         className="max-w-full h-svh  max-h-full bg-transparent border-none p-0 !rounded-none"
       >
-        <div className="relative overflow-auto">
+        <DialogTitle className="hidden">Project</DialogTitle>
+        <ProjectModal2Container>
           <ModalCloseButton />
 
           <div className="hidden xl:flex fixed left-[calc(50%+435px+28px)] top-[112px] flex-col gap-[24px]">
@@ -54,48 +62,7 @@ function ProjectModal2({
           </div>
 
           <div className="container px-0 max-w-[870px] lg:my-[70px] bg-white">
-            <div className="grid grid-cols-1 gap-2 lg:gap-[20px]">
-              <Image
-                src={urlForImage(project.mainImage as any)}
-                width={900}
-                height={900}
-                alt={project.mainImage?.alt || ""}
-                className="w-full"
-                quality={100}
-              />
-              {project.images?.map((image: any, i: number) => {
-                let gridColClass = "grid-cols-1";
-                switch (image._type) {
-                  case "twoImages":
-                    gridColClass = "grid-cols-2";
-                    break;
-                  case "threeImages":
-                    gridColClass = "grid-cols-3";
-                    break;
-                  case "fourImages":
-                    gridColClass = "grid-cols-4";
-                    break;
-                }
-                return (
-                  <div
-                    key={i}
-                    className={cn("grid gap-2 lg:gap-[20px]", gridColClass)}
-                  >
-                    {image.image?.map((image: any, i: number) => (
-                      <Image
-                        key={i}
-                        src={urlForImage(image as any)}
-                        width={900}
-                        height={900}
-                        alt={image?.alt || ""}
-                        className="w-full object-cover"
-                        quality={100}
-                      />
-                    ))}
-                  </div>
-                );
-              })}
-            </div>
+            <ProjectModal2Images project={project} />
 
             <div className="bg-black text-white px-6 py-8 lg:px-[75px] lg:py-[70px]">
               <div className="text-[11px] px-[11px] py-[6px] w-max font-light bg-white leading-[.8] text-[#141423]">
@@ -160,14 +127,10 @@ function ProjectModal2({
               </div>
             )}
             <div className="px-6 pb-8 pt-4 lg:px-[75px] lg:pt-[20px] lg:pb-[40px]">
-              <DisqusEmbed
-                url={`https://je-2025-git-development-jpspeaks-projects-eea61f34.vercel.app/projects/${project.slug?.current}`}
-                identifier={project._id}
-                title={project.title}
-              />
+              <Comments identifier={project._id} />
             </div>
           </div>
-        </div>
+        </ProjectModal2Container>
       </DialogContent>
     </Dialog>
   );
