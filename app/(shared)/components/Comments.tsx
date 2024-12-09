@@ -8,7 +8,7 @@ function Comments({ identifier }: { identifier: string }) {
 
     (window as any).replybox = {
       // UPDATE SITE HERE
-      site: "4dnkP06BxX",
+      site: process.env.NEXT_PUBLIC_REPLYBOX_SITE_ID || "4dnkP06BxX",
       identifier,
     };
 
