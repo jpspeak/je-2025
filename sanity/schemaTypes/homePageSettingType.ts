@@ -14,6 +14,10 @@ export const homePageSettingType = defineType({
       title: "Project Marquee",
     },
     {
+      name: "team",
+      title: "Team",
+    },
+    {
       name: "brandProjects",
       title: "Brand Projects",
     },
@@ -135,6 +139,45 @@ export const homePageSettingType = defineType({
       type: "array",
       of: [{ type: "reference", to: { type: "project" } }],
       group: "projectMarquee",
+    }),
+    defineField({
+      name: "team",
+      title: "Team",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          title: "Team",
+          name: "team",
+          fields: [
+            {
+              name: "image",
+              title: "Image",
+              type: "image",
+              options: { hotspot: true },
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: "name",
+              title: "Name",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: "info",
+              title: "Info",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            },
+            // {
+            //   name: "href",
+            //   type: "url",
+            //   title: "URL",
+            // },
+          ],
+        },
+      ],
+      group: "team",
     }),
     defineField({
       name: "brandProjects",
