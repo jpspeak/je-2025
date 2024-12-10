@@ -4,12 +4,14 @@ import React, { useState } from "react";
 import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
 import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
+import TeamCarousel from "./TeamCarousel";
 
 function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
   const [selectedTeamIndex, setSelectedTeamIndex] = useState(0);
   const handleTeamImageClick = (id: number) => {
     setSelectedTeamIndex(id);
   };
+  const [isOpenTeamCarousel, setIsOpenTeamCarousel] = useState(false);
   const selectedTeam = homePageSetting.team?.find(
     (team: any, i: number) => i === selectedTeamIndex
   );
@@ -38,7 +40,10 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
               );
             })}
 
-            <div className="pb-[100%] bg-[#f6f6f8] relative">
+            <div
+              onClick={() => setIsOpenTeamCarousel(true)}
+              className="pb-[100%] bg-[#f6f6f8] relative cursor-pointer"
+            >
               <div className="absolute w-full h-full top-0 left-0 flex items-center justify-center">
                 <p className="text-[20px] font-medium">+11</p>
               </div>
@@ -52,39 +57,44 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
               {selectedTeam.info}
             </span>
           </div>
-          <div className="absolute -right-[8px] -top-[1px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 30 2"
-              className="w-[15px] h-[1px]"
-            >
-              <path fillRule="evenodd" d="M0 2V0h30v2H0z" />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 2 15"
-              className="w-[1px] h-[8px] top-0 absolute left-1/2 -translate-x-1/2"
-            >
-              <path fillRule="evenodd" d="M0 0h2v15H0V0z" />
-            </svg>
-          </div>
-          <div className="absolute -right-[8px] -bottom-[1px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 30 2"
-              className="w-[15px] h-[1px]"
-            >
-              <path fillRule="evenodd" d="M0 2V0h30v2H0z" />
-            </svg>
+          {!isOpenTeamCarousel && (
+            <>
+              <div className="absolute -right-[8px] -top-[1px]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 2"
+                  className="w-[15px] h-[1px]"
+                >
+                  <path fillRule="evenodd" d="M0 2V0h30v2H0z" />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 2 15"
+                  className="w-[1px] h-[8px] top-0 absolute left-1/2 -translate-x-1/2"
+                >
+                  <path fillRule="evenodd" d="M0 0h2v15H0V0z" />
+                </svg>
+              </div>
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 2 15"
-              className="w-[1px] h-[8px] absolute left-1/2 -translate-x-1/2 -top-[7px]"
-            >
-              <path fillRule="evenodd" d="M2 15H0V0h2v15z" />
-            </svg>
-          </div>
+              <div className="absolute -right-[8px] -bottom-[1px]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 2"
+                  className="w-[15px] h-[1px]"
+                >
+                  <path fillRule="evenodd" d="M0 2V0h30v2H0z" />
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 2 15"
+                  className="w-[1px] h-[8px] absolute left-1/2 -translate-x-1/2 -top-[7px]"
+                >
+                  <path fillRule="evenodd" d="M2 15H0V0h2v15z" />
+                </svg>
+              </div>
+            </>
+          )}
         </div>
         <div className="pt-[80px] pb-[54px] pl-[100px] relative">
           <h2 className="font-gilroy text-[45px] font-bold">Our Process</h2>
@@ -221,6 +231,21 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
           </div>
         </div>
       </div>
+      {isOpenTeamCarousel && (
+        <div className="bg-[#f3f4f6] absolute top-0 w-full h-full overflow-hidden">
+          <div className="container mx-auto py-[60px]">
+            <button
+              onClick={() => setIsOpenTeamCarousel(false)}
+              className="mx-auto font-gilroy text-[25px] font-bold block"
+            >
+              Close
+            </button>
+            <div className="mt-[50px]">
+              <TeamCarousel team={homePageSetting.team} />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

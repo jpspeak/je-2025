@@ -122,3 +122,35 @@ p:empty {
   }
 }
 /*  */
+
+/*  */
+/* Start | Custom style for slider full screen swiper navigation button */
+.team-carousel-nav {
+  width: 154px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+/* .team-carousel-nav > .swiper-button-prev::before,
+.team-carousel-nav > .swiper-button-next::before {
+  content: "";
+  @apply bg-white rounded-full size-[55px] hover:bg-muted shadow-sm border border-muted;
+} */
+.team-carousel-nav > .swiper-button-prev::after {
+  content: "";
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 22"><g stroke="%231B1B1B" stroke-width="2.2" fill="none" fill-rule="evenodd"><path d="m22.557 1 9.85 9.85-9.85 9.848"/><path stroke-linecap="square" d="M31.843 10.85H1.333"/></g></svg>') !important;
+  @apply h-[26px] w-[41px] rotate-[180deg] absolute bg-center bg-[100%_auto] bg-no-repeat;
+}
+.team-carousel-nav > .swiper-button-next::after {
+  content: "";
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 22"><g stroke="%231B1B1B" stroke-width="2.2" fill="none" fill-rule="evenodd"><path d="m22.557 1 9.85 9.85-9.85 9.848"/><path stroke-linecap="square" d="M31.843 10.85H1.333"/></g></svg>') !important;
+  @apply h-[26px] w-[41px] absolute bg-center bg-[100%_auto] bg-no-repeat;
+}
+.team-carousel-nav > .swiper-button-next,
+.team-carousel-nav > .swiper-button-prev {
+  @apply hidden lg:flex size-[60px];
+}
+
+/* End */
+
+/*  */
