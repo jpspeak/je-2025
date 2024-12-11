@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import SectionOne from "./home/components/SectionOne";
 import SectionTwo from "./home/components/SectionTwo";
 import SectionThree from "./home/components/SectionThree";
+import SectionFour from "./home/components/SectionFour";
 
 export const metadata: Metadata = {
   title: "Branding Without Boundaries & Forward-thinking Vehicle Wrap Designs",
@@ -20,6 +21,7 @@ export default async function Home() {
       <SectionOne homePageSetting={homePageSetting} />
       <SectionTwo homePageSetting={homePageSetting} />
       <SectionThree />
+      <SectionFour />
     </>
   );
 }

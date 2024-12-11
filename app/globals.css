@@ -151,6 +151,17 @@ p:empty {
   @apply hidden lg:flex size-[60px];
 }
 
+/* Start | React player custom play button */
+.react-player__play-icon::before {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url(/assets/images/yt-play-button.webp);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-size: 100px 100px;
+  transform: translate(-50%, -50%);
+}
 /* End */
-
-/*  */
