@@ -5,8 +5,21 @@ function SectionThree() {
   return (
     <section className="relative static-background-hard">
       <div className="container mx-auto pt-[120px] pb-[125px]">
-        <h2 className="text-center font-gilroy text-[50px] font-bold">
+        <h2 className="text-center w-max mx-auto font-gilroy text-[50px] font-bold relative">
           Our Expertise, Your Success
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 31 28"
+            className="w-[28px] h-[26px] absolute -right-[20px] top-[8px]"
+            fill="none"
+          >
+            <path
+              fill="#262626"
+              fillRule="evenodd"
+              d="M2.006 9.173C2.74 6.555 3.11 3.814 3.45 1.156 3.521.583 3.124.05 2.565.01a1.016 1.016 0 0 0-1.143.86C1.095 3.446.745 6.105.038 8.6a1.039 1.039 0 0 0 .705 1.268 1.018 1.018 0 0 0 1.263-.695zm10.413 7.934c4.3-4.213 8.045-8.958 12.46-13.089a1.007 1.007 0 0 0 .049-1.431c-.386-.41-1.033-.45-1.446-.041-4.427 4.131-8.185 8.876-12.497 13.088a1.055 1.055 0 0 0-.012 1.473c.395.368 1.043.409 1.446 0zm16.538 7.895-7.383.367c-.563 0-.999.491-.971 1.064.028.573.507.982 1.071.982l7.394-.368a1.05 1.05 0 0 0 .965-1.105 1.018 1.018 0 0 0-1.076-.94z"
+              clipRule="evenodd"
+            />
+          </svg>
         </h2>
         <div className="grid grid-cols-3 gap-[35px] mt-[70px]">
           <div>
