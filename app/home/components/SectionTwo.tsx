@@ -16,7 +16,7 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
     (team: any, i: number) => i === selectedTeamIndex
   );
   return (
-    <section className="border-y border-[#e9eaec] relative static-background-hard mb-10">
+    <section className="border-y border-[#e9eaec] relative static-background-hard">
       <div className="container mx-auto grid grid-cols-2">
         <div className="border-r border-[#e9eaec] pt-[80px] pb-[54px] pr-[100px] relative">
           <h2 className="font-gilroy text-[45px] font-bold">Introduction</h2>

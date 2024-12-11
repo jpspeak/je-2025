@@ -3,6 +3,7 @@ import { getHomePageSetting } from "@/sanity/query/homePageSetting";
 import { Metadata } from "next";
 import SectionOne from "./home/components/SectionOne";
 import SectionTwo from "./home/components/SectionTwo";
+import SectionThree from "./home/components/SectionThree";
 
 export const metadata: Metadata = {
   title: "Branding Without Boundaries & Forward-thinking Vehicle Wrap Designs",
@@ -18,6 +19,7 @@ export default async function Home() {
       <Header tickerLink={homePageSetting.tickerLink} />
       <SectionOne homePageSetting={homePageSetting} />
       <SectionTwo homePageSetting={homePageSetting} />
+      <SectionThree />
     </>
   );
 }

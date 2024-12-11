@@ -63,7 +63,10 @@ function TeamCarouselItem({ team }: { team: any }) {
             </svg>
           </button>
           <div className="bg-white p-[48px] w-full h-full absolute">
-            <QRCode value={team.name} className="w-full h-full" />
+            <QRCode
+              value={`http://localhost:3000/${team.name}`}
+              className="w-full h-full"
+            />
           </div>
         </div>
       )}
