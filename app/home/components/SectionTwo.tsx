@@ -123,6 +123,14 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
             </CalComModalTrigger>
           </div>
           <div className="mt-[36px] w-[417px] relative">
+            <Image
+              src="/assets/images/linesanddots.png"
+              alt="Lines"
+              width={834}
+              height={384}
+              className="absolute z-0 top-[14px]"
+            />
+
             <div className="pl-[68px]">
               <div className="flex items-center gap-[10px]">
                 <svg
@@ -147,7 +155,7 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
               </p>
             </div>
 
-            <div className="size-[30px] bg-black rounded-full flex items-center justify-center absolute top-[46px] -right-[15px]">
+            <div className="size-[30px] bg-black rounded-full flex items-center justify-center absolute top-[46px] -right-[12px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -186,7 +194,7 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
               </p>
             </div>
 
-            <div className="size-[30px] bg-black rounded-full flex items-center justify-center absolute bottom-[95px] -left-[15px]">
+            <div className="size-[30px] bg-black rounded-full flex items-center justify-center absolute bottom-[88px] -left-[12px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

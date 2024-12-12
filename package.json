@@ -12,6 +12,7 @@
     "@calcom/embed-react": "^1.5.1",
     "@radix-ui/react-avatar": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-select": "^2.1.2",
     "@radix-ui/react-slot": "^1.1.0",
     "@re-dev/react-truncate": "^0.4.3",
     "@sanity/icons": "^3.5.0",
@@ -40,6 +41,7 @@
     "sonner": "^1.7.0",
     "styled-components": "^6.1.13",
     "swiper": "^11.1.15",
+    "swr": "^2.2.5",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "zustand": "^5.0.1"
