@@ -88,7 +88,9 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
                     fill="#0977ff"
                   />
                 </svg>
-                <p className="text-[25px] font-gilroy font-bold">Discovery</p>
+                <p className="text-[25px] font-gilroy leading-none font-bold">
+                  Discovery
+                </p>
               </div>
               <p className="max-w-[300px] font-light text-[13px] leading-[1.54] text-center">
                 Conduct a discovery call to understand your needs and provide a
@@ -109,7 +111,9 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
                     fill="#ffc809"
                   />
                 </svg>
-                <p className="text-[25px] font-gilroy font-bold">Design</p>
+                <p className="text-[25px] font-gilroy leading-none font-bold">
+                  Design
+                </p>
               </div>
               <p className="max-w-[246px] font-light text-[13px] leading-[1.54] text-center">
                 Begin project, craft and refine designs to your vision.
@@ -135,7 +139,7 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
                     fill="#72d622"
                   />
                 </svg>
-                <p className="text-[25px] font-gilroy font-bold">
+                <p className="text-[25px] font-gilroy leading-none font-bold">
                   Deliverables
                 </p>
               </div>
