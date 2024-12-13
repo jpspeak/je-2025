@@ -12,14 +12,15 @@ function SectionOne({ homePageSetting }: { homePageSetting: any }) {
           width={600}
           height={600}
           alt="JE design logo sketch"
-          className="w-[514px] pt-[28px] lg:pt-[48px] absolute"
+          className="h-[422px] w-[422px] lg:h-[514px] lg:w-[514px] object-cover pt-[28px] lg:pt-[80px] absolute"
           quality={100}
+          priority
         />
         {/* <h1 className="hidden lg:block max-w-[804px] text-center leading-[1.18] text-[68px] font-gilroy font-bold pt-[436px]">
             Igniting creativity, fueling brands since 2004
           </h1> */}
         <h1 className="max-w-[848px] text-center leading-[1.05] text-[55px] lg:text-[68px] font-gilroy font-bold pt-[318px] lg:pt-[450px]">
-          Building brands that break the mold <br className="lg:hidden" />
+          Building brands that break the mold <br className="sm:hidden" />
           since &apos;04
         </h1>
         <p className="hidden lg:block font-light text-[17px] leading-[1.65] max-w-[560px] text-center mt-[38px]">
