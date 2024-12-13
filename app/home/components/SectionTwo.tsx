@@ -5,6 +5,7 @@ import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
 import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
 import TeamCarousel from "./TeamCarousel";
+import TeamCarouselMobile from "./TeamCarouselMobile";
 
 function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
   const [selectedTeamIndex, setSelectedTeamIndex] = useState(0);
@@ -17,7 +18,136 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
   );
   return (
     <section className="border-y border-[#e9eaec] relative static-background-hard">
-      <div className="container mx-auto grid grid-cols-2">
+      <div className="container px-0 relative lg:hidden">
+        <div className="border-r h-[45px] border-[#e9eaec] w-1/2" />
+        <div className="absolute left-1/2 -translate-x-1/2 -top-[1px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 30 1"
+            className="w-[15px] h-[1px]"
+          >
+            <path fillRule="evenodd" d="M0 2V0h30v2H0z" />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 2 15"
+            className="w-[1px] h-[8px] top-0 absolute left-1/2 -translate-x-1/2"
+          >
+            <path fillRule="evenodd" d="M0 0h2v15H0V0z" />
+          </svg>
+        </div>
+        <h2 className="font-gilroy text-[35px] font-bold text-center leading-none mt-[24px]">
+          Introduction
+        </h2>
+        <p className="text-[15px] font-light text-center mt-[18px] max-w-[240px] mx-auto">
+          Our team provides personalized assistance at every step.
+        </p>
+        <div className="mt-[30px] pb-[40px]">
+          <TeamCarouselMobile team={homePageSetting.team} />
+        </div>
+
+        <div className="relative border-t">
+          <div className="border-r h-[45px] border-[#e9eaec] w-1/2" />
+          <div className="absolute left-1/2 -translate-x-1/2 -top-[1px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 30 1"
+              className="w-[15px] h-[1px]"
+            >
+              <path fillRule="evenodd" d="M0 2V0h30v2H0z" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 2 15"
+              className="w-[1px] h-[8px] top-0 absolute left-1/2 -translate-x-1/2"
+            >
+              <path fillRule="evenodd" d="M0 0h2v15H0V0z" />
+            </svg>
+          </div>
+          <h2 className="font-gilroy text-[35px] font-bold text-center leading-none mt-[24px]">
+            3D Process
+          </h2>
+          <p className="text-[15px] font-light text-center mt-[18px] max-w-[280px] mx-auto">
+            Seamless, reliable service to keep your projects on track. Schedule
+            your discovery call today.
+          </p>
+          <div className="grid grid-cols-1 mt-[10px]">
+            <div className="flex flex-col items-center gap-[10px] pt-[40px] pb-[36px] border-b border-[#e9eaec]">
+              <div className="flex items-center gap-[10px]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className="size-[24px]"
+                  color="#000"
+                  fill="none"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M17.312 1.93c-1.343-.18-3.064-.18-5.255-.18h-.114c-2.19 0-3.912 0-5.255.18-1.377.186-2.469.573-3.327 1.43-.858.86-1.245 1.951-1.43 3.328-.181 1.343-.181 3.064-.181 5.255v.114c0 2.19 0 3.912.18 5.255.186 1.377.573 2.469 1.43 3.327.86.858 1.951 1.245 3.328 1.43 1.343.181 3.064.181 5.255.181h.114c2.19 0 3.912 0 5.255-.18 1.377-.186 2.469-.573 3.327-1.43.858-.86 1.245-1.951 1.43-3.328.181-1.343.181-3.064.181-5.255v-.114c0-2.19 0-3.912-.18-5.255-.186-1.377-.573-2.469-1.43-3.327-.86-.858-1.951-1.245-3.328-1.43zM12.75 8a.75.75 0 0 0-1.5 0v8a.75.75 0 0 0 1.5 0V8zm-3 2a.75.75 0 0 0-1.5 0v4a.75.75 0 0 0 1.5 0v-4zm6 0a.75.75 0 0 0-1.5 0v4a.75.75 0 0 0 1.5 0v-4zm-9 1a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm12 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2z"
+                    fill="#0977ff"
+                  />
+                </svg>
+                <p className="text-[25px] font-gilroy font-bold">Discovery</p>
+              </div>
+              <p className="max-w-[300px] font-light text-[13px] leading-[1.54] text-center">
+                Conduct a discovery call to understand your needs and provide a
+                tailored quote.
+              </p>
+            </div>
+            <div className="flex flex-col items-center gap-[10px] pt-[40px] pb-[36px] border-b border-[#e9eaec]">
+              <div className="flex items-center gap-[10px] pr-[30px]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className="size-[24px]"
+                  color="#000"
+                  fill="none"
+                >
+                  <path
+                    d="M12 2.25a.75.75 0 0 1 .75.75c0 2.006 1.01 4.075 2.593 5.657 1.582 1.582 3.65 2.593 5.657 2.593a.75.75 0 0 1 0 1.5c-2.006 0-4.075 1.01-5.657 2.593-1.582 1.582-2.593 3.65-2.593 5.657a.75.75 0 0 1-1.5 0c0-2.006-1.01-4.075-2.593-5.657C7.075 13.76 5.007 12.75 3 12.75a.75.75 0 0 1 0-1.5c2.006 0 4.075-1.01 5.657-2.593C10.24 7.075 11.25 5.007 11.25 3a.75.75 0 0 1 .75-.75zM19.25 1.25c.213 0 .398.148.445.356l.235 1.04c.16.71.714 1.264 1.424 1.424l1.04.235a.456.456 0 0 1 0 .89l-1.04.235c-.71.16-1.264.714-1.424 1.424l-.235 1.04a.457.457 0 0 1-.89 0l-.235-1.04a1.885 1.885 0 0 0-1.424-1.424l-1.04-.235a.456.456 0 0 1 0-.89l1.04-.235a1.885 1.885 0 0 0 1.424-1.424l.235-1.04a.457.457 0 0 1 .445-.356zM4.75 15.75c.213 0 .398.148.445.356l.235 1.04c.16.71.714 1.264 1.424 1.424l1.04.235a.457.457 0 0 1 0 .89l-1.04.235c-.71.16-1.264.714-1.424 1.424l-.235 1.04a.456.456 0 0 1-.89 0l-.235-1.04a1.885 1.885 0 0 0-1.424-1.424l-1.04-.235a.457.457 0 0 1 0-.89l1.04-.235a1.885 1.885 0 0 0 1.424-1.424l.235-1.04a.456.456 0 0 1 .445-.356z"
+                    fill="#ffc809"
+                  />
+                </svg>
+                <p className="text-[25px] font-gilroy font-bold">Design</p>
+              </div>
+              <p className="max-w-[246px] font-light text-[13px] leading-[1.54] text-center">
+                Begin project, craft and refine designs to your vision.
+              </p>
+            </div>
+            <div className="flex flex-col items-center gap-[10px] pt-[40px] pb-[36px] border-b border-[#e9eaec]">
+              <div className="flex items-center gap-[10px]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className="size-[24px]"
+                  color="#000"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17 1.25a5.75 5.75 0 1 0 0 11.5 5.75 5.75 0 0 0 0-11.5zm2.25 4.957a.75.75 0 0 0-.5-1.414c-.483.171-.93.49-1.309.823-.386.339-.745.73-1.046 1.091-.146.175-.282.346-.402.505a2.057 2.057 0 0 0-.264-.21l-.055-.038A1.019 1.019 0 0 0 15 6.75a.75.75 0 0 0-.116 1.491.271.271 0 0 1 .012.008c.056.037.228.176.433.587a.75.75 0 0 0 1.304.066c.163-.23.643-.91.914-1.234.271-.326.575-.654.883-.924.316-.277.597-.458.82-.537z"
+                    fill="#72d622"
+                  />
+                  <path
+                    d="M9.748 1.25h-.055c-1.541 0-2.774 0-3.756.103-1.01.105-1.871.328-2.616.855-.39.276-.739.605-1.034.977-.57.72-.813 1.557-.927 2.53-.11.938-.11 2.11-.11 3.559v2.583c0 1.418 0 2.531.06 3.432.06.917.184 1.682.465 2.393.843 2.137 2.617 3.8 4.837 4.581 1.383.487 3.07.487 5.909.487h.44c1.554 0 2.587 0 3.446-.302 1.376-.485 2.485-1.519 3.014-2.858.183-.465.259-.95.294-1.495.035-.528.035-1.176.035-1.975v-.7a.976.976 0 0 0-.974-.977.976.976 0 0 0-.973.977v.667c0 .84 0 1.423-.03 1.88-.03.448-.085.706-.163.903-.31.785-.976 1.427-1.848 1.734-.504.177-1.17.191-3.005.191-.604 0-1.141 0-1.622-.004-.4-.002-.806-.114-1.07-.414a2.574 2.574 0 0 1-.648-1.71l.037-1.04c.007-.38-.005-.824-.12-1.252a2.416 2.416 0 0 0-1.708-1.71c-.428-.114-.872-.126-1.252-.118l-1.04.036a2.574 2.574 0 0 1-1.731-.666c-.296-.266-.404-.67-.405-1.068V9.335c0-1.524 0-2.581.096-3.39.092-.788.262-1.22.517-1.543.178-.224.39-.425.632-.596.358-.253.841-.42 1.695-.51.87-.09 2.001-.091 3.61-.091a.975.975 0 0 0 .973-.978.975.975 0 0 0-.973-.977z"
+                    fill="#72d622"
+                  />
+                </svg>
+                <p className="text-[25px] font-gilroy font-bold">
+                  Deliverables
+                </p>
+              </div>
+              <p className="max-w-[300px] font-light text-[13px] leading-[1.54] text-center">
+                Share approved design files and provide ongoing expert support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="hidden lg:grid container mx-auto grid-cols-2">
         <div className="border-r border-[#e9eaec] pt-[80px] pb-[54px] pr-[100px] relative">
           <h2 className="font-gilroy text-[45px] font-bold">Introduction</h2>
           <p className="text-[17px] font-light lg:leading-[28px] mt-2 lg:max-w-[370px]">
@@ -240,7 +370,7 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
         </div>
       </div>
       {isOpenTeamCarousel && (
-        <div className="bg-[#f3f4f6] absolute top-0 w-full h-full overflow-hidden">
+        <div className="bg-[#f3f4f6] absolute top-0 w-full h-full overflow-hidden hidden lg:block">
           <div className="container mx-auto py-[60px]">
             <button
               onClick={() => setIsOpenTeamCarousel(false)}

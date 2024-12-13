@@ -5,7 +5,7 @@ import React from "react";
 
 function SectionOne({ homePageSetting }: { homePageSetting: any }) {
   return (
-    <section className="relative static-background-hard lg:pb-[118px] ">
+    <section className="relative static-background-hard pb-[50px] lg:pb-[118px] ">
       <div className="container mx-auto flex flex-col items-center relative">
         <Image
           src="/assets/images/hero-image.webp"

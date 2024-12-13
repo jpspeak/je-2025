@@ -10,7 +10,7 @@ function TeamCarouselItem({ team }: { team: any }) {
         <Image
           src={urlForImage(team.image)}
           fill
-          alt="Team profile"
+          alt={team.name}
           className="object-cover"
         />
       </div>

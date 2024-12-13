@@ -82,7 +82,7 @@ function Projects({
       );
 
     return (
-      <div className="px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-[35px] mt-[70px]">
+      <div className="px-0 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-[35px] mt-[28px] lg:mt-[70px]">
         {data?.map((projects: any[]) =>
           projects.map((project) => {
             const src = urlForImage(project.mainImage as any);
@@ -109,16 +109,16 @@ function Projects({
   };
   return (
     <section className="border-y border-[#e9eaec] relative static-background-hard">
-      <div className="container mx-auto relative pt-[90px] pb-[118px]">
-        <div className="flex justify-between items-end">
+      <div className="container mx-auto relative px-[20px] lg:px-[32px] pt-[46px] pb-[46px] lg:pt-[90px] lg:pb-[118px]">
+        <div className="flex flex-col lg:flex-row gap-[34px] justify-between items-end">
           <div className="max-w-[520px]">
-            <h1 className="text-[50px] font-gilroy leading-[1.2]">
+            <h1 className="text-[36px] lg:text-[50px] font-gilroy leading-[1.2]">
               Brand Projects
             </h1>
 
-            <p className="text-[17px] font-light mt-[24px] lg:mt-[31px]">
-              &quot;Strategic brand transformations that tell powerful stories
-              and create lasting connections with your audience.
+            <p className="text-[17px] font-light mt-[20px] lg:mt-[31px]">
+              Strategic brand transformations that tell powerful stories and
+              create lasting connections with your audience.
             </p>
           </div>
           {industrySelector}
@@ -127,12 +127,12 @@ function Projects({
         {render()}
 
         {hasMore && (
-          <div className="flex justify-center mt-[40px] lg:mt-[65px]">
+          <div className="flex justify-center mt-[28px] lg:mt-[65px]">
             {isValidating ? (
               <Loader className="size-4 animate-spin text-muted-foreground" />
             ) : (
               <Button
-                className="mx-auto flex items-center gap-[13px] text-white min-w-[250px] h-[71px] text-[20px] font-gilroy font-bold"
+                className="mx-auto flex items-center gap-[13px] text-white min-w-[250px] h-[60px] lg:h-[71px] text-[20px] font-gilroy font-bold w-full lg:w-max"
                 onClick={loadMore}
               >
                 <svg

@@ -4,13 +4,14 @@ import React from "react";
 function SectionThree() {
   return (
     <section className="relative static-background-hard">
-      <div className="container mx-auto pt-[120px] pb-[125px]">
-        <h2 className="text-center w-max mx-auto font-gilroy text-[50px] font-bold relative">
-          Our Expertise, Your Success
+      <div className="container px-[20px] lg:px-[32px] mx-auto pt-[46px] lg:pt-[120px] pb-[50px] lg:pb-[125px]">
+        <h2 className="text-center leading-[1.2] lg:leading-normal lg:w-max mx-auto font-gilroy text-[35px] lg:text-[50px] font-bold relative">
+          Our Expertise,
+          <br className="lg:hidden" /> Your Success
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 31 28"
-            className="w-[28px] h-[26px] absolute -right-[20px] top-[8px]"
+            className="hidden lg:block w-[28px] h-[26px] absolute -right-[20px] top-[8px]"
             fill="none"
           >
             <path
@@ -21,7 +22,7 @@ function SectionThree() {
             />
           </svg>
         </h2>
-        <div className="grid grid-cols-3 gap-[35px] mt-[70px]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[25px] lg:gap-[35px] mt-[40px] lg:mt-[70px]">
           <div>
             <div className="w-full pb-[100%] bg-[#f3f4f6] whitespace-nowrap relative">
               <Image
@@ -32,7 +33,7 @@ function SectionThree() {
                 quality={100}
               />
             </div>
-            <p className="font-gilroy text-[25px] text-center mt-[30px]">
+            <p className="font-gilroy text-[24px] lg:text-[25px] text-center mt-[22px] lg:mt-[30px]">
               Branding
             </p>
           </div>
@@ -46,7 +47,7 @@ function SectionThree() {
                 quality={100}
               />
             </div>
-            <p className="font-gilroy text-[25px] text-center mt-[30px]">
+            <p className="font-gilroy text-[24px] lg:text-[25px] text-center mt-[22px] lg:mt-[30px]">
               Website Design/Dev.
             </p>
           </div>
@@ -60,42 +61,45 @@ function SectionThree() {
                 quality={100}
               />
             </div>
-            <p className="font-gilroy text-[25px] text-center mt-[30px]">
+            <p className="font-gilroy text-[24px] lg:text-[25px] text-center mt-[22px] lg:mt-[30px]">
               App Design/Dev.
             </p>
           </div>
         </div>
-        <div className="flex gap-[20px] justify-center mt-[60px]">
-          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[52px] flex items-center text-[15px] font-medium">
+        <div className="flex flex-wrap gap-[10px] lg:gap-[20px] justify-center mt-[30px] lg:mt-[60px] ">
+          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[38px] lg:h-[52px] flex items-center text-[11.3px] lg:text-[15px] font-medium">
             Logo Design
           </div>
-          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[52px] flex items-center text-[15px] font-medium">
+          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[38px] lg:h-[52px] flex items-center text-[11.3px] lg:text-[15px] font-medium">
             Vehicle Wrap Design
           </div>
-          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[52px] flex items-center text-[15px] font-medium">
+          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[38px] lg:h-[52px] flex items-center text-[11.3px] lg:text-[15px] font-medium">
             Uniform Design
           </div>
-          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[52px] flex items-center text-[15px] font-medium">
+          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[38px] lg:h-[52px] flex items-center text-[11.3px] lg:text-[15px] font-medium">
             Product Label Design
           </div>
-          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[52px] flex items-center text-[15px] font-medium">
+          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[38px] lg:h-[52px] flex items-center text-[11.3px] lg:text-[15px] font-medium">
             Illustration Design
           </div>
-        </div>
-        <div className="flex gap-[20px] mt-[20px] justify-center">
-          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[52px] flex items-center text-[15px] font-medium">
+          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[38px] lg:h-[52px] flex items-center text-[11.3px] lg:text-[15px] font-medium">
             Social Media Ads
           </div>
-          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[52px] flex items-center text-[15px] font-medium">
-            Brand Guidelines
+          <div className="w-full lg:w-auto flex justify-center">
+            <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[38px] lg:h-[52px] flex items-center text-[11.3px] lg:text-[15px] font-medium">
+              Brand Guidelines
+            </div>
           </div>
-          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[52px] flex items-center text-[15px] font-medium">
-            Icons
+          <div className="w-full lg:w-max flex justify-center gap-[10px] lg:gap-[20px]">
+            <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[38px] lg:h-[52px] flex items-center text-[11.3px] lg:text-[15px] font-medium">
+              Icons
+            </div>
+            <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[38px] lg:h-[52px] flex items-center text-[11.3px] lg:text-[15px] font-medium">
+              Poster Designs
+            </div>
           </div>
-          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[52px] flex items-center text-[15px] font-medium">
-            Poster Designs
-          </div>
-          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[52px] flex items-center text-[15px] font-medium">
+
+          <div className="bg-[#f3f4f6] whitespace-nowrap px-[20px] h-[38px] lg:h-[52px] flex items-center text-[11.3px] lg:text-[15px] font-medium">
             Landing pages
           </div>
         </div>

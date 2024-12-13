@@ -4,8 +4,8 @@ import ReactPlayerServer from "@/app/(shared)/components/ReactPlayerServer";
 function SectionFour() {
   return (
     <section className="border-y border-[#e9eaec] relative static-background-hard">
-      <div className="container mx-auto relative py-[110px] grid grid-cols-1 lg:grid-cols-2">
-        <div className="w-[calc(25%+16px)] border-r h-full absolute z-0">
+      <div className="container px-0 lg:px-[32px] mx-auto relative pt-[40px] lg:py-[110px] grid grid-cols-1 lg:grid-cols-2">
+        <div className="w-1/2 lg:w-[calc(25%+16px)] border-r h-[300px] lg:h-full absolute z-0">
           <div className="absolute -right-[8px] -top-[1px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ function SectionFour() {
             </svg>
           </div>
 
-          <div className="absolute -right-[8px] -bottom-[1px]">
+          <div className="hidden lg:block absolute -right-[8px] -bottom-[1px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 30 2"
@@ -48,12 +48,12 @@ function SectionFour() {
             </div>
           </div>
         </div>
-        <div className="lg:pl-[86px] mt-[28px] lg:mt-0 flex flex-col justify-center">
-          <h1 className="text-[50px] font-gilroy leading-[1.2]">
+        <div className="lg:pl-[86px] pb-[44px] lg:pb-0 mt-[38px] lg:mt-0 flex flex-col justify-center">
+          <h1 className="text-[35px] lg:text-[50px] max-w-[224px] lg:max-w-full font-gilroy px-[20px] lg:px-0 leading-[1.14] lg:leading-[1.2]">
             Innovating Beyond Boundaries
           </h1>
 
-          <p className="text-[17px] font-light mt-[24px] lg:mt-[31px]">
+          <p className="text-base lg:text-[17px] leading-[1.63] px-[20px] lg:px-0 font-light mt-[24px] lg:mt-[31px]">
             Watch as we transform brands through bold design, bringing visionary
             ideas to life through strategic creativity.
           </p>
