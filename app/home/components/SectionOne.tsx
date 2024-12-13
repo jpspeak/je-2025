@@ -9,10 +9,11 @@ function SectionOne({ homePageSetting }: { homePageSetting: any }) {
       <div className="container mx-auto flex flex-col items-center relative">
         <Image
           src="/assets/images/hero-image.webp"
-          width={1542}
-          height={1542}
+          width={600}
+          height={600}
           alt="JE design logo sketch"
           className="w-[514px] pt-[28px] lg:pt-[48px] absolute"
+          quality={100}
         />
         {/* <h1 className="hidden lg:block max-w-[804px] text-center leading-[1.18] text-[68px] font-gilroy font-bold pt-[436px]">
             Igniting creativity, fueling brands since 2004
