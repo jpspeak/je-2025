@@ -36,7 +36,7 @@ function StarRating({
       {text}
       <div className="flex gap-[2.5px] items-center">
         <Rating
-          className={cn("max-w-[100px] lg:max-w-[90px]", ratingClass)}
+          className={cn("max-w-[80px] lg:max-w-[90px]", ratingClass)}
           // radius="large"
           // spaceInside="large"
           spaceBetween="none"

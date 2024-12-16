@@ -23,21 +23,41 @@ export async function getProjects({
       break;
   }
   let query = `*[_type == "project" ${lastOrderRank ? `&& orderRank > $lastOrderRank` : ""}] | order(orderRank) [0...$limit]{
-    ...
+    ...,
+    "firstReview": reviews[0]->{
+      ...,
+      "reviewPlatformLogo": reviewPlatform->logo,
+      "reviewPlatformName": reviewPlatform->name
+    }
   }`;
   if (industrySlug && industrySlug !== "all") {
-    query = `*[_type == "project" && projectIndustry->slug.current == $industrySlug ${lastOrderRank ? `&& orderRank > $lastOrderRank` : ""}] | order(orderRank) [0...$limit]{
-        ...
+    query = `*[_type == "project" && projectIndustry->slug.current == $industrySlug ${lastOrderRank ? `&& orderRank > $lastOrderRank` : ""}] | order(orderRank) [0,$limit]{
+        ...,
+        "firstReview": reviews[0]->{
+        ...,
+        "reviewPlatformLogo": reviewPlatform->logo,
+        "reviewPlatformName": reviewPlatform->name
+      }
       }`;
   }
 
   if (sortByValue !== "") {
     query = `*[_type == "project" ${lastCreatedAt ? `&& _createdAt ${operator} $lastCreatedAt` : ""}] | order(_createdAt ${sortByValue}) [0...$limit]{
-      ...
+      ...,
+      "firstReview": reviews[0]->{
+        ...,
+        "reviewPlatformLogo": reviewPlatform->logo,
+        "reviewPlatformName": reviewPlatform->name
+      }
     }`;
     if (industrySlug && industrySlug !== "all") {
       query = `*[_type == "project" && projectIndustry->slug.current == $industrySlug ${lastCreatedAt ? `&& _createdAt ${operator} $lastCreatedAt` : ""}] | order(_createdAt ${sortByValue}) [0...$limit]{
-          ...
+          ...,
+          "firstReview": reviews[0]->{
+            ...,
+            "reviewPlatformLogo": reviewPlatform->logo,
+            "reviewPlatformName": reviewPlatform->name
+          }
         }`;
     }
   }

@@ -9,6 +9,7 @@ import { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import useSWRInfinite from "swr/infinite";
+import ReviewModal from "./ReviewModal";
 
 function Projects({
   initialProjects,
@@ -86,21 +87,29 @@ function Projects({
         {data?.map((projects: any[]) =>
           projects.map((project) => {
             const src = urlForImage(project.mainImage as any);
+
             return (
-              <Link
-                href={`/projects/${project.slug?.current}`}
-                key={project._id}
+              <div
                 className="relative w-full pb-[100%] bg-[#f3f4f6] rounded-none overflow-hidden"
+                key={project._id}
               >
-                <Image
-                  loader={() => src}
-                  src={src}
-                  fill
-                  alt={project.title || ""}
-                  className="object-contain"
-                  quality={100}
-                />
-              </Link>
+                <Link
+                  href={`/projects/${project.slug?.current}`}
+                  className="absolute w-full h-full"
+                >
+                  <Image
+                    loader={() => src}
+                    src={src}
+                    fill
+                    alt={project.title || ""}
+                    className="object-contain"
+                    quality={100}
+                  />
+                </Link>
+                {project.firstReview && (
+                  <ReviewModal review={project.firstReview} />
+                )}
+              </div>
             );
           })
         )}
