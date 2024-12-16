@@ -6,6 +6,7 @@ import { reviewType } from "./reviewType";
 import { reviewPlatformType } from "./reviewPlatformType";
 import { faqType } from "./faqType";
 import { homePageSettingType } from "./homePageSettingType";
+import { recordingType } from "./recordingType";
 
 export const schema: { types: SchemaTypeDefinition[]; templates: any } = {
   types: [
@@ -15,6 +16,7 @@ export const schema: { types: SchemaTypeDefinition[]; templates: any } = {
     reviewPlatformType,
     faqType,
     homePageSettingType,
+    recordingType,
   ],
   // Filter out singleton types from the global “New document” menu options
   templates: (templates: any[]) =>

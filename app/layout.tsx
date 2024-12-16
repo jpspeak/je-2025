@@ -77,7 +77,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${gilroy.variable} ${deliciousHandrawn.variable} font-poppins`}
+        className={`${poppins.variable} ${gilroy.variable} ${deliciousHandrawn.variable} font-poppins overflow-x-hidden`}
       >
         {children}
         {project}

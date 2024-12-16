@@ -48,6 +48,7 @@ export default defineConfig({
             //   "Article Categories"
             // ),
             S.documentTypeListItem("faq").title("FAQs"),
+            S.documentTypeListItem("recording").title("Recordings"),
             // Our singleton type has a list item with a custom child
             S.listItem().title("Home Page Setting").id("homePageSetting").child(
               // Instead of rendering a list of documents, we render a single

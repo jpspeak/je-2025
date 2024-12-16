@@ -32,7 +32,6 @@ function TeamCarouselMobile({ team }: { team: any[] }) {
         //     spaceBetween: 36,
         //   },
         // }}
-        className="!overflow-visible"
       >
         {team.map((team, i) => (
           <SwiperSlide key={i} className="group">

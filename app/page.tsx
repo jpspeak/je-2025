@@ -8,6 +8,8 @@ import SectionFour from "./home/components/SectionFour";
 import Projects from "./home/components/Projects";
 import { getProjects } from "@/sanity/query/project";
 import IndustrySelector from "./home/components/IndustrySelector";
+import { getRecordings } from "@/sanity/query/recording";
+import Recordings from "./home/components/Recordings";
 
 export const metadata: Metadata = {
   title: "Branding Without Boundaries & Forward-thinking Vehicle Wrap Designs",
@@ -28,6 +30,8 @@ export default async function HomePage({
     limit: 12,
     industrySlug,
   });
+  const recordings = await getRecordings();
+
   return (
     <>
       <Header tickerLink={homePageSetting.tickerLink} />
@@ -39,6 +43,7 @@ export default async function HomePage({
         initialProjects={projects}
         industrySelector={<IndustrySelector />}
       />
+      <Recordings recordings={recordings} />
     </>
   );
 }
