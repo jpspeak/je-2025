@@ -10,6 +10,8 @@ import { getProjects } from "@/sanity/query/project";
 import IndustrySelector from "./home/components/IndustrySelector";
 import { getRecordings } from "@/sanity/query/recording";
 import Recordings from "./home/components/Recordings";
+import Reviews from "./home/components/Reviews";
+import { getReviews } from "@/sanity/query/review";
 
 export const metadata: Metadata = {
   title: "Branding Without Boundaries & Forward-thinking Vehicle Wrap Designs",
@@ -25,12 +27,13 @@ export default async function HomePage({
   const industrySlug = searchParams.industry;
 
   const homePageSetting = await getHomePageSetting();
-  console.log(homePageSetting.team);
+
   const projects = await getProjects({
     limit: 12,
     industrySlug,
   });
   const recordings = await getRecordings();
+  const reviews = await getReviews();
 
   return (
     <>
@@ -44,6 +47,7 @@ export default async function HomePage({
         industrySelector={<IndustrySelector />}
       />
       <Recordings recordings={recordings} />
+      <Reviews reviews={reviews} />
     </>
   );
 }

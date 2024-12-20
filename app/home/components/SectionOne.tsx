@@ -130,7 +130,10 @@ function SectionOne({ homePageSetting }: { homePageSetting: any }) {
             return "col-span-1"; // Single column
           };
           return (
-            <div className={cn("w-full relative pb-[100%]", gridClasses(i))}>
+            <div
+              key={i}
+              className={cn("w-full relative pb-[100%]", gridClasses(i))}
+            >
               <Image
                 src={urlForImage(project.mainImage)}
                 alt={project.title}

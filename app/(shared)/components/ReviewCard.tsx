@@ -72,13 +72,13 @@ function ReviewCard({
           </div>
           <p
             title={reviewerInfo}
-            className="text-xs lg:text-[15px] font-poppins font-light text-[#53545c] mt-[6px] lg:mt-[8px] leading-none line-clamp-1"
+            className="text-xs lg:text-[15px] font-light text-[#53545c] mt-[6px] lg:mt-[8px] leading-none line-clamp-1"
           >
             {reviewerInfo}
           </p>
         </div>
       </div>
-      <div className="pb-[26px] pt-[22px] text-sm font-light lg:text-[15px] leading-normal lg:leading-[1.67] w-full">
+      <div className="pb-[26px] pt-[22px] text-sm font-light lg:text-base leading-normal lg:leading-normal w-full">
         {/* <ShowMoreText
           lines={4}
           more="More"
@@ -112,8 +112,8 @@ function ReviewCard({
             loop
             modules={[Thumbs, Mousewheel]}
             spaceBetween={10}
-            slidesPerView={4}
-            className="mt-[30px] lg:mt-[54px]"
+            slidesPerView={3}
+            className="mt-[30px] lg:mt-[34px]"
             mousewheel
           >
             {images?.map((image, i) => (
