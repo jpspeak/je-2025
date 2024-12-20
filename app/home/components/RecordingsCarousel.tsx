@@ -39,7 +39,7 @@ function RecordingsCarousel({ recordings }: { recordings: any[] }) {
           </SwiperSlide>
         ))}
       </Swiper>
-      {recordings && recordings.length > 1 && (
+      {recordings && recordings.length > 3 && (
         <div className="team-carousel-nav relative top-[80px]">
           <button
             className="swiper-button-prev"

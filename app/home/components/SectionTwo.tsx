@@ -79,7 +79,7 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
             </svg>
           </div>
           <div className="flex items-center gap-[24px]">
-            <h2 className="font-gilroy text-[40px] font-bold block leading-none">
+            <h2 className="font-gilroy text-[40px] font-bold block leading-none pb-[6px]">
               Team je.design
             </h2>
             <span>
