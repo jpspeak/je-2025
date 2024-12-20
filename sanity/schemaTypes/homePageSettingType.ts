@@ -1,5 +1,12 @@
 import { defineField, defineType } from "sanity";
 
+export const departmentType = defineType({
+  name: "department",
+  title: "Department",
+  type: "document",
+  fields: [{ name: "name", title: "Name", type: "string" }],
+});
+
 export const homePageSettingType = defineType({
   name: "homePageSetting",
   title: "Home Page Setting",
@@ -169,11 +176,12 @@ export const homePageSettingType = defineType({
               type: "string",
               validation: (Rule) => Rule.required(),
             },
-            // {
-            //   name: "href",
-            //   type: "url",
-            //   title: "URL",
-            // },
+            {
+              name: "department",
+              type: "reference",
+              to: { type: "department" },
+              validation: (Rule) => Rule.required(),
+            },
           ],
         },
       ],

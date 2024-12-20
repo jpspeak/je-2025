@@ -11,6 +11,16 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+const funnelSans = localFont({
+  variable: "--font-funnel-sans",
+  src: [
+    {
+      path: "./(shared)/fonts/FunnelSans.ttf",
+      style: "normal",
+    },
+  ],
+});
+
 const gilroy = localFont({
   variable: "--font-gilroy",
   src: [
@@ -77,7 +87,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${gilroy.variable} ${deliciousHandrawn.variable} font-poppins overflow-x-hidden`}
+        className={`${poppins.variable} ${funnelSans.variable} ${gilroy.variable} ${deliciousHandrawn.variable} font-funnel-sans overflow-x-hidden`}
       >
         {children}
         {project}

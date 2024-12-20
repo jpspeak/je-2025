@@ -141,7 +141,8 @@ function Projects({
               <Loader className="size-4 animate-spin text-muted-foreground" />
             ) : (
               <Button
-                className="mx-auto flex items-center gap-[13px] text-white min-w-[250px] h-[60px] lg:h-[71px] text-[20px] font-gilroy font-bold w-full lg:w-max"
+                variant="outline"
+                className="mx-auto flex items-center gap-[13px] text-black min-w-[250px] h-[60px] lg:h-[71px] text-[20px] font-gilroy font-bold w-full lg:w-max"
                 onClick={loadMore}
               >
                 <svg
@@ -153,7 +154,7 @@ function Projects({
                 >
                   <path
                     d="M10.75 13.25V20h2.5v-6.75H20v-2.5h-6.75V4h-2.5v6.75H4v2.5h6.75z"
-                    fill="#fff"
+                    fill="#000000"
                   />
                 </svg>
                 Show more

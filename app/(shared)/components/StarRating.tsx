@@ -32,11 +32,14 @@ function StarRating({
     activeFillColor: "#000000",
   };
   return (
-    <Link href="reviews" className="flex items-center gap-1 lg:gap-2">
+    <Link
+      href="reviews"
+      className="flex items-center justify-center gap-1 lg:gap-2"
+    >
       {text}
       <div className="flex gap-[2.5px] items-center">
         <Rating
-          className={cn("max-w-[80px] lg:max-w-[90px]", ratingClass)}
+          className={cn("max-w-[90px]", ratingClass)}
           // radius="large"
           // spaceInside="large"
           spaceBetween="none"
@@ -54,7 +57,7 @@ function Text(props: ComponentProps<"p">) {
   return (
     <p
       className={cn(
-        "grow text-base mt-[3px] lg:text-[17.5px] font-medium lg:leading-none leading-none",
+        "text-base mt-[3px] lg:text-[17px] font-semibold leading-none",
         props.className
       )}
     >

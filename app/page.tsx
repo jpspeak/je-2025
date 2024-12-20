@@ -25,7 +25,7 @@ export default async function HomePage({
   const industrySlug = searchParams.industry;
 
   const homePageSetting = await getHomePageSetting();
-
+  console.log(homePageSetting.team);
   const projects = await getProjects({
     limit: 12,
     industrySlug,

@@ -35,7 +35,7 @@ function TeamCarousel({ team }: { team: any[] }) {
           </SwiperSlide>
         ))}
       </Swiper>
-      {team && team.length > 1 && (
+      {team && team.length > 4 && (
         <div className="team-carousel-nav relative top-[38px]">
           <button
             className="swiper-button-prev"

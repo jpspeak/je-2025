@@ -1,26 +1,9 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
-import { useWindowScroll } from "@uidotdev/usehooks";
-import { cn } from "../lib/utils";
 
 function HeaderTicker({ link }: { link: string }) {
-  const [{ y }] = useWindowScroll();
-  // const windowMaxScroll =
-  // typeof window !== "undefined"
-  //   ? document.body.offsetHeight - window.innerHeight
-  //   : 0;
-
-  // This will hide navbar when scroll position is at the bottom
-  const showTicker = (y || 0) <= 100;
   return (
-    <div
-      className={cn(
-        "px-3 lg:px-8 relative items-center gap-[12px] overflow-hidden static-background-hard flex h-0 transition-all",
-        showTicker && "h-[54px] lg:h-[70px]"
-      )}
-    >
+    <div className="container text-white justify-center px-3 lg:px-8 relative items-center gap-[12px] overflow-hidden static-background-hard flex h-[57px]">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 49 50"
@@ -33,9 +16,11 @@ function HeaderTicker({ link }: { link: string }) {
         />
       </svg>
 
-      <p className="hidden lg:block font-medium text-[15px]">
-        JE Designs now accepts Bitcoin, Litecoin, Solana and XRP -{" "}
-        <Link href={link}>Learn more</Link>
+      <p className="hidden lg:block text-[15px]">
+        je.design now accepts Bitcoin, Litecoin, Solana and XRP -{" "}
+        <Link href={link} className="text-[#fff619]">
+          Learn more
+        </Link>
       </p>
       <p className="lg:hidden font-medium text-[13px]">
         Now accepts Bitcoin, Litecoin, Solana and XRP

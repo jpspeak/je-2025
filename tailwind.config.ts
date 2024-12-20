@@ -10,10 +10,20 @@ export default {
   theme: {
     fontFamily: {
       poppins: ["var(--font-poppins)", "sans-serif"],
+      "funnel-sans": ["var(--font-funnel-sans)", "sans-serif"],
       gilroy: ["var(--font-gilroy)", "sans-serif"],
       "delicious-handrawn": ["var(--font-delicious-handrawn)", "sans-serif"],
     },
     extend: {
+      animation: {
+        "spin-slow": "spin-reverse 6s linear infinite",
+      },
+      keyframes: {
+        "spin-reverse": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(-360deg)" },
+        },
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

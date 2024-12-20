@@ -28,7 +28,11 @@ export async function getHomePageSetting(): Promise<any> {
   const query = `*[_type == "homePageSetting"][0]{
     ...,
     projectMarquee[]->,
-    brandProjects[]->
+    brandProjects[]->,
+    team[]{
+    ...,
+    department->
+    }
   }`;
   return client.fetch(query);
 }
