@@ -85,7 +85,7 @@ function Projects({
     return (
       <div className="px-0 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-[35px] mt-[28px] lg:mt-[70px]">
         {data?.map((projects: any[]) =>
-          projects.map((project) => {
+          projects?.map((project) => {
             const src = urlForImage(project.mainImage as any);
 
             return (

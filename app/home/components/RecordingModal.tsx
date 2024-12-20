@@ -2,9 +2,9 @@
 
 import React, { useState } from "react";
 import { Dialog, DialogContent } from "@/app/(shared)/components/ui/dialog";
-import ModalCloseButton from "@/app/projects/[slug]/components/ModalCloseButton";
 import ReactPlayer from "react-player";
 import Image from "next/image";
+import ModalCloseButton from "@/app/(shared)/components/ModalCloseButton";
 
 function RecordingModal({ video }: { video: any }) {
   const [isOpen, setIsOpen] = useState(false);

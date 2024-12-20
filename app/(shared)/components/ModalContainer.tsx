@@ -1,9 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import React, { ComponentProps } from "react";
+import { useRouter } from "next/navigation";
 
-function ProjectModal2Container({ children }: ComponentProps<"div">) {
+function ModalContainer({ children }: ComponentProps<"div">) {
   const router = useRouter();
   const handleOnClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (e.target === e.currentTarget) {
@@ -17,4 +17,4 @@ function ProjectModal2Container({ children }: ComponentProps<"div">) {
   );
 }
 
-export default ProjectModal2Container;
+export default ModalContainer;

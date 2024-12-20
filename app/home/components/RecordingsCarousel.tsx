@@ -3,10 +3,9 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import RecordingCard from "./RecordingCard";
 import "swiper/css";
 import "swiper/css/navigation";
-import { urlForImage } from "@/sanity/lib/image";
-import RecordingCard from "./RecordingCard";
 
 function RecordingsCarousel({ recordings }: { recordings: any[] }) {
   const swiperRef = useRef<any>();
@@ -23,8 +22,12 @@ function RecordingsCarousel({ recordings }: { recordings: any[] }) {
           //   spaceBetween: 8,
           // },
           // when window width is >= 640px
-          640: {
+          1024: {
             slidesPerView: 3.5,
+            spaceBetween: 35,
+          },
+          1920: {
+            slidesPerView: 5.5,
             spaceBetween: 35,
           },
         }}
@@ -32,12 +35,7 @@ function RecordingsCarousel({ recordings }: { recordings: any[] }) {
       >
         {recordings.map((recording, i) => (
           <SwiperSlide key={i} className="group">
-            <RecordingCard
-              title={recording.title}
-              description={recording.description}
-              thumbnail={urlForImage(recording.thumbnail)}
-              video={recording.video.asset.url}
-            />
+            <RecordingCard recording={recording} />
           </SwiperSlide>
         ))}
       </Swiper>

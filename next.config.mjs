@@ -9,7 +9,7 @@ const nextConfig = {
   //     },
   //   ];
   // },
-  // reactStrictMode: false,
+  reactStrictMode: false,
   images: {
     dangerouslyAllowSVG: true,
     remotePatterns: [

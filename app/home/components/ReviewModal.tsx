@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import ReviewCard from "@/app/(shared)/components/ReviewCard";
 import { Dialog, DialogContent } from "@/app/(shared)/components/ui/dialog";
-import ModalCloseButton from "@/app/projects/[slug]/components/ModalCloseButton";
 import { urlForImage } from "@/sanity/lib/image";
+import ModalCloseButton from "@/app/(shared)/components/ModalCloseButton";
 
 function ReviewModal({ review }: { review: any }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +50,7 @@ function ReviewModal({ review }: { review: any }) {
 
       <DialogContent hideCloseButton className="!p-0 !rounded-none w-[90%]">
         <ModalCloseButton
-          className="right-1 top-1 lg:right-[12px] lg:top-[12px] bg-transparent text-black"
+          className="right-1 top-1 lg:right-[12px] lg:top-[12px] lg:bg-transparent text-black"
           onClick={() => setIsOpen(false)}
         />
         <ReviewCard

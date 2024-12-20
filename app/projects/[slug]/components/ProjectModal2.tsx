@@ -8,12 +8,12 @@ import Image from "next/image";
 import PortableText from "react-portable-text";
 import ShareModal from "@/app/(shared)/components/ShareModal";
 import ReviewCard from "@/app/(shared)/components/ReviewCard";
-import ModalCloseButton from "./ModalCloseButton";
+import ModalCloseButton from "../../../(shared)/components/ModalCloseButton";
 import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
 import { formatDate } from "@/app/(shared)/lib/utils";
 import Link from "next/link";
 import Comments from "@/app/(shared)/components/Comments";
-import ProjectModal2Container from "./ProjectModal2Container";
+import ModalContainer from "../../../(shared)/components/ModalContainer";
 import ProjectModal2Images from "./ProjectModal2Images";
 
 function ProjectModal2({
@@ -33,7 +33,7 @@ function ProjectModal2({
         className="max-w-full h-svh  max-h-full bg-transparent border-none p-0 !rounded-none"
       >
         <DialogTitle className="hidden">Project</DialogTitle>
-        <ProjectModal2Container>
+        <ModalContainer>
           <ModalCloseButton />
 
           <div className="hidden xl:flex fixed left-[calc(50%+435px+28px)] top-[112px] flex-col gap-[24px]">
@@ -130,7 +130,7 @@ function ProjectModal2({
               <Comments identifier={project._id} />
             </div>
           </div>
-        </ProjectModal2Container>
+        </ModalContainer>
       </DialogContent>
     </Dialog>
   );

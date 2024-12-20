@@ -14,3 +14,15 @@ export async function getRecordings(): Promise<any[]> {
 
   return client.fetch(query);
 }
+
+export async function getRecording({ slug }: { slug: string }): Promise<any> {
+  const query = `*[_type == "recording" && slug.current == $slug][0]{
+    ...,
+    video {
+      asset -> {
+        url
+      }
+    },
+  }`;
+  return client.fetch(query, { slug });
+}

@@ -6,7 +6,7 @@ import ShareModal from "@/app/(shared)/components/ShareModal";
 import Carousel from "@/app/(shared)/components/carousel/Carousel";
 import ReviewCard from "@/app/(shared)/components/ReviewCard";
 import BlockA from "@/app/(shared)/components/BlockA";
-import ModalCloseButton from "./ModalCloseButton";
+import ModalCloseButton from "../../../(shared)/components/ModalCloseButton";
 import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
 
 function ProjectModal({ project }: { project: any }) {
@@ -20,7 +20,7 @@ function ProjectModal({ project }: { project: any }) {
       >
         <div className="h-dvh w-full overflow-hidden">
           <div className="pt-[54px] pb-0 h-full relative w-full">
-            <ModalCloseButton />
+            <ModalCloseButton className="z-[1]" />
             {/* Separator */}
             <div className="absolute w-full h-[18px] lg:h-[37px] top-[46px] z-[1]">
               <Image

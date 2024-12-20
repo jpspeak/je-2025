@@ -1,7 +1,7 @@
 import React from "react";
-import ReactPlayerServer from "@/app/(shared)/components/ReactPlayerServer";
-import { Button } from "@/app/(shared)/components/ui/button";
 import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
+import { Button } from "@/app/(shared)/components/ui/button";
+import VideoPlayer from "@/app/(shared)/components/VideoPlayer";
 
 function SectionFour() {
   return (
@@ -10,7 +10,12 @@ function SectionFour() {
         <div>
           <div className="w-full h-0 pb-[65.17%] relative rounded-none bg-black">
             <div className="w-full pb-[65.17%] absolute top-1/2 -translate-y-1/2">
-              <ReactPlayerServer />
+              <VideoPlayer
+                thumbnail="/assets/images/commercial-thumbnail.webp"
+                isPlaying
+                showControls
+                url="https://www.youtube.com/watch?v=BpuC_iyq0l8&ab_channel=JeremyEllsworthDesignsLLC"
+              />
             </div>
           </div>
         </div>
@@ -26,7 +31,8 @@ function SectionFour() {
           <div className="flex items-center gap-[20px] mt-[40px] px-[20px] lg:px-0">
             <CalComModalTrigger
               variant="outline"
-              className="w-1/2 lg:w-[172px]"
+              containerclass="w-1/2 lg:w-[172px]"
+              className="lg:w-full"
             >
               Book a call
             </CalComModalTrigger>
