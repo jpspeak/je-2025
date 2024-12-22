@@ -5,7 +5,7 @@ import RecordingCard from "./RecordingCard";
 function Recordings({ recordings }: { recordings: any[] }) {
   return (
     <section className="static-background-hard relative">
-      <div className="pt-[50px] lg:pt-[150px] pb-[228px] overflow-hidden">
+      <div className="pt-[50px] lg:pt-[150px] pb-[60px] lg:pb-[228px] overflow-hidden">
         <h2 className="font-gilroy text-[35px] lg:text-[50px] text-center mb-[30px] lg:mb-[65px]">
           Watch us work
         </h2>

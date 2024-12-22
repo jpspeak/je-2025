@@ -33,7 +33,8 @@ export default async function HomePage({
     industrySlug,
   });
   const recordings = await getRecordings();
-  const reviews = await getReviews();
+  const reviewsMobile = await getReviews({ limit: 2 });
+  const reviewsDesktop = await getReviews({ limit: 6 });
 
   return (
     <>
@@ -47,7 +48,10 @@ export default async function HomePage({
         industrySelector={<IndustrySelector />}
       />
       <Recordings recordings={recordings} />
-      <Reviews reviews={reviews} />
+      <Reviews
+        initialReviewsDesktop={reviewsDesktop}
+        initialReviewsMobile={reviewsMobile}
+      />
     </>
   );
 }
