@@ -32,6 +32,10 @@ export const homePageSettingType = defineType({
       name: "recordedProjects",
       title: "Recorded Projects",
     },
+    {
+      name: "faqs",
+      title: "FAQs",
+    },
   ],
   fields: [
     defineField({
@@ -220,5 +224,12 @@ export const homePageSettingType = defineType({
     //   ],
     //   group: "sketchConcept",
     // }),
+    defineField({
+      name: "faqs",
+      title: "FAQs",
+      type: "array",
+      of: [{ type: "reference", to: { type: "faq" } }],
+      group: "faqs",
+    }),
   ],
 });

@@ -32,7 +32,8 @@ export async function getHomePageSetting(): Promise<any> {
     team[]{
     ...,
     department->
-    }
+    },
+    faqs[]->
   }`;
   return client.fetch(query);
 }
