@@ -1,3 +1,4 @@
+import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
 import ProjectMarquee from "@/app/(shared)/components/ProjectMarque";
 import StarRating from "@/app/(shared)/components/StarRating";
 import { Button } from "@/app/(shared)/components/ui/button";
@@ -69,9 +70,10 @@ function SectionOne({ homePageSetting }: { homePageSetting: any }) {
           <br /> and built for growth.
         </p>
         <div className="mt-[36px] lg:mt-[44px] w-full flex flex-col lg:flex-row justify-center items-center gap-[15px]">
-          <Button
+          <CalComModalTrigger
             variant="outline"
-            className="w-full max-w-[252px] lg:max-w-[172px] text-black"
+            containerclass="w-full max-w-[252px] lg:max-w-[172px]"
+            className="w-full lg:w-full text-black"
           >
             <span>Book a call</span>
             <svg
@@ -88,24 +90,29 @@ function SectionOne({ homePageSetting }: { homePageSetting: any }) {
                 fill="#000000"
               />
             </svg>
-          </Button>
-          <Button className="w-full max-w-[252px] lg:max-w-[172px]">
-            <span>See pricing</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="8"
-              height="12"
-              color="#fff"
-              fill="none"
-              className="lg:hidden"
-            >
-              <path
-                d="M17.5 13.398 12.002 20.5 6.5 13.398H11V3.5h2v9.898h4.5z"
-                fill="#ffffff"
-              />
-            </svg>
-          </Button>
+          </CalComModalTrigger>
+          <Link
+            href="/#pricing"
+            className="w-full max-w-[252px] lg:max-w-[172px]"
+          >
+            <Button className="w-full max-w-[252px] lg:max-w-[172px]">
+              <span>See pricing</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="8"
+                height="12"
+                color="#fff"
+                fill="none"
+                className="lg:hidden"
+              >
+                <path
+                  d="M17.5 13.398 12.002 20.5 6.5 13.398H11V3.5h2v9.898h4.5z"
+                  fill="#ffffff"
+                />
+              </svg>
+            </Button>
+          </Link>
         </div>
 
         <p className="hidden lg:block font-delicious-handrawn absolute -bottom-[48px] z-[1] text-[20.8px] leading-none left-0 -rotate-[10deg] max-w-[177px] text-black">

@@ -11,9 +11,9 @@ import PortableText from "react-portable-text";
 
 async function SectionFive({ faqs }: { faqs: any[] }) {
   return (
-    <section>
-      <div className="container px-[20px] lg:px-[32px] pt-[50px] lg:py-[120px] grid grid-cols-1 lg:grid-cols-2 gap-[64px] lg:gap-[103px]">
-        <div id="pricing" className="h-max">
+    <section id="pricing">
+      <div className="container pb-[48px] px-[20px] lg:px-[32px] pt-[50px] lg:py-[120px] grid grid-cols-1 lg:grid-cols-2 gap-[64px] lg:gap-[103px]">
+        <div className="h-max">
           <Accordion
             defaultValue="ultimate brand sprint"
             type="single"
@@ -113,7 +113,7 @@ async function SectionFive({ faqs }: { faqs: any[] }) {
               value="Custom Brand Sprint"
               className="mt-[20px] lg:mt-[30px] border-black border"
             >
-              <AccordionTrigger className="group border-[1px] px-[30px] lg:px-[38px] relative lg:py-[40px] text-[20px] text-primary lg:text-[22px] font-gilroy font-bold !no-underline">
+              <AccordionTrigger className="group border-none px-[30px] lg:px-[38px] relative lg:py-[40px] text-[20px] text-primary lg:text-[22px] font-gilroy font-bold !no-underline">
                 <div className="flex flex-col">
                   <span>Custom Brand Sprint</span>
                   {/* <p className="hidden group-data-[state=open]:block text-[#c7c7c7] text-base mt-[18px] font-normal font-funnel-sans max-w-[380px] []">

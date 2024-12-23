@@ -31,7 +31,7 @@ export async function getProjects({
     }
   }`;
   if (industrySlug && industrySlug !== "all") {
-    query = `*[_type == "project" && projectIndustry->slug.current == $industrySlug ${lastOrderRank ? `&& orderRank > $lastOrderRank` : ""}] | order(orderRank) [0,$limit]{
+    query = `*[_type == "project" && projectIndustry->slug.current == $industrySlug ${lastOrderRank ? `&& orderRank > $lastOrderRank` : ""}] | order(orderRank) [0...$limit]{
         ...,
         "firstReview": reviews[0]->{
         ...,

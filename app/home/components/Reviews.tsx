@@ -95,7 +95,7 @@ function Reviews({
     return null;
   };
   return (
-    <section className="bg-[#f6f6f8] border-t border-[#e9eaec]">
+    <section id="reviews" className="bg-[#f6f6f8] border-t border-[#e9eaec]">
       <div className="container px-[20px] lg:px-[32px] pt-[50px] pb-[43px] lg:py-[124px]">
         <div className="flex items-center gap-[18px] justify-center">
           <Image

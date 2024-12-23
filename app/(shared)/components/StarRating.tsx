@@ -12,10 +12,12 @@ function StarRating({
   value,
   text,
   ratingClass,
+  activeFillColor,
 }: {
   value: number;
   text?: ReactNode;
   ratingClass?: string;
+  activeFillColor?: string;
 }) {
   // const customStyles = {
   //   itemShapes: Star,
@@ -29,11 +31,11 @@ function StarRating({
     // activeBoxColor: "#000000",
     // inactiveBoxColor: "#ffffff",
     inactiveFillColor: "#8f8f8f",
-    activeFillColor: "#000000",
+    activeFillColor: activeFillColor || "#000000",
   };
   return (
     <Link
-      href="reviews"
+      href="/#reviews"
       className="flex items-center justify-center gap-1 lg:gap-2"
     >
       {text}

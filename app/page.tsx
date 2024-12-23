@@ -13,6 +13,7 @@ import Recordings from "./home/components/Recordings";
 import Reviews from "./home/components/Reviews";
 import { getReviews } from "@/sanity/query/review";
 import SectionFive from "./home/components/SectionFive";
+import Footer from "./(shared)/components/Footer";
 
 export const metadata: Metadata = {
   title: "Branding Without Boundaries & Forward-thinking Vehicle Wrap Designs",
@@ -54,6 +55,7 @@ export default async function HomePage({
         initialReviewsMobile={reviewsMobile}
       />
       <SectionFive faqs={homePageSetting.faqs || []} />
+      <Footer />
     </>
   );
 }

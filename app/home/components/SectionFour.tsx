@@ -2,6 +2,7 @@ import React from "react";
 import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
 import { Button } from "@/app/(shared)/components/ui/button";
 import VideoPlayer from "@/app/(shared)/components/VideoPlayer";
+import Link from "next/link";
 
 function SectionFour() {
   return (
@@ -36,7 +37,9 @@ function SectionFour() {
             >
               Book a call
             </CalComModalTrigger>
-            <Button className="w-1/2 lg:w-[172px]">See pricing</Button>
+            <Link href="/#pricing" className="w-1/2 lg:w-[172px]">
+              <Button className="w-full">See pricing</Button>
+            </Link>
           </div>
         </div>
       </div>

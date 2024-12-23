@@ -85,6 +85,19 @@ body {
   z-index: -1;
 }
 
+.static-background-light::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/assets/images/static-effect-old.png") 0 0;
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  opacity: 0.8;
+}
+
 /* Start | Custom portable text  */
 
 .project-body h1 {
