@@ -18,6 +18,7 @@ export async function getRecordings(): Promise<any[]> {
 export async function getRecording({ slug }: { slug: string }): Promise<any> {
   const query = `*[_type == "recording" && slug.current == $slug][0]{
     ...,
+    publishedAt,
     video {
       asset -> {
         url

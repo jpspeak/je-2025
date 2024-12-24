@@ -308,6 +308,7 @@ export const projectType = defineType({
     }),
     defineField({
       name: "publishedAt",
+      title: "Published at",
       type: "datetime",
       validation: (Rule) => Rule.required(),
     }),

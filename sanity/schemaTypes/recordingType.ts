@@ -45,6 +45,19 @@ export const recordingType = defineType({
       },
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: "publishedAt",
+      title: "Published at",
+      type: "datetime",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "views",
+      title: "Views",
+      type: "number",
+      initialValue: 0,
+      readOnly: true,
+    }),
   ],
 
   //   preview: {

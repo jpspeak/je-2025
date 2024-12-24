@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { urlForImage } from "@/sanity/lib/image";
+import TimeAgo from "./TimeAgo";
 
 function RecordingCard({ recording }: { recording: any }) {
   return (
@@ -18,9 +19,18 @@ function RecordingCard({ recording }: { recording: any }) {
       <h3 className="lg:px-[14px] mt-[20px] lg:mt-[22px] font-gilroy font-bold text-[20px] lg:text-[22px]">
         {recording.title}
       </h3>
-      <p className="lg:px-[14px] mt-[6px] text-[15px] font-light lg:text-[#555555]">
+      {/* <p className="lg:px-[14px] mt-[6px] text-[15px] font-light lg:text-[#555555]">
         {recording.description}
-      </p>
+      </p> */}
+      <div className="lg:px-[14px] mt-[4px] text-[15px] font-light lg:text-[#555555] flex items-center gap-[4px]">
+        {/* <span>100 views</span>
+        <span>•</span> */}
+        {recording.publishedAt && (
+          <span>
+            <TimeAgo date={new Date(recording.publishedAt)} />
+          </span>
+        )}
+      </div>
 
       <Link
         href={`/recordings/${recording.slug?.current}`}

@@ -8,6 +8,7 @@ import {
 } from "@/app/(shared)/components/ui/accordion";
 import Image from "next/image";
 import PortableText from "react-portable-text";
+import { Plus } from "lucide-react";
 
 async function SectionFive({ faqs }: { faqs: any[] }) {
   return (
@@ -24,7 +25,7 @@ async function SectionFive({ faqs }: { faqs: any[] }) {
               value="ultimate brand sprint"
               className="bg-black border-black border"
             >
-              <AccordionTrigger className="group border-none px-[30px] lg:px-[38px] relative py-[30px] lg:py-[40px] text-[20px] text-white lg:text-[22px] font-gilroy font-bold !no-underline">
+              <AccordionTrigger className="group border-none px-[26px] lg:px-[38px] relative py-[30px] lg:py-[40px] text-[20px] text-white lg:text-[22px] font-gilroy font-bold !no-underline">
                 <div className="flex flex-col">
                   <span>Ultimate Brand Sprint</span>
                   <p className="hidden group-data-[state=open]:block text-[#c7c7c7] text-base mt-[18px] font-normal font-funnel-sans max-w-[380px] []">
@@ -109,96 +110,32 @@ async function SectionFive({ faqs }: { faqs: any[] }) {
                 </div>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem
+            {/* <AccordionItem
               value="Custom Brand Sprint"
               className="mt-[20px] lg:mt-[30px] border-black border"
             >
               <AccordionTrigger className="group border-none px-[30px] lg:px-[38px] relative lg:py-[40px] text-[20px] text-primary lg:text-[22px] font-gilroy font-bold !no-underline">
                 <div className="flex flex-col">
                   <span>Custom Brand Sprint</span>
-                  {/* <p className="hidden group-data-[state=open]:block text-[#c7c7c7] text-base mt-[18px] font-normal font-funnel-sans max-w-[380px] []">
+                  <p className="hidden group-data-[state=open]:block text-[#c7c7c7] text-base mt-[18px] font-normal font-funnel-sans max-w-[380px] []">
                     A complete solution to launch your brand—branding in one
                     package.{" "}
                     <span className="text-white">
                       No surprises, just results.
                     </span>
-                  </p> */}
+                  </p>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="!pb-0 ngek">
-                {/* <Image
-                  src="/assets/images/line-2-copy-3.svg"
-                  alt="Line"
-                  width={509}
-                  height={1}
-                  className="w-[509px] h-[1px] object-cover"
-                />
-                <ul className="flex flex-col gap-[14px] p-3 lg:py-[50px] lg:px-[38px]">
-                  <li className="text-[17px] text-white">
-                    <div className="flex items-center gap-[1px]">
-                      <span className="text-[#fff600]">•</span>
-                      <p>Business Logo Identity Kit</p>
-                    </div>
-                    <p className="text-[#7d7d7d] pl-[10px]">
-                      Logo, Stationary Designs & Five page style guide
-                    </p>
-                  </li>
-                  <li className="text-[17px] text-white">
-                    <div className="flex items-center gap-[1px]">
-                      <span className="text-[#fff600]">•</span>
-                      <p>1x Vehicle/Trailer Wrap Design</p>
-                    </div>
-                  </li>
-                  <li className="text-[17px] text-white">
-                    <div className="flex items-center gap-[1px]">
-                      <span className="text-[#fff600]">•</span>
-                      <p>Company Shirt Design</p>
-                    </div>
-                  </li>
-                  <li className="text-[17px] text-white">
-                    <div className="flex items-center gap-[1px]">
-                      <span className="text-[#fff600]">•</span>
-                      <p>Digital and Print Accessable Files</p>
-                    </div>
-                  </li>
-                  <li className="text-[17px] text-white">
-                    <div className="flex items-center gap-[1px]">
-                      <span className="text-[#fff600]">•</span>
-                      <p>Dedicated Creative Team</p>
-                    </div>
-                  </li>
-                  <li className="text-[17px] text-white">
-                    <div className="flex items-center gap-[1px]">
-                      <span className="text-[#fff600]">•</span>
-                      <p>Private Communication Channel</p>
-                    </div>
-                  </li>
-                </ul>
-                <Image
-                  src="/assets/images/line-2-copy-3.svg"
-                  alt="Line"
-                  width={509}
-                  height={1}
-                  className="w-[509px] h-[1px] object-cover"
-                />
-                <div className="pl-[38px] pr-[30px] py-[30px] flex gap-4 justify-between items-center">
-                  <div className="text-white flex items-center text-[15px]">
-                    <span className="font-gilroy font-bold text-[50px]">
-                      $5479
-                    </span>
-                    <span className="ml-[12px]">/</span>
-                    <span className="ml-[2px]">one price</span>
-                  </div>
-                  <CalComModalTrigger
-                    containerclass="w-full max-w-[158px]"
-                    className="bg-secondary hover:bg-secondary/80 lg:w-full text-primary"
-                  >
-                    I&apos;m ready
-                  </CalComModalTrigger>
-                </div> */}
-              </AccordionContent>
-            </AccordionItem>
+              <AccordionContent className="!pb-0 ngek"></AccordionContent>
+            </AccordionItem> */}
           </Accordion>
+          <CalComModalTrigger
+            className="h-[60px] lg:h-[90px] px-[26px] lg:px-[38px] bg-white border border-black w-full lg:w-full flex items-center justify-between text-black mt-[30px] hover:bg-white"
+            containerclass="w-full"
+          >
+            <span>Custom Brand Sprint</span>
+            <Plus className="!size-[25px] shrink-0 transition-transform duration-200 plus" />
+          </CalComModalTrigger>
         </div>
         <div id="faq">
           <h2 className="text-[35px] lg:text-[50px] font-gilroy font-bold leading-none">
