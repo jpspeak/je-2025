@@ -151,21 +151,21 @@ p:empty {
 } */
 .team-carousel-nav > .swiper-button-prev::after {
   content: "";
-  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 22"><g stroke="%231B1B1B" stroke-width="2.2" fill="none" fill-rule="evenodd"><path d="m22.557 1 9.85 9.85-9.85 9.848"/><path stroke-linecap="square" d="M31.843 10.85H1.333"/></g></svg>') !important;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 22"><g stroke="%231B1B1B" stroke-width="2.2" fill="none" fillRule="evenodd"><path d="m22.557 1 9.85 9.85-9.85 9.848"/><path strokeLinecap="square" d="M31.843 10.85H1.333"/></g></svg>') !important;
   @apply h-[26px] w-[41px] rotate-[180deg] absolute bg-center bg-[100%_auto] bg-no-repeat;
 }
 .team-carousel-nav > .swiper-button-prev[disabled]::after {
   @apply opacity-30 cursor-not-allowed;
-  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 22"><g stroke="%23A0A0A0" stroke-width="2.2" fill="none" fill-rule="evenodd"><path d="m22.557 1 9.85 9.85-9.85 9.848"/><path stroke-linecap="square" d="M31.843 10.85H1.333"/></g></svg>');
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 22"><g stroke="%23A0A0A0" stroke-width="2.2" fill="none" fillRule="evenodd"><path d="m22.557 1 9.85 9.85-9.85 9.848"/><path strokeLinecap="square" d="M31.843 10.85H1.333"/></g></svg>');
 }
 .team-carousel-nav > .swiper-button-next::after {
   content: "";
-  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 22"><g stroke="%231B1B1B" stroke-width="2.2" fill="none" fill-rule="evenodd"><path d="m22.557 1 9.85 9.85-9.85 9.848"/><path stroke-linecap="square" d="M31.843 10.85H1.333"/></g></svg>') !important;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 22"><g stroke="%231B1B1B" stroke-width="2.2" fill="none" fillRule="evenodd"><path d="m22.557 1 9.85 9.85-9.85 9.848"/><path strokeLinecap="square" d="M31.843 10.85H1.333"/></g></svg>') !important;
   @apply h-[26px] w-[41px] absolute bg-center bg-[100%_auto] bg-no-repeat;
 }
 .team-carousel-nav > .swiper-button-next[disabled]::after {
   @apply opacity-30 cursor-not-allowed;
-  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 22"><g stroke="%231B1B1B" stroke-width="2.2" fill="none" fill-rule="evenodd"><path d="m22.557 1 9.85 9.85-9.85 9.848"/><path stroke-linecap="square" d="M31.843 10.85H1.333"/></g></svg>') !important;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 22"><g stroke="%231B1B1B" stroke-width="2.2" fill="none" fillRule="evenodd"><path d="m22.557 1 9.85 9.85-9.85 9.848"/><path strokeLinecap="square" d="M31.843 10.85H1.333"/></g></svg>') !important;
 }
 .team-carousel-nav > .swiper-button-next,
 .team-carousel-nav > .swiper-button-prev {

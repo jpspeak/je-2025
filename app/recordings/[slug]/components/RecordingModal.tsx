@@ -52,6 +52,7 @@ function RecordingModal({ recording }: { recording: any }) {
             <div className="bg-black w-full pb-[75.8%] relative">
               <div className="w-full h-full absolute">
                 <VideoPlayer
+                  id={recording._id}
                   url={recording.video.asset.url}
                   isPlaying
                   showControls

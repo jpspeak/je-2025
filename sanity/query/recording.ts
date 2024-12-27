@@ -27,3 +27,7 @@ export async function getRecording({ slug }: { slug: string }): Promise<any> {
   }`;
   return client.fetch(query, { slug });
 }
+
+export async function incrementViews({ id }: { id: string }): Promise<void> {
+  await client.patch(id).setIfMissing({ views: 0 }).inc({ views: 1 }).commit();
+}

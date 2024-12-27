@@ -69,7 +69,7 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
                 <textPath
                   xlinkHref="#circle"
                   startOffset="50%"
-                  dominant-baseline="middle"
+                  dominantBaseline="middle"
                   textAnchor="middle"
                   className="text-[17px] font-light font-poppins"
                 >

@@ -5,6 +5,7 @@ import { urlForImage } from "@/sanity/lib/image";
 import TimeAgo from "./TimeAgo";
 
 function RecordingCard({ recording }: { recording: any }) {
+  const views = recording.views || 0;
   return (
     <div className="relative">
       <div className="relative pb-[56%]">
@@ -23,8 +24,10 @@ function RecordingCard({ recording }: { recording: any }) {
         {recording.description}
       </p> */}
       <div className="lg:px-[14px] mt-[4px] text-[15px] font-light lg:text-[#555555] flex items-center gap-[4px]">
-        {/* <span>100 views</span>
-        <span>•</span> */}
+        <span>
+          {views} {`view${views === 0 || views > 1 ? "s" : ""}`}
+        </span>
+        <span>•</span>
         {recording.publishedAt && (
           <span>
             <TimeAgo date={new Date(recording.publishedAt)} />
