@@ -11,19 +11,21 @@ function VideoPlayer({
   isPlaying = false,
   showControls = false,
 }: {
-  id: string;
+  id?: string;
   url: string;
   thumbnail?: string;
   isPlaying?: boolean;
   showControls?: boolean;
 }) {
   const handlePlay = async () => {
-    if (!localStorage.getItem(`videoPlayed-${id}`)) {
-      try {
-        await incrementViews({ id });
-        localStorage.setItem(`videoPlayed-${id}`, "true");
-      } catch (error) {
-        console.error("Failed to increment views:", error);
+    if (id) {
+      if (!localStorage.getItem(`videoPlayed-${id}`)) {
+        try {
+          await incrementViews({ id });
+          localStorage.setItem(`videoPlayed-${id}`, "true");
+        } catch (error) {
+          console.error("Failed to increment views:", error);
+        }
       }
     }
   };
