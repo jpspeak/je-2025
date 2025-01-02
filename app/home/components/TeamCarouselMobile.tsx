@@ -35,7 +35,7 @@ function TeamCarouselMobile({ team }: { team: any[] }) {
       >
         {team.map((team, i) => (
           <SwiperSlide key={i} className="group">
-            <div className="w-full pb-[100%] relative  border border-[#e9eaeb]">
+            <div className="w-full pb-[100%] relative bg-[#f3f4f6]">
               <Image
                 src={urlForImage(team.image)}
                 fill

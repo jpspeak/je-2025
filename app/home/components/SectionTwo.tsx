@@ -101,9 +101,9 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
                 <li
                   key={i}
                   className={cn(
-                    "cursor-pointer font-semibold border-b leading-none border-transparent hover:border-black hover:text-black",
+                    "cursor-pointer border-b leading-none border-transparent hover:border-black hover:text-black",
                     selectedDepartment === department &&
-                      "border-black text-black"
+                      "border-black text-black font-semibold"
                   )}
                   onClick={() => setSelectedDepartment(department)}
                 >

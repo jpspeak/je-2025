@@ -37,16 +37,19 @@ function ProjectModal2Images({ project }: { project: any }) {
               gridColClass = "grid-cols-2";
               break;
             case "threeImages":
-              gridColClass = "grid-cols-3";
+              gridColClass = "lg:grid-cols-3";
               break;
             case "fourImages":
-              gridColClass = "grid-cols-4";
+              gridColClass = "lg:grid-cols-4";
               break;
           }
           return (
             <div
               key={i}
-              className={cn("grid gap-2 lg:gap-[20px]", gridColClass)}
+              className={cn(
+                "grid gap-2 lg:gap-[20px] grid-cols-2",
+                gridColClass
+              )}
             >
               {image.image?.map((image: any, i: number) => (
                 <Image

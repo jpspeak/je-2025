@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
+import TimeAgo from "./TimeAgo";
 import Link from "next/link";
 import { urlForImage } from "@/sanity/lib/image";
-import TimeAgo from "./TimeAgo";
 
 function RecordingCard({ recording }: { recording: any }) {
   const views = recording.views || 0;
   return (
-    <div className="relative">
+    <Link href={`/recordings/${recording.slug?.current}`} className="relative">
       <div className="relative pb-[56%]">
         <Image
           src={urlForImage(recording.thumbnail)}
@@ -35,18 +35,20 @@ function RecordingCard({ recording }: { recording: any }) {
         )}
       </div>
 
-      <Link
+      {/* <Link
         href={`/recordings/${recording.slug?.current}`}
         className="size-[84px] absolute right-[4px] top-[4px]"
-      >
+      > */}
+      <div className="size-[84px] absolute right-[4px] top-[4px]">
         <Image
           src="/assets/images/yt-play-button.webp"
           width={100}
           height={100}
           alt="Play button"
         />
-      </Link>
-    </div>
+      </div>
+      {/* </Link> */}
+    </Link>
   );
 }
 

@@ -117,7 +117,7 @@ function Projects({
     );
   };
   return (
-    <section className="border-t border-[#e9eaec] relative static-background-hard">
+    <section className="relative static-background-hard">
       <div className="container mx-auto relative px-[20px] lg:px-[32px] pt-[46px] lg:pt-[90px]">
         <div className="flex flex-col lg:flex-row gap-[34px] justify-between items-end">
           <div className="max-w-[520px]">

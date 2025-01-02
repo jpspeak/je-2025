@@ -6,7 +6,7 @@ function TeamCarouselItem({ team }: { team: any }) {
   // const [isOpenQr, setIsOpenQr] = useState(false);
   return (
     <div className="flex flex-col items-center">
-      <div className="w-full pb-[100%] relative  border border-[#e9eaeb]">
+      <div className="w-full pb-[100%] relative border-none bg-[#f3f4f6]">
         <Image
           src={urlForImage(team.image)}
           fill
