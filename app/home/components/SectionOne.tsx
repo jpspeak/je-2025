@@ -156,12 +156,12 @@ function SectionOne({ homePageSetting }: { homePageSetting: any }) {
           width={333}
           height={342}
           alt="20 years"
-          className="w-[111px] h-[114px]"
+          className="w-[135px] h-[138px]"
         />
         {/* <p className="font-gilroy text-[23px] lg:text-[25px] font-bold mt-[20px] text-center">
           Over 20 years of experience
         </p> */}
-        <p className="mt-[30px] text-[15px] font-light text-center lg:max-w-[270px] max-w-[210px] text-[#555555]">
+        <p className="mt-[30px] text-[15px] font-light text-center lg:max-w-[240px] max-w-[210px] text-[#555555]">
           Trusted by over 8,000 Startups across the United States
         </p>
         <p className="hidden lg:block relative max-w-[820px] mt-[40px] text-[50px] font-bold font-gilroy text-center leading-tight">
