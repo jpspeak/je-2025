@@ -45,14 +45,14 @@ async function SectionFive({ faqs }: { faqs: any[] }) {
                   height={1}
                   className="w-[509px] h-[1px] object-cover"
                 />
-                <ul className="flex flex-col gap-[14px] p-[30px] lg:py-[50px] lg:px-[38px]">
+                <ul className="flex flex-col gap-[10px] p-[30px] lg:py-[50px] lg:px-[38px]">
                   <li className="text-[17px] text-white">
                     <div className="flex items-center gap-[1px]">
                       <span className="text-[#fff600] pr-[2px]">•</span>
                       <p>Business Logo Identity Kit</p>
                     </div>
-                    <p className="text-[#7d7d7d] pl-[10px]">
-                      Logo, Stationary Designs & Five page style guide
+                    <p className="text-[#7d7d7d] pl-[10px] text-sm pt-[4px] pb-[12px]">
+                      Logo + Five page style guide
                     </p>
                   </li>
                   <li className="text-[17px] text-white">
@@ -64,13 +64,13 @@ async function SectionFive({ faqs }: { faqs: any[] }) {
                   <li className="text-[17px] text-white">
                     <div className="flex items-center gap-[1px]">
                       <span className="text-[#fff600] pr-[2px]">•</span>
-                      <p>Company Shirt Design</p>
+                      <p>5x Collateral Designs</p>
                     </div>
                   </li>
                   <li className="text-[17px] text-white">
                     <div className="flex items-center gap-[1px]">
                       <span className="text-[#fff600] pr-[2px]">•</span>
-                      <p>Digital and Print Accessable Files</p>
+                      <p>1x Website Design & Dev.</p>
                     </div>
                   </li>
                   <li className="text-[17px] text-white">
@@ -96,10 +96,10 @@ async function SectionFive({ faqs }: { faqs: any[] }) {
                 <div className="px-0 lg:pl-[38px] lg:pr-[30px] lg:py-[30px] flex flex-col lg:flex-row lg:gap-4 lg:justify-between lg:items-center">
                   <div className="text-white flex items-center justify-center lg:justify-stretch text-[15px] py-[35px] lg:py-0">
                     <span className="font-gilroy font-bold text-[50px] leading-none">
-                      $5479
+                      $9479
                     </span>
                     <span className="ml-[12px]">/</span>
-                    <span className="ml-[2px]">one price</span>
+                    <span className="ml-[2px]">no hidden fees</span>
                   </div>
                   <CalComModalTrigger
                     containerclass="w-full lg:max-w-[158px]"
