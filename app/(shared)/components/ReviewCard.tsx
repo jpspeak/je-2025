@@ -24,7 +24,6 @@ function ReviewCard({
   text,
   platformLogoUrl,
   platformName,
-  images,
 }: {
   avatar?: string;
   reviewerName: string;
@@ -33,7 +32,6 @@ function ReviewCard({
   text?: ReactNode;
   platformLogoUrl?: string;
   platformName: string;
-  images?: any[];
 }) {
   // The Toggle method will be passed back through `useImperativeHandle`
   const ref = useRef<ShowMoreRef>(null);
