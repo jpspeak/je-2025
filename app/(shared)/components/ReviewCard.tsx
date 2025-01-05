@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useRef, useState } from "react";
+import { ReactNode, useRef } from "react";
 import StarRating from "./StarRating";
 import Image from "next/image";
 import {
@@ -43,14 +43,14 @@ function ReviewCard({
     ref.current?.toggleLines(e);
   };
 
-  const [isOpenSliderFullScreen, setIsOpenSliderFullScreen] = useState(false);
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  // const [isOpenSliderFullScreen, setIsOpenSliderFullScreen] = useState(false);
+  // const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  // const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
-  const handleImageClick = (slideIndex: number) => {
-    setIsOpenSliderFullScreen(true);
-    setCurrentSlideIndex(slideIndex);
-  };
+  // const handleImageClick = (slideIndex: number) => {
+  //   setIsOpenSliderFullScreen(true);
+  //   setCurrentSlideIndex(slideIndex);
+  // };
   return (
     // <Card className="p-4 lg:p-[25px] rounded-none shadow-none border-none h-max">
     //   <div className="flex gap-[10px] lg:gap-[18px] items-center">
