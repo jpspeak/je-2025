@@ -1,10 +1,10 @@
 import React from "react";
-import HeaderTicker from "./HeaderTicker";
+import Ticker from "./Ticker";
 
 function Header({ tickerLink }: { tickerLink?: string }) {
   return (
-    <header className="bg-black">
-      <HeaderTicker link={tickerLink || ""} />
+    <header>
+      <Ticker link={tickerLink || ""} />
     </header>
   );
 }
