@@ -120,7 +120,7 @@ function Projects({
     <section className="relative static-background-hard">
       <div className="container mx-auto relative px-[20px] lg:px-[32px] pt-[46px] lg:pt-[90px]">
         <div className="flex flex-col lg:flex-row gap-[34px] justify-between items-end">
-          <div className="max-w-[520px]">
+          <div className="max-w-[434px]">
             <h1 className="text-[36px] lg:text-[50px] font-gilroy leading-[1.2]">
               Brand Projects
             </h1>
