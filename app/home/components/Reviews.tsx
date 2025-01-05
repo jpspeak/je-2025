@@ -119,8 +119,8 @@ function Reviews({
               1.8k Success
               <br className="lg:hidden" /> Stories
             </h2>
-            <p className="text-[17px] text-center max-w-[492px] mx-auto mt-[28px] lg:mt-[20px] mb-[46px] lg:mb-[64px]">
-              <strong className="font-semibold">
+            <p className="text-[17px] font-light text-center max-w-[492px] mx-auto mt-[28px] lg:mt-[20px] mb-[46px] lg:mb-[64px]">
+              <strong className="font-medium">
                 At je.design, we are committed to your success.
               </strong>
               <br />
