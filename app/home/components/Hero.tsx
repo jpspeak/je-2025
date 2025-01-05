@@ -8,7 +8,7 @@ import Link from "next/link";
 
 function Hero({ tickerLink }: { tickerLink: string }) {
   return (
-    <div className="container max-w-[2608px] p-[30px]">
+    <div className="container max-w-[2608px] p-[30px] static-background-hard">
       <div className="relative pt-[6px]">
         <div className="absolute w-full top-0">
           <Ticker link={tickerLink || ""} />
