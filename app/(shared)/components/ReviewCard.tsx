@@ -11,10 +11,6 @@ import {
 import { Card } from "./ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { formatRateNumber, generateAvatarInitials } from "../lib/utils";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { urlForImage } from "@/sanity/lib/image";
-import { Mousewheel, Thumbs } from "swiper/modules";
-import { SliderFullScreen } from "./slider-full-screen/SliderFullScreen";
 import "react-medium-image-zoom/dist/styles.css";
 import "swiper/css";
 import "swiper/css/free-mode";
