@@ -1,8 +1,5 @@
 import React from "react";
-import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
 import ProjectMarquee from "@/app/(shared)/components/ProjectMarque";
-import StarRating from "@/app/(shared)/components/StarRating";
-import { Button } from "@/app/(shared)/components/ui/button";
 import { cn } from "@/app/(shared)/lib/utils";
 import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
