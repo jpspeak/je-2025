@@ -6,15 +6,15 @@ import StarRating from "./StarRating";
 function Footer() {
   return (
     <footer className="bg-black relative static-background-light">
-      <div className="container px-[20px] lg:px-[32px] pt-[220px] relative">
+      <div className="container px-[20px] lg:px-[32px] pt-[103px] relative">
         <Image
-          src="/assets/images/jelogowhitesketch.webp"
+          src="/assets/images/logo-white.webp"
           alt="je.design logo"
           width={600}
           height={600}
-          className="size-[360px] absolute z-[1] -top-[50px] left-1/2 -translate-x-1/2 object-contain"
+          className="size-[81px] mx-auto"
         />
-        <h1 className="text-[50px] leading-[1.1] text-center lg:text-[80px] text-white font-gilroy relative z-[1]">
+        <h1 className="text-[50px] leading-[1.1] mt-[40px] text-center lg:text-[80px] text-white font-gilroy relative z-[1]">
           Ready to amplify your brand?
         </h1>
         <CalComModalTrigger
