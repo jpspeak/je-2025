@@ -96,7 +96,7 @@ function Reviews({
   };
   return (
     <section id="reviews" className="relative static-background-hard">
-      <div className="container max-w-[2608px] lg:p-[25px] p-0">
+      <div className="container max-w-[2608px] lg:p-[25px] lg:pt-0 p-0">
         <div className="bg-[#f6f6f8] ">
           <div className="container px-[20px] lg:px-[32px] pt-[50px] pb-[43px] lg:py-[124px]">
             <div className="flex items-center gap-[18px] justify-center">

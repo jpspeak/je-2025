@@ -7,13 +7,12 @@ import SectionFour from "./home/components/SectionFour";
 import Projects from "./home/components/Projects";
 import { getProjects } from "@/sanity/query/project";
 import IndustrySelector from "./home/components/IndustrySelector";
-import { getRecordings } from "@/sanity/query/recording";
-import Recordings from "./home/components/Recordings";
 import Reviews from "./home/components/Reviews";
 import { getReviews } from "@/sanity/query/review";
 import SectionFive from "./home/components/SectionFive";
 import Footer from "./(shared)/components/Footer";
 import Hero from "./home/components/Hero";
+import WorkInAction from "./home/components/WorkInAction";
 
 export const metadata: Metadata = {
   title: "Branding Without Boundaries & Forward-thinking Vehicle Wrap Designs",
@@ -34,7 +33,7 @@ export default async function HomePage({
     limit: 12,
     industrySlug,
   });
-  const recordings = await getRecordings();
+
   const reviewsMobile = await getReviews({ limit: 2 });
   const reviewsDesktop = await getReviews({ limit: 6 });
 
@@ -49,7 +48,7 @@ export default async function HomePage({
         initialProjects={projects}
         industrySelector={<IndustrySelector />}
       />
-      <Recordings recordings={recordings} />
+      <WorkInAction workInActionImages={homePageSetting.workInActionImages} />
       <Reviews
         initialReviewsDesktop={reviewsDesktop}
         initialReviewsMobile={reviewsMobile}

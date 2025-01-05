@@ -30,9 +30,10 @@ export async function getHomePageSetting(): Promise<any> {
     projectMarquee[]->,
     brandProjects[]->,
     team[]{
-    ...,
-    department->
+      ...,
+      department->
     },
+    workInActionImages,
     faqs[]->
   }`;
   return client.fetch(query);

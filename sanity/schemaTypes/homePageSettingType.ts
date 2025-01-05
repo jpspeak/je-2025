@@ -225,6 +225,12 @@ export const homePageSettingType = defineType({
     //   group: "sketchConcept",
     // }),
     defineField({
+      name: "workInActionImages",
+      title: "Work In Action Images",
+      type: "array",
+      of: [{ type: "image" }],
+    }),
+    defineField({
       name: "faqs",
       title: "FAQs",
       type: "array",
