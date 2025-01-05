@@ -64,6 +64,7 @@ function ReviewsCarousel({
                 text={review.reviewText}
                 platformLogoUrl={urlForImage(review.reviewPlatformLogo)}
                 platformName={review.reviewPlatformName}
+                images={review.images}
               />
             </SwiperSlide>
           ))
