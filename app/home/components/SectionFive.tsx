@@ -12,7 +12,7 @@ import { Plus } from "lucide-react";
 
 async function SectionFive({ faqs }: { faqs: any[] }) {
   return (
-    <section id="pricing">
+    <section id="pricing" className="static-background-hard relative">
       <div className="container pb-[48px] px-[20px] lg:px-[32px] pt-[50px] lg:py-[120px] grid grid-cols-1 lg:grid-cols-2 gap-[64px] lg:gap-[103px]">
         <div className="h-max">
           <Accordion
