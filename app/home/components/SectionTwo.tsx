@@ -42,10 +42,10 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
                 stroke="#1B1B1B"
                 strokeWidth="2.2"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <path d="m22.557 1 9.85 9.85-9.85 9.848" />
-                <path stroke-linecap="square" d="M31.843 10.85H1.333" />
+                <path strokeLinecap="square" d="M31.843 10.85H1.333" />
               </g>
             </svg>
 

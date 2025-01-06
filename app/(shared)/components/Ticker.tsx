@@ -38,7 +38,7 @@ function Ticker({ link }: { link: string }) {
             className="size-[11px]"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               fill="#FFF"
               d="M22 13h-9v9H8.1v-9H0V8.1h8.1V0H13v8.1h9V13z"
             />

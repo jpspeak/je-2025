@@ -14,7 +14,6 @@ function TickerIndustrySelector({
   options,
   placeholder = "Choose your industry",
 }: TickerIndustrySelectorProps) {
-  console.log(options);
   const [isOpen, setIsOpen] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -84,7 +83,7 @@ function TickerIndustrySelector({
             viewBox="0 0 22 22"
             className="size-[11px]"
           >
-            <path fill-rule="evenodd" fill="#FFF" d="M0 8.1h22v4H0z" />
+            <path fillRule="evenodd" fill="#FFF" d="M0 8.1h22v4H0z" />
           </svg>
         ) : (
           <svg
@@ -93,7 +92,7 @@ function TickerIndustrySelector({
             className="size-[11px]"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               fill="#FFF"
               d="M22 13h-9v9H8.1v-9H0V8.1h8.1V0H13v8.1h9V13z"
             />
