@@ -19,7 +19,7 @@ function Hero({
       (heroImage: any) =>
         heroImage.projectIndustry.slug.current === industrySlug
     ) || homePageSetting.heroImages[0];
-  console.log(urlForImage(heroImage.imageDesktop as any));
+
   return (
     <div className="container max-w-[2608px] p-[25px] static-background-hard relative">
       <div className="relative pt-[6px]">
