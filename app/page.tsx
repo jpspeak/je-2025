@@ -13,6 +13,7 @@ import SectionFive from "./home/components/SectionFive";
 import Footer from "./(shared)/components/Footer";
 import Hero from "./home/components/Hero";
 import WorkInAction from "./home/components/WorkInAction";
+import IndustrySelectorClient from "./home/components/IndustrySelectorClient";
 
 export const metadata: Metadata = {
   title: "Branding Without Boundaries & Forward-thinking Vehicle Wrap Designs",
@@ -46,7 +47,9 @@ export default async function HomePage({
       <SectionFour />
       <Projects
         initialProjects={projects}
-        industrySelector={<IndustrySelector />}
+        industrySelector={
+          <IndustrySelector Component={IndustrySelectorClient} />
+        }
       />
       <WorkInAction workInActionImages={homePageSetting.workInActionImages} />
       <Reviews

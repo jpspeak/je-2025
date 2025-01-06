@@ -1,12 +1,15 @@
 import { getProjectsIndustries } from "@/sanity/query/project";
-import IndustrySelectorClient from "./IndustrySelectorClient";
 
 export const revalidate = 60;
 
-async function IndustrySelector() {
+async function IndustrySelector({
+  Component,
+}: {
+  Component: React.ComponentType<any>;
+}) {
   const projectIndustries = await getProjectsIndustries();
 
-  return <IndustrySelectorClient options={projectIndustries} />;
+  return <Component options={projectIndustries} />;
 }
 
 export default IndustrySelector;
