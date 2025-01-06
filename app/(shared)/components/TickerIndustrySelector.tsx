@@ -3,7 +3,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { cn } from "../lib/utils";
 import { useRouter, useSearchParams } from "next/navigation";
-import { title } from "process";
 
 type TickerIndustrySelectorProps = {
   options: any[];
