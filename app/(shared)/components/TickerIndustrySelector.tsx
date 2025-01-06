@@ -14,6 +14,7 @@ function TickerIndustrySelector({
   options,
   placeholder = "Choose your industry",
 }: TickerIndustrySelectorProps) {
+  console.log(options);
   const [isOpen, setIsOpen] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
