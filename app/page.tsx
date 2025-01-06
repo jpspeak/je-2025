@@ -47,9 +47,7 @@ export default async function HomePage({
       <SectionFour />
       <Projects
         initialProjects={projects}
-        industrySelector={
-          <IndustrySelector Component={IndustrySelectorClient} />
-        }
+        industrySelector={<IndustrySelector />}
       />
       <WorkInAction workInActionImages={homePageSetting.workInActionImages} />
       <Reviews
