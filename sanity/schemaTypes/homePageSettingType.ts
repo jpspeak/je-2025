@@ -17,6 +17,10 @@ export const homePageSettingType = defineType({
       title: "Ticker",
     },
     {
+      name: "heroImages",
+      title: "Hero Images",
+    },
+    {
       name: "projectMarquee",
       title: "Project Marquee",
     },
@@ -29,8 +33,8 @@ export const homePageSettingType = defineType({
       title: "Brand Projects",
     },
     {
-      name: "recordedProjects",
-      title: "Recorded Projects",
+      name: "workInActionImages",
+      title: "Work in Action Images",
     },
     {
       name: "faqs",
@@ -47,6 +51,42 @@ export const homePageSettingType = defineType({
           scheme: ["http", "https", "mailto", "tel"],
         }),
       group: "ticker",
+    }),
+    defineField({
+      name: "heroImages",
+      title: "Hero Images",
+      type: "array",
+      of: [
+        defineField({
+          type: "object",
+          title: "Hero Image",
+          name: "heroImage",
+          fields: [
+            defineField({
+              name: "imageDesktop",
+              title: "Image(Desktop)",
+              type: "image",
+              options: { hotspot: true },
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: "imageMobile",
+              title: "Image(Mobile)",
+              type: "image",
+              options: { hotspot: true },
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: "projectIndustry",
+              title: "Product Industry",
+              type: "reference",
+              to: { type: "projectIndustry" },
+              validation: (Rule) => Rule.required(),
+            }),
+          ],
+        }),
+      ],
+      group: "heroImages",
     }),
     // defineField({
     //   name: "featuredStories",
@@ -229,6 +269,7 @@ export const homePageSettingType = defineType({
       title: "Work In Action Images",
       type: "array",
       of: [{ type: "image" }],
+      group: "workInActionImages",
     }),
     defineField({
       name: "faqs",

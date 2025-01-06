@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import TickerSelect from "./TickerSelect";
+import TickerIndustrySelector from "./TickerIndustrySelector";
+import IndustrySelector from "@/app/home/components/IndustrySelector";
 
 function Ticker({ link }: { link: string }) {
   return (
@@ -43,7 +44,8 @@ function Ticker({ link }: { link: string }) {
             />
           </svg>
         </button> */}
-        <TickerSelect
+        <IndustrySelector Component={TickerIndustrySelector} />
+        {/* <TickerIndustrySelector
           placeholder="Choose your industry"
           options={[
             { value: "All Industries", label: "All Industries" },
@@ -65,7 +67,7 @@ function Ticker({ link }: { link: string }) {
             { value: "Education", label: "Education" },
             { value: "Automotive", label: "Automotive" },
           ]}
-        />
+        /> */}
       </div>
     </div>
   );

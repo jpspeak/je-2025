@@ -27,6 +27,10 @@ import { client } from "../lib/client";
 export async function getHomePageSetting(): Promise<any> {
   const query = `*[_type == "homePageSetting"][0]{
     ...,
+    heroImages[]{
+      ...,
+      projectIndustry->
+    },
     projectMarquee[]->,
     brandProjects[]->,
     team[]{

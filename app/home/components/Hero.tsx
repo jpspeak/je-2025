@@ -5,16 +5,29 @@ import StarRating from "@/app/(shared)/components/StarRating";
 import Ticker from "@/app/(shared)/components/Ticker";
 import Image from "next/image";
 import Link from "next/link";
+import { urlForImage } from "@/sanity/lib/image";
 
-function Hero({ tickerLink }: { tickerLink: string }) {
+function Hero({
+  homePageSetting,
+  industrySlug,
+}: {
+  homePageSetting: any;
+  industrySlug: string;
+}) {
+  const heroImage =
+    homePageSetting.heroImages.find(
+      (heroImage: any) =>
+        heroImage.projectIndustry.slug.current === industrySlug
+    ) || homePageSetting.heroImages[0];
+  console.log(urlForImage(heroImage.imageDesktop as any));
   return (
     <div className="container max-w-[2608px] p-[25px] static-background-hard relative">
       <div className="relative pt-[6px]">
         <div className="absolute w-full top-0">
-          <Ticker link={tickerLink || ""} />
+          <Ticker link={homePageSetting.tickerLink || ""} />
         </div>
         <Image
-          src="/assets/images/herobg-food.webp"
+          src={urlForImage(heroImage.imageDesktop as any)}
           alt="Background"
           width={4000}
           height={1273}

@@ -2,25 +2,32 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { cn } from "../lib/utils";
+import { useRouter, useSearchParams } from "next/navigation";
+import { title } from "process";
 
-type Option = {
-  value: string;
-  label: string;
-};
-
-type CustomSelectProps = {
-  options: Option[];
+type TickerIndustrySelectorProps = {
+  options: any[];
   placeholder?: string;
 };
 
 // Function Declaration for Component
-function CustomSelect({
+function TickerIndustrySelector({
   options,
-  placeholder = "Select an option",
-}: CustomSelectProps) {
+  placeholder = "Choose your industry",
+}: TickerIndustrySelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
+
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const selectedOptionSlug = searchParams.get("industry");
+  let selectedOption = options.find(
+    (option) => option.slug.current === selectedOptionSlug
+  );
+  if (selectedOptionSlug === "all") {
+    selectedOption = { title: "All Industries", slug: { current: "all" } };
+  }
 
   // Toggle Dropdown Visibility
   function toggleDropdown() {
@@ -28,10 +35,18 @@ function CustomSelect({
   }
 
   // Select Option and Close Dropdown
-  function selectOption(option: Option) {
-    setSelectedOption(option);
+  // function selectOption(option: Option) {
+  //   setSelectedOption(option);
+  //   setIsOpen(false);
+  // }
+
+  const handleIndustryChange = (industry: string) => {
+    const params = new URLSearchParams(searchParams);
+    params.set("industry", industry);
+
+    router.replace(`/?${params.toString()}`, { scroll: false });
     setIsOpen(false);
-  }
+  };
 
   // Close Dropdown on Outside Click
   useEffect(function addClickOutsideListener() {
@@ -61,7 +76,7 @@ function CustomSelect({
         onClick={toggleDropdown}
       >
         <span className="truncate whitespace-nowrap">
-          {selectedOption ? selectedOption.label : placeholder}
+          {selectedOption?.title || placeholder}
         </span>
         {isOpen ? (
           <svg
@@ -87,39 +102,33 @@ function CustomSelect({
       </div>
 
       {/* Dropdown Menu */}
-      {/* {isOpen && (
-        <ul className="absolute w-full bg-black text-white max-h-60 overflow-y-auto z-50 shadow-lg pb-[10px]">
-          {options.map((option, i) => (
-            <li
-              key={i}
-              onClick={() => selectOption(option)}
-              className={cn(
-                "px-[20px] py-2 hover:text-secondary cursor-pointer font-light text-[15px] whitespace-nowrap",
-                selectedOption?.value === option.value ? "text-secondary" : ""
-              )}
-            >
-              {option.label}
-            </li>
-          ))}
-        </ul>
-      )} */}
-
       <ul
         className={cn(
           "absolute w-full bg-black text-white max-h-0 z-50 overflow-hidden shadow-lg transition-all custom-scrollbar",
           isOpen && "max-h-60 pb-[10px] overflow-y-auto"
         )}
       >
+        <li
+          onClick={() => handleIndustryChange("all")}
+          className={cn(
+            "px-[20px] py-2 hover:text-secondary cursor-pointer font-light text-[15px] whitespace-nowrap",
+            selectedOption?.slug.current === "all" ? "text-secondary" : ""
+          )}
+        >
+          All Industries
+        </li>
         {options.map((option, i) => (
           <li
             key={i}
-            onClick={() => selectOption(option)}
+            onClick={() => handleIndustryChange(option.slug.current)}
             className={cn(
               "px-[20px] py-2 hover:text-secondary cursor-pointer font-light text-[15px] whitespace-nowrap",
-              selectedOption?.value === option.value ? "text-secondary" : ""
+              selectedOption?.slug.current === option.slug.current
+                ? "text-secondary"
+                : ""
             )}
           >
-            {option.label}
+            {option.title}
           </li>
         ))}
       </ul>
@@ -127,4 +136,4 @@ function CustomSelect({
   );
 }
 
-export default CustomSelect;
+export default TickerIndustrySelector;
