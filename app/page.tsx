@@ -21,6 +21,8 @@ export const metadata: Metadata = {
     "Elevate your brand with our comprehensive creative solutions. We specialize in crafting eye-catching logos, developing cohesive brand identities, and designing head-turning vehicle wraps that make your business stand out on the streets. Our expert team also delivers stunning visual assets, from marketing materials to digital graphics, ensuring your brand shines across all platforms. Transform your vision into reality and leave a lasting impression with our innovative design services tailored to your unique business needs.",
 };
 
+export const revalidate = 60;
+
 export default async function HomePage({
   searchParams,
 }: {
