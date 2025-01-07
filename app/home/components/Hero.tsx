@@ -58,7 +58,7 @@ function Hero({
           {/* <h1 className="hidden lg:block max-w-[804px] text-center leading-[1.18] text-[68px] font-gilroy font-bold pt-[436px]">
             Igniting creativity, fueling brands since 2004
           </h1> */}
-          <h1 className="font-gilroy text-white text-[41px] lg:text-[75px] leading-[1.1] lg:leading-[90px] font-bold text-center mt-[28px] lg:mt-[40px] max-w-[330px] lg:max-w-[730px]">
+          <h1 className="font-gilroy text-white text-[44px] lg:text-[75px] leading-[1.1] lg:leading-[90px] font-bold text-center mt-[28px] lg:mt-[40px] max-w-[330px] lg:max-w-[730px]">
             Building Brands That Empower Growth
           </h1>
           <div className="hidden lg:flex flex-col lg:flex-row mt-[30px] gap-[20px]">
