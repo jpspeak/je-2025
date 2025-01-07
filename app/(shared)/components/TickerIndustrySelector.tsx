@@ -71,7 +71,7 @@ function TickerIndustrySelector({
     >
       {/* Dropdown Trigger */}
       <div
-        className="text-white font-light w-[240px] px-[20px] h-[55px] flex items-center justify-between gap-[10px] text-[15px]"
+        className="text-white font-light w-full lg:w-[240px] px-[20px] h-[50px] lg:h-[55px] flex items-center justify-between gap-[10px] text-[15px]"
         onClick={toggleDropdown}
       >
         <span className="truncate whitespace-nowrap">

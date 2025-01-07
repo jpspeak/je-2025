@@ -35,7 +35,7 @@ function Footer() {
                 />
               </span>
             </CalComModalTrigger>
-            <p className="text-base lg:text-[17px] max-w-[500px] text-center text-white mt-[55px] lg:mt-[40px] mx-auto">
+            <p className="leading-[1.53] font-light text-base lg:text-[17px] max-w-[500px] text-center text-white mt-[55px] lg:mt-[40px] mx-auto">
               je.design is a full-service design agency catering to businesses
               and individuals, with a focus on delivering high-quality,
               professional design solutions.

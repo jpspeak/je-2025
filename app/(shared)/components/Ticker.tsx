@@ -5,8 +5,8 @@ import IndustrySelector from "@/app/home/components/IndustrySelector";
 
 function Ticker({ link }: { link: string }) {
   return (
-    <div className="bg-black relative h-[55px]">
-      <div className="container h-full text-white justify-center px-3 lg:px-8 relative items-center gap-[12px] overflow-hidden static-background-hard flex">
+    <div className="bg-black relative h-[50px] lg:h-[55px]">
+      <div className="hidden lg:flex container h-full text-white justify-center px-3 lg:px-8 relative items-center gap-[12px] overflow-hidden static-background-hard">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 49 50"
@@ -19,7 +19,7 @@ function Ticker({ link }: { link: string }) {
           />
         </svg>
 
-        <p className="hidden lg:block text-[15px]">
+        <p className="hidden lg:block text-[15px] font-light">
           je.design now accepts Bitcoin, Litecoin, Solana and XRP -{" "}
           <Link href={link} className="text-[#fff619]">
             Learn more
@@ -29,7 +29,7 @@ function Ticker({ link }: { link: string }) {
           Now accepts Bitcoin, Litecoin, Solana and XRP
         </p>
       </div>
-      <div className="absolute right-0 top-0">
+      <div className="absolute right-0 top-0 w-full lg:w-auto">
         {/* <button className="text-white font-light w-[240px] px-[20px] h-[55px] flex items-center justify-between text-[15px] border-l border-[#606060]">
           <span>Choose your industry</span>
           <svg

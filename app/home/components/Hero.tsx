@@ -21,9 +21,9 @@ function Hero({
     ) || homePageSetting.heroImages[0];
 
   return (
-    <div className="container max-w-[2608px] p-[25px] static-background-hard relative">
+    <div className="container max-w-[2608px] p-0 lg:p-[25px] static-background-hard relative">
       <div className="relative pt-[6px]">
-        <div className="absolute w-full top-0">
+        <div className="absolute w-full top-0 z-[1]">
           <Ticker link={homePageSetting.tickerLink || ""} />
         </div>
         <Image
@@ -32,7 +32,15 @@ function Hero({
           width={4000}
           height={1273}
           quality={100}
-          className="h-[808px] object-cover"
+          className="hidden xs:block h-[808px] object-cover"
+        />
+        <Image
+          src={urlForImage(heroImage.imageMobile as any)}
+          alt="Background"
+          width={500}
+          height={978}
+          quality={100}
+          className="h-[704px] object-cover xs:hidden"
         />
         <div className="container mx-auto flex flex-col items-center absolute top-0 w-full left-1/2 -translate-x-1/2">
           <Image
@@ -40,20 +48,20 @@ function Hero({
             width={100}
             height={100}
             alt="je.design logo"
-            className="size-[60px] lg:size-[70px] object-contain mt-[54px] lg:mt-[100px]"
+            className="size-[56px] lg:size-[70px] object-contain mt-[88px] lg:mt-[100px]"
             quality={100}
             priority
           />
-          <p className="text-[12px] lg:text-[15px] mt-[12px] text-center text-white">
+          <p className="text-[12px] lg:text-[15px] mt-[12px] text-center text-white font-light">
             www.je.design
           </p>
           {/* <h1 className="hidden lg:block max-w-[804px] text-center leading-[1.18] text-[68px] font-gilroy font-bold pt-[436px]">
             Igniting creativity, fueling brands since 2004
           </h1> */}
-          <h1 className="font-gilroy text-white text-[58px] lg:text-[75px] leading-[58px] lg:leading-[90px] font-bold text-center mt-[36px] lg:mt-[40px] max-w-[330px] lg:max-w-[730px]">
+          <h1 className="font-gilroy text-white text-[41px] lg:text-[75px] leading-[1.1] lg:leading-[90px] font-bold text-center mt-[28px] lg:mt-[40px] max-w-[330px] lg:max-w-[730px]">
             Building Brands That Empower Growth
           </h1>
-          <div className="flex flex-col lg:flex-row mt-[30px] gap-[20px]">
+          <div className="hidden lg:flex flex-col lg:flex-row mt-[30px] gap-[20px]">
             <StarRating
               value={5}
               activeFillColor="#fff719"
@@ -80,12 +88,16 @@ function Hero({
               />
             </div>
           </div>
-          <p className="text-white text-base leading-[23px] max-w-[300px] lg:max-w-[450px] text-center mt-[34px] lg:mt-[30px]">
+          <p className="hidden lg:block font-light text-white text-base leading-[23px] max-w-[300px] lg:max-w-[450px] text-center mt-[25px] lg:mt-[30px]">
             Offering tailored creative solutions and brand packages designed to
             amplify your business—efficient, impactful,
             <br /> and built for growth.
           </p>
-          <div className="mt-[36px] lg:mt-[44px] w-full flex flex-col lg:flex-row justify-center items-center gap-[15px]">
+          <p className="lg:hidden text-center mt-[25px] font-light text-white text-base leading-[1.41] max-w-[275px]">
+            Offering tailored creative solutions and brand packages designed to
+            grow your business.
+          </p>
+          <div className="hidden lg:flex mt-[36px] lg:mt-[44px] w-full flex-col lg:flex-row justify-center items-center gap-[15px]">
             <CalComModalTrigger
               variant="secondary"
               containerclass="w-full max-w-[252px] lg:max-w-[172px]"

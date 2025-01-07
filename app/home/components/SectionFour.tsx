@@ -25,7 +25,7 @@ function SectionFour() {
             Innovating Beyond Boundaries
           </h2>
 
-          <p className="text-base lg:text-[17px] leading-[1.63] px-[20px] lg:px-0 font-light mt-[24px] lg:mt-[20px]">
+          <p className="max-w-[396px] text-base lg:text-[17px] leading-[1.63] px-[20px] lg:px-0 font-light mt-[24px] lg:mt-[20px]">
             Watch as we transform brands through bold design, bringing visionary
             ideas to life through strategic creativity.
           </p>

@@ -4,6 +4,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import CalComModal from "./(shared)/components/CalComModal";
 import { Toaster } from "sonner";
+import NavbarMobile from "./(shared)/components/NavbarMobile";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -99,6 +100,7 @@ export default function RootLayout({
           toastOptions={{ className: "w-max right-0" }}
           visibleToasts={1}
         />
+        <NavbarMobile />
       </body>
     </html>
   );
