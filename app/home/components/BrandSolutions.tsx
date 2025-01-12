@@ -69,7 +69,7 @@ function BrandSolutions() {
   ];
 
   return (
-    <section className="relative static-background-hard">
+    <section className="hidden lg:block relative static-background-hard">
       <div className="container pt-[80px] absolute left-1/2 -translate-x-1/2 z-20">
         <h2 className="leading-[1.2] font-gilroy text-[35px] lg:text-[50px] font-bold relative text-center">
           Creative Solutions
