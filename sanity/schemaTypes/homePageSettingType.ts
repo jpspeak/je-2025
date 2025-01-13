@@ -29,6 +29,10 @@ export const homePageSettingType = defineType({
       title: "Team",
     },
     {
+      name: "brandSolutions",
+      title: "Brand Solutions",
+    },
+    {
       name: "brandProjects",
       title: "Brand Projects",
     },
@@ -230,6 +234,13 @@ export const homePageSettingType = defineType({
         },
       ],
       group: "team",
+    }),
+    defineField({
+      name: "brandSolutions",
+      title: "Brand Solutions",
+      type: "array",
+      of: [{ type: "reference", to: { type: "brandSolution" } }],
+      group: "brandSolutions",
     }),
     defineField({
       name: "brandProjects",

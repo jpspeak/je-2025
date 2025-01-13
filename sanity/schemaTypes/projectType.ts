@@ -295,7 +295,7 @@ export const projectType = defineType({
     // }),
     defineField({
       name: "projectIndustry",
-      title: "Product Industry",
+      title: "Project Industry",
       type: "reference",
       to: { type: "projectIndustry" },
       validation: (Rule) => Rule.required(),

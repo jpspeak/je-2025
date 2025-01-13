@@ -37,6 +37,12 @@ export async function getHomePageSetting(): Promise<any> {
       ...,
       department->
     },
+    brandSolutions[]->{
+      ...,
+      image,
+      category->,
+      projectIndustry->
+    },
     workInActionImages,
     faqs[]->
   }`;

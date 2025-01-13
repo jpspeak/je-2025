@@ -39,13 +39,13 @@ export default async function HomePage({
 
   const reviewsMobile = await getReviews({ limit: 2 });
   const reviewsDesktop = await getReviews({ limit: 6 });
-
+  console.log(homePageSetting.brandSolutions);
   return (
     <>
       <Hero homePageSetting={homePageSetting} industrySlug={industrySlug} />
       <SectionOne homePageSetting={homePageSetting} />
       <SectionTwo homePageSetting={homePageSetting} />
-      <BrandSolutions />
+      <BrandSolutions brandSolutions={homePageSetting.brandSolutions} />
       <SectionFour />
       <Projects
         initialProjects={projects}
