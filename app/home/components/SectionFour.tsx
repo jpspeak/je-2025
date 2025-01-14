@@ -8,7 +8,7 @@ function SectionFour() {
   return (
     <section className="relative static-background-hard">
       <div className="container max-w-[2608px] p-0 lg:px-[25px]">
-        <div className="border-y border-[#e9eaec]">
+        <div className="border-b lg:border-y border-[#e9eaec]">
           <div className="container px-0 lg:px-[32px] mx-auto relative pt-[40px] lg:py-[110px] grid grid-cols-1 lg:grid-cols-2">
             <div>
               <div className="w-full h-0 pb-[65.17%] relative rounded-none bg-black">

@@ -239,7 +239,43 @@ export const homePageSettingType = defineType({
       name: "brandSolutions",
       title: "Brand Solutions",
       type: "array",
-      of: [{ type: "reference", to: { type: "brandSolution" } }],
+      of: [
+        {
+          type: "object",
+          name: "brandSolution",
+          title: "Brand Solution",
+          fields: [
+            defineField({
+              name: "name",
+              title: "Name",
+              type: "string",
+            }),
+            defineField({
+              name: "image",
+              title: "Image",
+              type: "image",
+              options: {
+                hotspot: true,
+              },
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: "category",
+              title: "Category",
+              type: "reference",
+              to: { type: "brandSolutionCategory" },
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: "projectIndustry",
+              title: "Project Industry",
+              type: "reference",
+              to: { type: "projectIndustry" },
+              validation: (Rule) => Rule.required(),
+            }),
+          ],
+        },
+      ],
       group: "brandSolutions",
     }),
     defineField({

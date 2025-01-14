@@ -37,7 +37,7 @@ export async function getHomePageSetting(): Promise<any> {
       ...,
       department->
     },
-    brandSolutions[]->{
+    brandSolutions[]{
       ...,
       image,
       category->,

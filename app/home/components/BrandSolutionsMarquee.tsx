@@ -15,7 +15,11 @@ function BrandSolutionsMarquee({ solutions }: { solutions: any[] }) {
     solutions[0].category.name || null
   );
   const brandSolutionCategories = [
-    ...new Set(solutions.map((solution) => solution.category.name)),
+    ...new Set(
+      solutions
+        .sort((a, b) => a.category.position - b.category.position)
+        .map((solution) => solution.category.name)
+    ),
   ];
   const filteredSolutions = solutions.filter(
     (solution) => solution.category.name === selectedCategory

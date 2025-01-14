@@ -3,6 +3,7 @@ import Link from "next/link";
 import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
 import BrandSolutionsMarquee from "./BrandSolutionsMarquee";
 import { Button } from "@/app/(shared)/components/ui/button";
+import BrandSolutionsAccordion from "./BrandSolutionsAccordion";
 
 function BrandSolutions({ brandSolutions }: { brandSolutions: any }) {
   // const brandSolutions = [
@@ -69,9 +70,9 @@ function BrandSolutions({ brandSolutions }: { brandSolutions: any }) {
   // ];
 
   return (
-    <section className="hidden lg:block static-background-hard relative">
+    <section className="static-background-hard relative">
       <div className="container max-w-[2608px] p-0 lg:px-[25px]">
-        <div className="container pt-[80px] absolute left-1/2 -translate-x-1/2 z-20">
+        <div className="container px-[20px] pb-[28px] pt-[40px] lg:pt-[80px] lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:z-20">
           <h2 className="leading-[1.2] font-gilroy text-[35px] lg:text-[50px] font-bold relative text-center">
             Creative Solutions
           </h2>
@@ -131,8 +132,12 @@ function BrandSolutions({ brandSolutions }: { brandSolutions: any }) {
             </Link>
           </div>
         </div>
-        <div className="mx-auto w-full">
+        <div className="hidden lg:block mx-auto w-full">
           <BrandSolutionsMarquee solutions={brandSolutions} />
+        </div>
+
+        <div className="lg:hidden px-[20px]">
+          <BrandSolutionsAccordion solutions={brandSolutions} />
         </div>
       </div>
     </section>
