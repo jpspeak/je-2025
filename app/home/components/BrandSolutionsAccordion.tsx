@@ -49,7 +49,6 @@ async function BrandSolutionsAccordion({ solutions }: { solutions: any[] }) {
   return (
     <Accordion
       type="multiple"
-      collapsible
       className="w-full border-t border-[#e9eaec] mt-[30px] lg:mt-[42px]"
     >
       {brandSolutionCategories.map((brandSolutionCategory, i) => (
