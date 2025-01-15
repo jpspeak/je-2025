@@ -48,14 +48,13 @@ async function BrandSolutionsAccordion({ solutions }: { solutions: any[] }) {
     solutions.filter((solution) => solution.category.name === category);
   return (
     <Accordion
-      defaultValue="1"
-      type="single"
+      type="multiple"
       collapsible
       className="w-full border-t border-[#e9eaec] mt-[30px] lg:mt-[42px]"
     >
       {brandSolutionCategories.map((brandSolutionCategory, i) => (
         <AccordionItem key={i} value={String(i)}>
-          <AccordionTrigger className="text-[20px] items-center px-0 leading-tight lg:text-[22px] !no-underline py-[18px] lg:px-0 lg:py-[31px] font-gilroy font-bold border-b-0">
+          <AccordionTrigger className="text-[20px] items-center px-0 leading-tight lg:text-[22px] !no-underline py-[20px] lg:px-0 lg:py-[31px] font-gilroy font-bold border-b-0">
             <p className="max-w-[300px] lg:max-w-full">
               {brandSolutionCategory}
             </p>

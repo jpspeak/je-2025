@@ -72,15 +72,15 @@ function BrandSolutions({ brandSolutions }: { brandSolutions: any }) {
   return (
     <section className="static-background-hard relative">
       <div className="container max-w-[2608px] p-0 lg:px-[25px]">
-        <div className="container px-[20px] pb-[28px] pt-[40px] lg:pt-[80px] lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:z-20">
+        <div className="container px-[20px] pb-[28px] pt-[46px] border-t border-[#e9eaec] lg:border-t-0 lg:pt-[80px] lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:z-20">
           <h2 className="leading-[1.2] font-gilroy text-[35px] lg:text-[50px] font-bold relative text-center">
             Creative Solutions
           </h2>
           <p className="text-[17px] max-w-[536px] mt-[20px] font-light text-center mx-auto relative">
             We solve brand challenges through distinctive design -{" "}
             <strong className="font-medium">
-              from bold logos to eye-catching vehicle wraps and strategic
-              websites and more.
+              from bold logos to eye-catching vehicle wraps, strategic websites
+              and more.
             </strong>
           </p>
           <div className="hidden relative lg:flex mt-[36px] lg:mt-[44px] w-full flex-col lg:flex-row justify-center items-center gap-[15px]">

@@ -149,7 +149,7 @@ async function SectionFive({ faqs }: { faqs: any[] }) {
           >
             {faqs.map((faq, i) => (
               <AccordionItem key={faq._id} value={String(i)}>
-                <AccordionTrigger className="text-[20px] items-center px-0 leading-tight lg:text-[22px] !no-underline py-[18px] lg:px-0 lg:py-[31px] font-gilroy font-bold border-b-0">
+                <AccordionTrigger className="text-[20px] items-center px-0 leading-tight lg:text-[22px] !no-underline py-[20px] lg:px-0 lg:py-[31px] font-gilroy font-bold border-b-0">
                   <p className="max-w-[300px] lg:max-w-full">{faq.question}</p>
                 </AccordionTrigger>
                 <AccordionContent className="px-0 lg:p-0">
