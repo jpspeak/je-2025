@@ -17,11 +17,13 @@ export default function NavbarMobile() {
   return (
     <div
       className={cn(
-        "fixed bottom-0 w-full z-50",
+        "fixed bottom-0 px-[20px] pb-[16px] w-full z-50",
         hideNavbar ? "hidden" : "block lg:hidden"
       )}
     >
-      <CalComModalTrigger variant="secondary">Book a call</CalComModalTrigger>
+      <CalComModalTrigger variant="secondary" className="h-[50px]">
+        Book a call
+      </CalComModalTrigger>
     </div>
   );
 }
