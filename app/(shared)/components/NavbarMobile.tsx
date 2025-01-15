@@ -21,7 +21,7 @@ export default function NavbarMobile() {
         hideNavbar ? "hidden" : "block lg:hidden"
       )}
     >
-      <CalComModalTrigger variant="secondary" className="h-[50px]">
+      <CalComModalTrigger variant="secondary" className="h-[54px]">
         Book a call
       </CalComModalTrigger>
     </div>
