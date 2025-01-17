@@ -115,7 +115,7 @@ function Reviews({
                 className="w-[83.5px] h-[16px]"
               />
             </div>
-            <h2 className="text-center leading-[1.5] mt-[20px] lg:mt-[4px] text-[35px] lg:text-[50px] font-gilroy font-bold">
+            <h2 className="text-center leading-[1.5] mt-[20px] lg:mt-[4px] text-[36px] lg:text-[50px] font-gilroy font-bold">
               1.8k Success
               <br className="lg:hidden" /> Stories
             </h2>
@@ -123,9 +123,9 @@ function Reviews({
               <strong className="font-medium">
                 At je.design, we are committed to your success.
               </strong>
-              <br />
-              We believe that our success lies in your success, and we are
-              dedicated to helping you achieve it.
+              <br className="hidden lg:block" /> We believe that our success
+              lies in your success, and we are dedicated to helping you achieve
+              it.
             </p>
             <div className="hidden lg:block">
               <ReviewsCarousel

@@ -23,7 +23,7 @@ function SectionFour() {
               </div>
             </div>
             <div className="lg:pl-[86px] pb-[44px] lg:pb-0 mt-[38px] lg:mt-0 flex flex-col justify-center">
-              <h2 className="text-[35px] lg:text-[50px] max-w-[224px] lg:max-w-full font-gilroy px-[20px] lg:px-0 leading-[1.14] lg:leading-[1.2]">
+              <h2 className="text-[36px] lg:text-[50px] max-w-[224px] lg:max-w-full font-gilroy px-[20px] lg:px-0 leading-[1.14] lg:leading-[1.2]">
                 Innovating Beyond Boundaries
               </h2>
 

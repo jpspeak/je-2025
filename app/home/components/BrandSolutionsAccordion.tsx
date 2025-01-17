@@ -58,7 +58,7 @@ async function BrandSolutionsAccordion({ solutions }: { solutions: any[] }) {
               {brandSolutionCategory}
             </p>
           </AccordionTrigger>
-          <AccordionContent className="px-0 py-[10px] lg:p-0">
+          <AccordionContent className="px-0 pt-[10px] pb-[20px] lg:p-0">
             <BrandSolutionTiles
               solutions={filterSolutionByCategory(brandSolutionCategory)}
             />

@@ -21,7 +21,7 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
   return (
     <section className="relative static-background-hard">
       <div className="container px-0 relative lg:hidden">
-        <h2 className="font-gilroy text-[35px] font-bold text-center leading-none">
+        <h2 className="font-gilroy text-[36px] font-bold text-center leading-none">
           Team je.design
         </h2>
 
