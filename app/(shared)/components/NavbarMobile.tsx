@@ -27,7 +27,7 @@ export default function NavbarMobile() {
         className="size-[60px] rounded-full p-0 shadow-sm"
         containerclass="flex justify-end"
       >
-        <PhoneCall className="size-8" />
+        <PhoneCall className="size-8 relative -left-[1px] -bottom-[1px]" />
       </CalComModalTrigger>
     </div>
   );
