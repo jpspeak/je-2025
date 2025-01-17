@@ -49,7 +49,7 @@ function Hero({
             width={500}
             height={332}
             quality={100}
-            className="w-[330px] xs:w-[400px] xs:h-[320px] xs:-translate-x-[148px] h-[224px] bottom-[14px] object-cover left-1/2 -translate-x-[107px] object-left absolute z-[1]"
+            className="lg:hidden w-[330px] xs:w-[400px] xs:h-[320px] xs:-translate-x-[148px] h-[224px] bottom-[14px] object-cover left-1/2 -translate-x-[107px] object-left absolute z-[1]"
           />
           <div className="container mx-auto flex flex-col items-center absolute top-0 w-full left-1/2 -translate-x-1/2">
             <Image
@@ -67,7 +67,7 @@ function Hero({
             {/* <h1 className="hidden lg:block max-w-[804px] text-center leading-[1.18] text-[68px] font-gilroy font-bold pt-[436px]">
             Igniting creativity, fueling brands since 2004
           </h1> */}
-            <h1 className="font-gilroy w-[330px] text-white text-[44px] lg:text-[75px] leading-[1.1] lg:leading-[90px] font-bold text-center mt-[28px] lg:mt-[40px] max-w-[330px] lg:max-w-[730px]">
+            <h1 className="font-gilroy w-[330px] lg:w-auto text-white text-[44px] lg:text-[75px] leading-[1.1] lg:leading-[90px] font-bold text-center mt-[28px] lg:mt-[40px] max-w-[330px] lg:max-w-[730px]">
               Building Brands That Empower Growth
             </h1>
             <div className="hidden lg:flex flex-col lg:flex-row mt-[30px] gap-[20px]">
