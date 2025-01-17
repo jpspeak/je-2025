@@ -46,19 +46,15 @@ function IndustrySelectorClient({
           // temporary workaround from https://github.com/shadcn-ui/ui/issues/1220
           ref?.addEventListener("touchend", (e) => e.preventDefault())
         }
-        className="max-h-[300px] w-[97.4%] lg:w-auto"
       >
-        <SelectItem
-          value="all"
-          className="p-3 text-sm lg:text-lg w-[calc(100vw-40px)] lg:w-auto"
-        >
+        <SelectItem value="all" className="p-3 text-sm lg:text-lg">
           All
         </SelectItem>
         {options.map((projectIndustry) => (
           <SelectItem
             key={projectIndustry._id}
             value={projectIndustry.slug?.current || ""}
-            className="p-3 text-sm lg:text-lg w-[calc(100vw-40px)] lg:w-auto"
+            className="p-3 text-sm lg:text-lg lg:w-[240px]"
           >
             {projectIndustry.title}
           </SelectItem>
