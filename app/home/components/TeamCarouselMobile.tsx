@@ -18,7 +18,7 @@ function TeamCarouselMobile({ team }: { team: any[] }) {
         }}
         centeredSlides
         modules={[Navigation]}
-        slidesPerView={1.2}
+        slidesPerView={1.3}
         spaceBetween={20}
         // loop
         // breakpoints={{
