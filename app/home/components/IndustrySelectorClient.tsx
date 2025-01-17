@@ -46,7 +46,7 @@ function IndustrySelectorClient({
           // temporary workaround from https://github.com/shadcn-ui/ui/issues/1220
           ref?.addEventListener("touchend", (e) => e.preventDefault())
         }
-        className="max-h-[300px]"
+        className="max-h-[300px] w-[97.4%] lg:w-auto"
       >
         <SelectItem
           value="all"
