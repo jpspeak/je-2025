@@ -22,7 +22,7 @@ function Hero({
 
   return (
     <section className="static-background-hard relative">
-      <div className="container max-w-[2608px] p-0 lg:p-[25px] relative">
+      <div className="container max-w-[2608px] p-0 lg:p-[25px] relative overflow-x-hidden">
         <div className="relative pt-[6px]">
           <div className="absolute w-full top-0 z-[1]">
             <Ticker link={homePageSetting.tickerLink || ""} />
