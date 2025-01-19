@@ -50,7 +50,8 @@ function ReviewModal({ review }: { review: any }) {
 
       <DialogContent hideCloseButton className="!p-0 !rounded-none w-[90%]">
         <ModalCloseButton
-          className="right-1 top-1 lg:right-[12px] lg:top-[12px] lg:bg-transparent text-black"
+          className="-right-[15px] -top-[17px] lg:-right-[15px] lg:-top-[16px] bg-[rgba(0,0,0,0.5)] lg:bg-[rgba(0,0,0,0.5)]  size-[30px]"
+          iconClassName="size-[20px]"
           onClick={() => setIsOpen(false)}
         />
         <ReviewCard

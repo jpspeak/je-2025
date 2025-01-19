@@ -7,9 +7,11 @@ import { useRouter } from "next/navigation";
 function ModalCloseButton({
   onClick,
   className,
+  iconClassName,
 }: {
   onClick?: () => void;
   className?: string;
+  iconClassName?: string;
 }) {
   const router = useRouter();
 
@@ -21,7 +23,7 @@ function ModalCloseButton({
         className
       )}
     >
-      <X className="size-[24px]" strokeWidth={2} />
+      <X className={cn("size-[24px]", iconClassName)} strokeWidth={2} />
     </button>
   );
 }

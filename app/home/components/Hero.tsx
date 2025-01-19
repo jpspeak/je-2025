@@ -132,7 +132,7 @@ function Hero({
                 href="/#pricing"
                 className="w-full max-w-[252px] lg:max-w-[172px]"
               >
-                <Button className="w-full max-w-[252px] lg:max-w-[172px] bg-white text-black hover:bg-white hover:bg-opacity-80">
+                <Button className="w-full max-w-[252px] lg:max-w-[172px] bg-white text-black">
                   <span>See pricing</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
