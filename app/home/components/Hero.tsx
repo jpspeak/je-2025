@@ -41,15 +41,15 @@ function Hero({
             width={500}
             height={978}
             quality={100}
-            className="h-[704px] object-cover xs:hidden"
+            className="h-[900px] object-cover xs:hidden"
           />
           <Image
             src="/assets/images/table-menu-mockup.webp"
             alt="Background"
-            width={500}
-            height={332}
+            width={602}
+            height={400}
             quality={100}
-            className="lg:hidden w-[330px] xs:w-[400px] xs:h-[320px] xs:-translate-x-[148px] h-[224px] bottom-[14px] object-cover left-1/2 -translate-x-[107px] object-left absolute z-[1]"
+            className="lg:hidden h-[400px] w-[602px] xs:w-[400px] xs:h-[320px] xs:-translate-x-[148px]  bottom-[28px] object-cover left-1/2 -translate-x-[187px] object-left absolute z-[1]"
           />
           <div className="container mx-auto flex flex-col items-center absolute top-0 w-full left-1/2 -translate-x-1/2">
             <Image
