@@ -5,16 +5,16 @@ import TeamCarousel from "./TeamCarousel";
 import TeamCarouselMobile from "./TeamCarouselMobile";
 import { cn } from "@/app/(shared)/lib/utils";
 
-function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
+function SectionTwo({ team }: { team: any[] }) {
   const [selectedDepartment, setSelectedDepartment] = useState("All");
   const departments = [
     "All",
-    ...new Set(homePageSetting.team.map((team: any) => team.department?.name)),
+    ...new Set(team.map((team: any) => team.department?.name)),
   ] as string[];
-  const team =
+  const teamFiltered =
     selectedDepartment === "All"
-      ? homePageSetting.team
-      : homePageSetting.team.filter(
+      ? team
+      : team.filter(
           (team: any) => team.department?.name === selectedDepartment
         );
 
@@ -26,7 +26,7 @@ function SectionTwo({ homePageSetting }: { homePageSetting: any }) {
         </h2>
 
         <div className="mt-[35px] pb-[40px]">
-          <TeamCarouselMobile team={homePageSetting.team} />
+          <TeamCarouselMobile team={teamFiltered} />
         </div>
       </div>
 

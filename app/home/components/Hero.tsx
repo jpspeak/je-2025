@@ -15,23 +15,23 @@ function Hero({
   industrySlug: string;
 }) {
   const heroImage =
-    homePageSetting.heroImages.find(
+    homePageSetting?.heroImages?.find(
       (heroImage: any) =>
         heroImage.projectIndustry.slug.current === industrySlug
-    ) || homePageSetting.heroImages[0];
+    ) || homePageSetting?.heroImages?.[0];
 
-  const heroImageMobileHeightClass = heroImage.imageMobileHeight
-    ? `${heroImage.imageMobileHeight}px`
+  const heroImageMobileHeightClass = heroImage?.imageMobileHeight
+    ? `${heroImage?.imageMobileHeight}px`
     : "900px";
   return (
     <section className="static-background-hard relative">
       <div className="container max-w-[2608px] p-0 lg:p-[25px] relative overflow-x-hidden">
         <div className="relative pt-[6px]">
           <div className="absolute w-full top-0 z-[1]">
-            <Ticker link={homePageSetting.tickerLink || ""} />
+            <Ticker link={homePageSetting?.tickerLink || ""} />
           </div>
           <Image
-            src={urlForImage(heroImage.imageDesktop as any)}
+            src={urlForImage(heroImage?.imageDesktop as any)}
             alt="Background"
             width={4000}
             height={1273}
@@ -39,7 +39,7 @@ function Hero({
             className="hidden lg:block lg:h-[808px] object-cover"
           />
           <Image
-            src={urlForImage(heroImage.imageMobile as any)}
+            src={urlForImage(heroImage?.imageMobile as any)}
             alt="Background"
             width={500}
             height={978}
@@ -48,7 +48,7 @@ function Hero({
             style={{ height: heroImageMobileHeightClass }}
           />
           <Image
-            src={urlForImage(heroImage.mockupMobile as any)}
+            src={urlForImage(heroImage?.mockupMobile as any)}
             alt="Background"
             width={400}
             height={400}

@@ -43,9 +43,12 @@ export default async function HomePage({
   return (
     <>
       <Hero homePageSetting={homePageSetting} industrySlug={industrySlug} />
-      <SectionOne homePageSetting={homePageSetting} />
-      <SectionTwo homePageSetting={homePageSetting} />
-      <BrandSolutions brandSolutions={homePageSetting.brandSolutions} />
+      <SectionOne
+        projectMarquee={homePageSetting?.projectMarquee || []}
+        tickerLink={homePageSetting?.tickerLink || ""}
+      />
+      <SectionTwo team={homePageSetting?.team || []} />
+      <BrandSolutions brandSolutions={homePageSetting?.brandSolutions || []} />
       <SectionFour />
       <Projects
         initialProjects={projects}
@@ -53,12 +56,14 @@ export default async function HomePage({
           <IndustrySelector Component={IndustrySelectorClient} />
         }
       />
-      <WorkInAction workInActionImages={homePageSetting.workInActionImages} />
+      <WorkInAction
+        workInActionImages={homePageSetting?.workInActionImages || []}
+      />
       <Reviews
         initialReviewsDesktop={reviewsDesktop}
         initialReviewsMobile={reviewsMobile}
       />
-      <SectionFive faqs={homePageSetting.faqs || []} />
+      <SectionFive faqs={homePageSetting?.faqs || []} />
       <Footer />
     </>
   );

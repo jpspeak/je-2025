@@ -12,7 +12,7 @@ import "swiper/css/free-mode";
 
 function BrandSolutionsMarquee({ solutions }: { solutions: any[] }) {
   const [selectedCategory, setSelectedCategory] = useState(
-    solutions[0].category.name || null
+    solutions[0]?.category?.name || null
   );
   const brandSolutionCategories = [
     ...new Set(

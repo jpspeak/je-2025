@@ -31,15 +31,21 @@ function ProjectTiles({ projects }: { projects: any[] }) {
   );
 }
 
-function SectionOne({ homePageSetting }: { homePageSetting: any }) {
+function SectionOne({
+  projectMarquee,
+  tickerLink,
+}: {
+  projectMarquee: any[];
+  tickerLink: string;
+}) {
   return (
     <section className="relative static-background-hard pb-[50px] lg:pb-[118px]">
       <div className="container max-w-[2608px] p-0 lg:px-[25px]">
         <div className="hidden lg:block relative left-1/2 -translate-x-1/2 max-w-[2560px]">
-          <ProjectMarquee projects={homePageSetting.projectMarquee} />
+          <ProjectMarquee projects={projectMarquee} />
         </div>
         <div className="lg:hidden px-[20px] pt-[20px]">
-          <ProjectTiles projects={homePageSetting.projectMarquee} />
+          <ProjectTiles projects={projectMarquee} />
         </div>
         <div className="container mx-auto flex flex-col items-center relative mt-[66px] lg:mt-[88px]">
           <Image
@@ -70,7 +76,7 @@ function SectionOne({ homePageSetting }: { homePageSetting: any }) {
             </svg>
             <p className="font-light hidden lg:block text-[15px]">
               je.design now accepts Bitcoin, Litecoin, Solana and XRP -{" "}
-              <Link href={homePageSetting.tickerLink || ""}>Learn more</Link>
+              <Link href={tickerLink || ""}>Learn more</Link>
             </p>
           </div>
         </div>

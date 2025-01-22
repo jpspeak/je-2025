@@ -81,7 +81,6 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
   project,
-  recording,
 }: Readonly<{
   children: React.ReactNode;
   project: React.ReactNode;
@@ -94,7 +93,6 @@ export default function RootLayout({
       >
         {children}
         {project}
-        {recording}
         <CalComModal />
         <Toaster
           toastOptions={{ className: "w-max right-0" }}
