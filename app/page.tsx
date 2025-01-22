@@ -16,12 +16,43 @@ import IndustrySelectorClient from "./home/components/IndustrySelectorClient";
 import BrandSolutions from "./home/components/BrandSolutions";
 
 export const metadata: Metadata = {
-  title: "Branding Without Boundaries & Forward-thinking Vehicle Wrap Designs",
+  metadataBase: new URL("https://je.design"),
+  title: {
+    template: "%s | Jeremy Ellsworth Designs LLC",
+    default:
+      "Jeremy Ellsworth Designs LLC | Premium Brand & Vehicle Wrap Design Services",
+  },
   description:
-    "Elevate your brand with our comprehensive creative solutions. We specialize in crafting eye-catching logos, developing cohesive brand identities, and designing head-turning vehicle wraps that make your business stand out on the streets. Our expert team also delivers stunning visual assets, from marketing materials to digital graphics, ensuring your brand shines across all platforms. Transform your vision into reality and leave a lasting impression with our innovative design services tailored to your unique business needs.",
+    "Transform your business with Jeremy Ellsworth Designs LLC's expert branding services. Specializing in custom logo design, vehicle wraps, and comprehensive brand identity solutions. Based in USA, serving clients worldwide. Visit je.design for innovative design solutions that make your brand stand out.",
+  keywords: [
+    "brand design",
+    "logo design",
+    "vehicle wraps",
+    "Jeremy Ellsworth Designs",
+    "brand identity",
+    "graphic design services",
+    "professional logo designer",
+    "custom vehicle wraps",
+    "business branding",
+    "creative design agency",
+  ],
+  alternates: {
+    canonical: "https://je.design",
+  },
+  openGraph: {
+    title:
+      "Jeremy Ellsworth Designs LLC | Premium Brand & Vehicle Wrap Design Services",
+    description:
+      "Transform your business with expert branding services. Specializing in custom logo design, vehicle wraps, and comprehensive brand identity solutions.",
+    url: "https://je.design",
+    siteName: "Jeremy Ellsworth Designs LLC",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
-export const revalidate = 60;
+// Reduce revalidation time for fresher content
+export const revalidate = 30;
 
 export default async function HomePage({
   searchParams,
@@ -41,7 +72,7 @@ export default async function HomePage({
   const reviewsDesktop = await getReviews({ limit: 6 });
 
   return (
-    <>
+    <main>
       <Hero homePageSetting={homePageSetting} industrySlug={industrySlug} />
       <SectionOne
         projectMarquee={homePageSetting?.projectMarquee || []}
@@ -65,6 +96,6 @@ export default async function HomePage({
       />
       <SectionFive faqs={homePageSetting?.faqs || []} />
       <Footer />
-    </>
+    </main>
   );
 }
