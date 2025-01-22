@@ -20,6 +20,9 @@ function Hero({
         heroImage.projectIndustry.slug.current === industrySlug
     ) || homePageSetting.heroImages[0];
 
+  const heroImageMobileHeightClass = heroImage.imageMobileHeight
+    ? `${heroImage.imageMobileHeight}px`
+    : "900px";
   return (
     <section className="static-background-hard relative">
       <div className="container max-w-[2608px] p-0 lg:p-[25px] relative overflow-x-hidden">
@@ -33,7 +36,7 @@ function Hero({
             width={4000}
             height={1273}
             quality={100}
-            className="hidden xs:block h-[808px] object-cover"
+            className="hidden lg:block lg:h-[808px] object-cover"
           />
           <Image
             src={urlForImage(heroImage.imageMobile as any)}
@@ -41,15 +44,16 @@ function Hero({
             width={500}
             height={978}
             quality={100}
-            className="h-[900px] object-cover xs:hidden"
+            className="w-full h-[900px] object-cover lg:hidden"
+            style={{ height: heroImageMobileHeightClass }}
           />
           <Image
-            src="/assets/images/table-menu-mockup.webp"
+            src={urlForImage(heroImage.mockupMobile as any)}
             alt="Background"
-            width={602}
+            width={400}
             height={400}
             quality={100}
-            className="lg:hidden h-[400px] w-[602px] xs:w-[400px] xs:h-[320px] xs:-translate-x-[148px]  bottom-[28px] object-cover left-1/2 -translate-x-[187px] object-left absolute z-[1]"
+            className="lg:hidden w-[360px] min-w-[360px] bottom-[28px] object-cover left-1/2 -translate-x-1/2 object-center absolute z-[1]"
           />
           <div className="container mx-auto flex flex-col items-center absolute top-0 w-full left-1/2 -translate-x-1/2">
             <Image

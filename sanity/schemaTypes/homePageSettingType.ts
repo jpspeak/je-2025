@@ -68,14 +68,28 @@ export const homePageSettingType = defineType({
           fields: [
             defineField({
               name: "imageDesktop",
-              title: "Image(Desktop)",
+              title: "Hero Image (Desktop)",
               type: "image",
               options: { hotspot: true },
               validation: (Rule) => Rule.required(),
             }),
             defineField({
               name: "imageMobile",
-              title: "Image(Mobile)",
+              title: "Hero Image (Mobile)",
+              type: "image",
+              options: { hotspot: true },
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: "imageMobileHeight",
+              title: "Hero Image Height (Mobile)",
+              type: "number",
+              description:
+                "(Optional) The height of the hero image in mobile device. (Default: 900px)",
+            }),
+            defineField({
+              name: "mockupMobile",
+              title: "Mockup(Mobile)",
               type: "image",
               options: { hotspot: true },
               validation: (Rule) => Rule.required(),
