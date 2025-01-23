@@ -25,11 +25,11 @@ function BrandSolutionsMarquee({ solutions }: { solutions: any[] }) {
     (solution) => solution.category.name === selectedCategory
   );
 
-  filteredSolutions.forEach((solution) => {
-    while (filteredSolutions.length < 18) {
+  while (filteredSolutions.length < 18) {
+    filteredSolutions.forEach((solution) => {
       filteredSolutions.push(solution);
-    }
-  });
+    });
+  }
 
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
