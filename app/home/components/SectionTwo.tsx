@@ -114,7 +114,7 @@ function SectionTwo({ team }: { team: any[] }) {
               </ul>
             </div>
             <div className="mt-[38px]">
-              <TeamCarousel team={team} />
+              <TeamCarousel team={teamFiltered} />
             </div>
           </div>
         </div>
