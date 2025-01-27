@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useRef } from "react";
+import { ReactNode, useRef, useState } from "react";
 import StarRating from "./StarRating";
 import Image from "next/image";
 import {
@@ -12,9 +12,9 @@ import { Card } from "./ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { formatRateNumber, generateAvatarInitials } from "../lib/utils";
 // import { Swiper, SwiperSlide } from "swiper/react";
-// import { urlForImage } from "@/sanity/lib/image";
+import { urlForImage } from "@/sanity/lib/image";
 // import { Mousewheel, Thumbs } from "swiper/modules";
-// import { SliderFullScreen } from "./slider-full-screen/SliderFullScreen";
+import { SliderFullScreen } from "./slider-full-screen/SliderFullScreen";
 import "react-medium-image-zoom/dist/styles.css";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -28,7 +28,7 @@ function ReviewCard({
   text,
   platformLogoUrl,
   platformName,
-  // images,
+  images,
 }: {
   avatar?: string;
   reviewerName: string;
@@ -47,14 +47,14 @@ function ReviewCard({
     ref.current?.toggleLines(e);
   };
 
-  // const [isOpenSliderFullScreen, setIsOpenSliderFullScreen] = useState(false);
+  const [isOpenSliderFullScreen, setIsOpenSliderFullScreen] = useState(false);
   // const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  // const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
-  // const handleImageClick = (slideIndex: number) => {
-  //   setIsOpenSliderFullScreen(true);
-  //   setCurrentSlideIndex(slideIndex);
-  // };
+  const handleImageClick = (slideIndex: number) => {
+    setIsOpenSliderFullScreen(true);
+    setCurrentSlideIndex(slideIndex);
+  };
   return (
     // <Card className="p-4 lg:p-[25px] rounded-none shadow-none border-none h-max">
     //   <div className="flex gap-[10px] lg:gap-[18px] items-center">
@@ -199,6 +199,25 @@ function ReviewCard({
         >
           {text}
         </ShowMore>
+        {images && images?.length > 0 && (
+          <div className="grid grid-cols-3 lg:grid-cols-4 gap-[10px] mt-[30px] lg:mt-[30px]">
+            {images?.map((image, i) => (
+              <div
+                key={i}
+                onClick={() => handleImageClick(i)}
+                className="relative w-full pb-[100%] border border-[#f0efed] cursor-zoom-in"
+              >
+                <Image
+                  src={urlForImage(image)}
+                  fill
+                  alt={platformName}
+                  className="object-contain"
+                  quality="100"
+                />
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* {images && images?.length > 0 && (
           <Swiper
@@ -227,16 +246,16 @@ function ReviewCard({
               </SwiperSlide>
             ))}
           </Swiper>
-        )}
+        )} */}
         <SliderFullScreen
           isOpen={isOpenSliderFullScreen}
           setIsOpen={setIsOpenSliderFullScreen}
           images={images as any[]}
-          thumbsSwiper={thumbsSwiper}
+          // thumbsSwiper={thumbsSwiper}
           currentIndex={currentSlideIndex}
-        /> */}
+        />
 
-        <div className="mt-[40px] lg:mt-[60px] flex gap-[10px] lg:gap-[18px] items-center">
+        <div className="mt-[40px] flex gap-[10px] lg:gap-[18px] items-center">
           <Avatar className="size-[43px] lg:size-[43px] rounded-none">
             <AvatarImage src={avatar} alt={reviewerName} />
             <AvatarFallback>
