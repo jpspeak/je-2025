@@ -104,7 +104,7 @@ function ProjectModal2({
             {sameIndustryProjects?.length > 0 && (
               <div className="border-t border-[#e9eaec] px-6 py-8 lg:px-[75px] lg:py-[40px]">
                 <h2 className="text-[25px] lg:text-[30px] font-gilroy mb-[24px]">
-                  Semilar industries
+                  Similar industries
                 </h2>
                 <div className="grid grid-cols-3 gap-4 lg:gap-[25px]">
                   {sameIndustryProjects.map((project, i) => (
