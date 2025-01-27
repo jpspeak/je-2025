@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/app/(shared)/lib/utils";
 import { urlForImage } from "@/sanity/lib/image";
@@ -11,6 +11,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 
 function BrandSolutionsMarquee({ solutions }: { solutions: any[] }) {
+  const swiperRef = useRef<any | null>(null);
   const [selectedCategory, setSelectedCategory] = useState(
     solutions[0]?.category?.name || null
   );
@@ -33,6 +34,14 @@ function BrandSolutionsMarquee({ solutions }: { solutions: any[] }) {
 
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
+
+    // Find the index of the clicked category
+    const categoryIndex = brandSolutionCategories.indexOf(category);
+
+    // Scroll to the selected category slide
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(categoryIndex, 500, false);
+    }
   };
   return (
     <div>
@@ -67,6 +76,7 @@ function BrandSolutionsMarquee({ solutions }: { solutions: any[] }) {
 
       <div className="container">
         <Swiper
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           freeMode
           modules={[Scrollbar, FreeMode]}
           breakpoints={
