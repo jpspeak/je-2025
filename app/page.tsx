@@ -1,101 +1,101 @@
-import Image from "next/image";
+import { getHomePageSetting } from "@/sanity/query/homePageSetting";
+import { Metadata } from "next";
+import { getProjects } from "@/sanity/query/project";
+import { getReviews } from "@/sanity/query/review";
+import SectionOne from "./home/components/SectionOne";
+import SectionTwo from "./home/components/SectionTwo";
+import SectionFour from "./home/components/SectionFour";
+import Projects from "./home/components/Projects";
+import IndustrySelector from "./home/components/IndustrySelector";
+import Reviews from "./home/components/Reviews";
+import SectionFive from "./home/components/SectionFive";
+import Footer from "./(shared)/components/Footer";
+import Hero from "./home/components/Hero";
+import WorkInAction from "./home/components/WorkInAction";
+import IndustrySelectorClient from "./home/components/IndustrySelectorClient";
+import BrandSolutions from "./home/components/BrandSolutions";
 
-export default function Home() {
+export const metadata: Metadata = {
+  metadataBase: new URL("https://je.design"),
+  title: {
+    template: "%s | Jeremy Ellsworth Designs LLC",
+    default:
+      "Jeremy Ellsworth Designs LLC | Premium Brand & Vehicle Wrap Design Services",
+  },
+  description:
+    "Transform your business with Jeremy Ellsworth Designs LLC's expert branding services. Specializing in custom logo design, vehicle wraps, and comprehensive brand identity solutions. Based in USA, serving clients worldwide. Visit je.design for innovative design solutions that make your brand stand out.",
+  keywords: [
+    "brand design",
+    "logo design",
+    "vehicle wraps",
+    "Jeremy Ellsworth Designs",
+    "brand identity",
+    "graphic design services",
+    "professional logo designer",
+    "custom vehicle wraps",
+    "business branding",
+    "creative design agency",
+  ],
+  alternates: {
+    canonical: "https://je.design",
+  },
+  openGraph: {
+    title:
+      "Jeremy Ellsworth Designs LLC | Premium Brand & Vehicle Wrap Design Services",
+    description:
+      "Transform your business with expert branding services. Specializing in custom logo design, vehicle wraps, and comprehensive brand identity solutions.",
+    url: "https://je.design",
+    siteName: "Jeremy Ellsworth Designs LLC",
+    locale: "en_US",
+    type: "website",
+  },
+};
+
+// Reduce revalidation time for fresher content
+export const revalidate = 30;
+
+export default async function HomePage({
+  searchParams,
+}: {
+  searchParams: { industry: string; sortBy: string };
+}) {
+  const industrySlug = searchParams.industry;
+
+  const homePageSetting = await getHomePageSetting();
+
+  const projects = await getProjects({
+    limit: 12,
+    industrySlug,
+  });
+
+  const reviewsMobile = await getReviews({ limit: 2 });
+  const reviewsDesktop = await getReviews({ limit: 6 });
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <main>
+      <Hero homePageSetting={homePageSetting} industrySlug={industrySlug} />
+      <SectionOne
+        projectMarquee={homePageSetting?.projectMarquee || []}
+        tickerLink={homePageSetting?.tickerLink || ""}
+      />
+      <SectionTwo team={homePageSetting?.team || []} />
+      <BrandSolutions brandSolutions={homePageSetting?.brandSolutions || []} />
+      <SectionFour />
+      <Projects
+        initialProjects={projects}
+        industrySelector={
+          <IndustrySelector Component={IndustrySelectorClient} />
+        }
+      />
+      <WorkInAction
+        workInActionImages={homePageSetting?.workInActionImages || []}
+      />
+      <Reviews
+        initialReviewsDesktop={reviewsDesktop}
+        initialReviewsMobile={reviewsMobile}
+      />
+      <SectionFive faqs={homePageSetting?.faqs || []} />
+      <Footer />
+    </main>
   );
 }
