@@ -285,7 +285,6 @@ export const homePageSettingType = defineType({
               title: "Project Industry",
               type: "reference",
               to: { type: "projectIndustry" },
-              validation: (Rule) => Rule.required(),
             }),
           ],
         },
@@ -329,7 +328,28 @@ export const homePageSettingType = defineType({
       name: "workInActionImages",
       title: "Work In Action Images",
       type: "array",
-      of: [{ type: "image" }],
+      of: [
+        {
+          type: "object",
+          title: "Work in Action",
+          name: "workInActionImages",
+          fields: [
+            defineField({
+              name: "image",
+              title: "Image",
+              type: "image",
+              options: { hotspot: true },
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: "projectIndustry",
+              title: "Project Industry",
+              type: "reference",
+              to: { type: "projectIndustry" },
+            }),
+          ],
+        },
+      ],
       group: "workInActionImages",
     }),
     defineField({

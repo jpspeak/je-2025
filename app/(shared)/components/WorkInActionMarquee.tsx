@@ -25,7 +25,7 @@ function WorkInActionMarquee({
         >
           <div className="relative w-full pb-[100%] bg-muted inline-block">
             <Image
-              src={urlForImage(workInActionImage as any)}
+              src={urlForImage(workInActionImage?.image as any)}
               fill
               alt="Work in action"
               className="object-cover"

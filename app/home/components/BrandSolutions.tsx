@@ -72,7 +72,7 @@ function BrandSolutions({ brandSolutions }: { brandSolutions: any }) {
   return (
     <section id="brand-solutions" className="static-background-hard relative">
       <div className="container max-w-[2608px] p-0 lg:px-[25px]">
-        <div className="container px-[20px] pb-[28px] pt-[46px] border-t border-[#e9eaec] lg:border-t-0 lg:pt-[80px] lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:z-20">
+        <div className="container px-[20px] pb-[28px] pt-[46px] border-t border-[#e9eaec] lg:border-t-0 lg:pt-[96px] lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:z-20">
           <h2 className="leading-[1.2] font-gilroy text-[36px] lg:text-[50px] font-bold relative text-center">
             Creative Solutions
           </h2>

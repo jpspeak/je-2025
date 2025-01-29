@@ -37,6 +37,7 @@ function Hero({
             height={1273}
             quality={100}
             className="hidden lg:block lg:h-[808px] object-cover"
+            priority
           />
           <Image
             src={urlForImage(heroImage?.imageMobile as any)}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/app/(shared)/lib/utils";
 import { urlForImage } from "@/sanity/lib/image";
@@ -10,11 +10,24 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 
+function repeatUntilLength(arr: any[], length: number) {
+  const result = [];
+  let i = 0;
+
+  while (result.length < length) {
+    result.push(arr[i % arr.length]); // Cycles through the original array
+    i++;
+  }
+
+  return result;
+}
+
 function BrandSolutionsMarquee({ solutions }: { solutions: any[] }) {
   const swiperRef = useRef<any | null>(null);
   const [selectedCategory, setSelectedCategory] = useState(
     solutions[0]?.category?.name || null
   );
+
   const brandSolutionCategories = [
     ...new Set(
       solutions
@@ -26,11 +39,14 @@ function BrandSolutionsMarquee({ solutions }: { solutions: any[] }) {
     (solution) => solution.category.name === selectedCategory
   );
 
-  while (filteredSolutions.length < 18) {
-    filteredSolutions.forEach((solution) => {
-      filteredSolutions.push(solution);
-    });
-  }
+  const loopedSolutions =
+    filteredSolutions.length > 0
+      ? repeatUntilLength(filteredSolutions, 18)
+      : [];
+
+  useEffect(() => {
+    setSelectedCategory(brandSolutionCategories[0]);
+  }, [solutions]);
 
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
@@ -47,12 +63,12 @@ function BrandSolutionsMarquee({ solutions }: { solutions: any[] }) {
     <div>
       <div className="h-[800px] mx-auto grid place-items-center relative overflow-hidden">
         <div className="size-0 relative grid place-items-center z-10 -top-[1130px] rotate-clockwise-slow">
-          {filteredSolutions.map((solution, i) => {
+          {loopedSolutions.map((solution, i) => {
             const degree = -(i * 20);
 
             return (
               <div
-                key={i}
+                key={i + Math.random()}
                 className={`h-[3000px] w-[350px] absolute flex items-end`}
                 style={{ transform: `rotate(${degree}deg)` }}
               >
@@ -104,7 +120,7 @@ function BrandSolutionsMarquee({ solutions }: { solutions: any[] }) {
           {brandSolutionCategories.map((brandSolutionCategory, i) => {
             const isActive = brandSolutionCategory === selectedCategory;
             return (
-              <SwiperSlide key={i} className="!w-max">
+              <SwiperSlide key={i + Math.random()} className="!w-max">
                 <li
                   onClick={() => handleCategoryClick(brandSolutionCategory)}
                   key={brandSolutionCategory}

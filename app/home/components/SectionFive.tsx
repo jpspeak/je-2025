@@ -13,7 +13,7 @@ import { Plus } from "lucide-react";
 async function SectionFive({ faqs }: { faqs: any[] }) {
   return (
     <section id="pricing" className="static-background-hard relative">
-      <div className="container pb-[48px] px-[20px] lg:px-[32px] pt-[50px] lg:py-[120px] grid grid-cols-1 lg:grid-cols-2 gap-[64px] lg:gap-[103px]">
+      <div className="container pb-[48px] px-[20px] lg:px-[32px] pt-[50px] lg:py-[88px] grid grid-cols-1 lg:grid-cols-2 gap-[64px] lg:gap-[103px]">
         <div className="h-max">
           <Accordion
             defaultValue="ultimate brand sprint"
@@ -137,7 +137,7 @@ async function SectionFive({ faqs }: { faqs: any[] }) {
             <Plus className="!size-[25px] shrink-0 transition-transform duration-200 plus" />
           </CalComModalTrigger>
         </div>
-        <div id="faq">
+        <div id="faq" className="relative lg:-top-[8px]">
           <h2 className="text-[35px] lg:text-[50px] font-gilroy font-bold leading-none">
             Questions
           </h2>

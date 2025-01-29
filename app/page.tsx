@@ -61,7 +61,7 @@ export default async function HomePage({
 }) {
   const industrySlug = searchParams.industry;
 
-  const homePageSetting = await getHomePageSetting();
+  const homePageSetting = await getHomePageSetting(industrySlug);
 
   const projects = await getProjects({
     limit: 12,
@@ -74,27 +74,39 @@ export default async function HomePage({
   return (
     <main>
       <Hero homePageSetting={homePageSetting} industrySlug={industrySlug} />
+
       <SectionOne
         projectMarquee={homePageSetting?.projectMarquee || []}
         tickerLink={homePageSetting?.tickerLink || ""}
       />
       <SectionTwo team={homePageSetting?.team || []} />
-      <BrandSolutions brandSolutions={homePageSetting?.brandSolutions || []} />
+
+      {homePageSetting?.brandSolutions &&
+        homePageSetting?.brandSolutions.length > 0 && (
+          <BrandSolutions brandSolutions={homePageSetting?.brandSolutions} />
+        )}
+
       <SectionFour />
+
       <Projects
         initialProjects={projects}
         industrySelector={
           <IndustrySelector Component={IndustrySelectorClient} />
         }
       />
-      <WorkInAction
-        workInActionImages={homePageSetting?.workInActionImages || []}
-      />
+      {homePageSetting?.workInActionImages &&
+        homePageSetting?.workInActionImages.length > 0 && (
+          <WorkInAction
+            workInActionImages={homePageSetting?.workInActionImages}
+          />
+        )}
+
       <Reviews
         initialReviewsDesktop={reviewsDesktop}
         initialReviewsMobile={reviewsMobile}
       />
       <SectionFive faqs={homePageSetting?.faqs || []} />
+
       <Footer />
     </main>
   );
