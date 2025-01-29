@@ -24,27 +24,59 @@ import { client } from "../lib/client";
 //   sketchBefore,
 //   sketchAfter
 // }
-export async function getHomePageSetting(): Promise<any> {
+export async function getHomePageSetting(
+  projectIndustrySlug?: string
+): Promise<any> {
+  const filterBySlug = projectIndustrySlug && projectIndustrySlug !== "all";
+  const projectMarqueeQuery = filterBySlug
+    ? `projectMarquee[@->projectIndustry->slug.current == "${projectIndustrySlug}"]->{
+        ...,
+        projectIndustry->
+      }`
+    : `projectMarquee[]->{
+        ...,
+        projectIndustry->
+      }`;
+  const brandSolutionsQuery = filterBySlug
+    ? `brandSolutions[projectIndustry->slug.current == "${projectIndustrySlug}"]{
+        ...,
+        image,
+        category->,
+        projectIndustry->
+      }`
+    : `brandSolutions[]{
+        ...,
+        image,
+        category->,
+        projectIndustry->
+      }`;
+  const workInActionImagesQuery = filterBySlug
+    ? `workInActionImages[projectIndustry->slug.current == "${projectIndustrySlug}"]{
+        image,
+        projectIndustry->
+      }`
+    : `workInActionImages[]{
+        image,
+        projectIndustry->
+      }`;
+
   const query = `*[_type == "homePageSetting"][0]{
     ...,
     heroImages[]{
       ...,
       projectIndustry->
     },
-    projectMarquee[]->,
+    'projectMarquee': ${projectMarqueeQuery},
     brandProjects[]->,
     team[]{
       ...,
       department->
     },
-    brandSolutions[]{
-      ...,
-      image,
-      category->,
-      projectIndustry->
-    },
-    workInActionImages,
+    'brandSolutions': ${brandSolutionsQuery},
+    'workInActionImages': ${workInActionImagesQuery},
     faqs[]->
   }`;
-  return client.fetch(query);
+  const result = await client.fetch(query);
+
+  return result;
 }

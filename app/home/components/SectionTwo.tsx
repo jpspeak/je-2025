@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import TeamCarousel from "./TeamCarousel";
 import TeamCarouselMobile from "./TeamCarouselMobile";
 import { cn } from "@/app/(shared)/lib/utils";
+import Link from "next/link";
 
 function SectionTwo({ team }: { team: any[] }) {
   const [selectedDepartment, setSelectedDepartment] = useState("All");
@@ -32,8 +33,11 @@ function SectionTwo({ team }: { team: any[] }) {
 
       <div className="container max-w-[2608px] p-0 lg:px-[25px]">
         <div className="top-0 w-full h-full hidden lg:block border-y border-[#e9eaec]">
-          <div className="container mx-auto pt-[72px] pb-[132px] relative overflow-y-visible">
-            <div className="bg-[#fff600] hidden lg:grid absolute size-[180px] place-items-center rounded-full -top-[15%] -right-[6%]">
+          <div className="container mx-auto pt-[100px] pb-[168px] relative overflow-y-visible">
+            <Link
+              href="/#reviews"
+              className="bg-[#fff600] hidden lg:grid absolute size-[180px] place-items-center rounded-full -top-[20%] -right-[6%]"
+            >
               <svg
                 className="w-[41px] h-[26px] rotate-[90deg] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
                 viewBox="0 0 34 22"
@@ -78,7 +82,7 @@ function SectionTwo({ team }: { team: any[] }) {
                   </textPath>
                 </text>
               </svg>
-            </div>
+            </Link>
             <div className="flex items-center gap-[24px]">
               <h2 className="font-gilroy text-[40px] font-bold block leading-none pb-[6px]">
                 Team je.design
@@ -98,19 +102,21 @@ function SectionTwo({ team }: { team: any[] }) {
                 </svg>
               </span>
               <ul className="flex items-center text-[17px] gap-[40px] text-[#555555]">
-                {departments.map((department: string, i: number) => (
-                  <li
-                    key={i}
-                    className={cn(
-                      "cursor-pointer border-b leading-none border-transparent hover:border-black hover:text-black",
-                      selectedDepartment === department &&
-                        "border-black text-black font-semibold"
-                    )}
-                    onClick={() => setSelectedDepartment(department)}
-                  >
-                    {department}
-                  </li>
-                ))}
+                {departments
+                  .sort((a, b) => a.localeCompare(b))
+                  .map((department: string, i: number) => (
+                    <li
+                      key={i}
+                      className={cn(
+                        "cursor-pointer border-b leading-none border-transparent hover:border-black hover:text-black",
+                        selectedDepartment === department &&
+                          "border-black text-black font-semibold"
+                      )}
+                      onClick={() => setSelectedDepartment(department)}
+                    >
+                      {department}
+                    </li>
+                  ))}
               </ul>
             </div>
             <div className="mt-[38px]">

@@ -2,6 +2,7 @@ import React from "react";
 import CalComModalTrigger from "./CalComModalTrigger";
 import Image from "next/image";
 import StarRating from "./StarRating";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -121,7 +122,10 @@ function Footer() {
                     />
                   </svg>
                 </a>
-                <a href="" aria-label="">
+                <a
+                  href="https://g.co/kgs/E6KKgsQ"
+                  aria-label="Visit us on Google"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -143,13 +147,19 @@ function Footer() {
             <div className="lg:hidden">
               <div className="flex items-center gap-[20px] w-full mt-[46px]">
                 <div className="border-t border-[#222222] h-[1px] w-full" />
-                <Image
-                  src="/assets/images/layer-54@3x.webp"
-                  alt=""
-                  width={144}
-                  height={144}
-                  className="size-[48px]"
-                />
+                <Link
+                  href="https://99designs.com/blog/designers/designer-profile-jeremy-ellsworth-jerekel/"
+                  aria-label="Visit us on 99designs"
+                  className="relative z-[2] shrink-0"
+                >
+                  <Image
+                    src="/assets/images/layer-54@3x.webp"
+                    alt=""
+                    width={144}
+                    height={144}
+                    className="size-[48px]"
+                  />
+                </Link>
                 <div className="border-t border-[#222222] h-[1px] w-full" />
               </div>
 
@@ -188,13 +198,19 @@ function Footer() {
                 <p className="font-gilroy text-[22px] font-bold text-white pb-[4px]">
                   Featured on
                 </p>
-                <Image
-                  src="/assets/images/99designs.webp"
-                  alt="99designs logo"
-                  width={338}
-                  height={80}
-                  className="w-[112px] h-[26px]"
-                />
+                <Link
+                  href="https://99designs.com/blog/designers/designer-profile-jeremy-ellsworth-jerekel/"
+                  aria-label="Visit us on 99designs"
+                  className="relative z-[2]"
+                >
+                  <Image
+                    src="/assets/images/99designs.webp"
+                    alt="99designs logo"
+                    width={338}
+                    height={80}
+                    className="w-[112px] h-[26px]"
+                  />
+                </Link>
               </div>
             </div>
 
@@ -202,13 +218,19 @@ function Footer() {
               <div className="border-t border-[#222222] h-[1px] w-full mt-[53px]" />
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-[18px]">
-                  <Image
-                    src="/assets/images/layer-54@3x.webp"
-                    alt=""
-                    width={144}
-                    height={144}
-                    className="size-[48px]"
-                  />
+                  <Link
+                    href="https://99designs.com/blog/designers/designer-profile-jeremy-ellsworth-jerekel/"
+                    aria-label="Visit us on 99designs"
+                    className="relative z-[2] shrink-0"
+                  >
+                    <Image
+                      src="/assets/images/layer-54@3x.webp"
+                      alt=""
+                      width={144}
+                      height={144}
+                      className="size-[48px]"
+                    />
+                  </Link>
                   <div className="pb-[4px]">
                     <div className="flex flex-row gap-[20px] items-center">
                       <StarRating
@@ -245,13 +267,19 @@ function Footer() {
                   <p className="font-gilroy text-[22px] font-bold text-white pb-[4px]">
                     Featured on
                   </p>
-                  <Image
-                    src="/assets/images/99designs.webp"
-                    alt="99designs logo"
-                    width={338}
-                    height={80}
-                    className="w-[112px] h-[26px]"
-                  />
+                  <Link
+                    href="https://99designs.com/blog/designers/designer-profile-jeremy-ellsworth-jerekel/"
+                    aria-label="Visit us on 99designs"
+                    className="relative z-[2]"
+                  >
+                    <Image
+                      src="/assets/images/99designs.webp"
+                      alt="99designs logo"
+                      width={338}
+                      height={80}
+                      className="w-[112px] h-[26px]"
+                    />
+                  </Link>
                 </div>
               </div>
             </div>

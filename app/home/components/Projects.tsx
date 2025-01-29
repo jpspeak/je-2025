@@ -83,7 +83,7 @@ function Projects({
       );
 
     return (
-      <div className="px-0 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-[35px] mt-[28px] lg:mt-[70px]">
+      <div className="px-0 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-[35px] mt-[28px] lg:mt-[58px]">
         {data?.map((projects: any[]) =>
           projects?.map((project) => {
             const src = urlForImage(project.mainImage as any);
@@ -118,7 +118,7 @@ function Projects({
   };
   return (
     <section id="projects" className="relative static-background-hard">
-      <div className="container mx-auto relative px-[20px] lg:px-[32px] pt-[46px] lg:pt-[90px]">
+      <div className="container mx-auto relative px-[20px] lg:px-[32px] pt-[46px] lg:pt-[96px]">
         <div className="flex flex-col lg:flex-row gap-[34px] justify-between items-end">
           <div className="max-w-[434px]">
             <h1 className="text-[36px] lg:text-[50px] font-gilroy leading-[1.2]">

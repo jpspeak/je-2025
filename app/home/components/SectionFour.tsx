@@ -27,20 +27,21 @@ function SectionFour() {
                 Innovating Beyond Boundaries
               </h2>
 
-              <p className="max-w-[396px] text-base lg:text-[17px] leading-[1.63] px-[20px] lg:px-0 font-light mt-[24px] lg:mt-[20px]">
+              <p className="max-w-[396px] text-base lg:text-[17px] leading-[1.63] px-[20px] lg:px-0 font-light mt-[24px] lg:mt-[31px]">
                 Watch as we transform brands through bold design, bringing
                 visionary ideas to life through strategic creativity.
               </p>
               <div className="flex items-center gap-[20px] mt-[40px] px-[20px] lg:px-0">
                 <CalComModalTrigger
-                  variant="outline"
                   containerclass="w-1/2 lg:w-[172px]"
                   className="lg:w-full"
                 >
                   Book a call
                 </CalComModalTrigger>
                 <Link href="/#pricing" className="w-1/2 lg:w-[172px]">
-                  <Button className="w-full">See pricing</Button>
+                  <Button variant="outline" className="w-full">
+                    See pricing
+                  </Button>
                 </Link>
               </div>
             </div>
