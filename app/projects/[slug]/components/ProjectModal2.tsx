@@ -102,7 +102,7 @@ function ProjectModal2({
             )}
 
             {sameIndustryProjects?.length > 0 && (
-              <div className="border-t border-[#e9eaec] px-6 py-8 lg:px-[75px] lg:py-[40px]">
+              <div className="border-t border-[#e9eaec] px-6 py-8 lg:px-[75px] lg:py-[40px] lg:pb-[75px]">
                 <h2 className="text-[25px] lg:text-[30px] font-gilroy mb-[24px]">
                   Similar industries
                 </h2>
