@@ -20,7 +20,7 @@ function ProjectModal2Images({ project }: { project: any }) {
 
   return (
     <>
-      <div className="grid grid-cols-1 gap-2 lg:gap-[20px]">
+      <div className="grid grid-cols-1">
         <Image
           src={urlForImage(project.mainImage as any)}
           width={900}
@@ -44,13 +44,7 @@ function ProjectModal2Images({ project }: { project: any }) {
               break;
           }
           return (
-            <div
-              key={i}
-              className={cn(
-                "grid gap-2 lg:gap-[20px] grid-cols-2",
-                gridColClass
-              )}
-            >
+            <div key={i} className={cn("grid grid-cols-2", gridColClass)}>
               {image.image?.map((image: any, i: number) => (
                 <Image
                   key={i}
