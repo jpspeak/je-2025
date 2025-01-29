@@ -12,7 +12,7 @@ import ModalCloseButton from "../../../(shared)/components/ModalCloseButton";
 import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
 import { formatDate } from "@/app/(shared)/lib/utils";
 import Link from "next/link";
-import Comments from "@/app/(shared)/components/Comments";
+// import Comments from "@/app/(shared)/components/Comments";
 import ModalContainer from "../../../(shared)/components/ModalContainer";
 import ProjectModal2Images from "./ProjectModal2Images";
 
@@ -83,7 +83,7 @@ function ProjectModal2({
               )}
             </div>
             {firstReview && (
-              <div className="bg-[#f6f6f8] px-6 py-8 lg:px-[75px] lg:py-[40px]">
+              <div className="bg-[#f6f6f8] px-6 py-8 lg:px-[75px] lg:py-[40px] lg:pb-[75px]">
                 <h2 className="text-[25px] lg:text-[30px] font-gilroy mb-[24px]">
                   Testimonial
                 </h2>
@@ -126,9 +126,9 @@ function ProjectModal2({
                 </div>
               </div>
             )}
-            <div className="px-6 pb-8 pt-4 lg:px-[75px] lg:pt-[20px] lg:pb-[40px]">
+            {/* <div className="px-6 pb-8 pt-4 lg:px-[75px] lg:pt-[20px] lg:pb-[40px]">
               <Comments identifier={project._id} />
-            </div>
+            </div> */}
           </div>
         </ModalContainer>
       </DialogContent>

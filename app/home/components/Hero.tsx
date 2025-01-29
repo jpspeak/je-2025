@@ -42,8 +42,8 @@ function Hero({
           <Image
             src={urlForImage(heroImage?.imageMobile as any)}
             alt="Background"
-            width={500}
-            height={978}
+            width={700}
+            height={1369}
             quality={100}
             className="w-full h-[900px] object-cover lg:hidden"
             style={{ height: heroImageMobileHeightClass }}

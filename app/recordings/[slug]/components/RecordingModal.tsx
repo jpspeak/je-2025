@@ -6,7 +6,7 @@ import {
 import Image from "next/image";
 import ShareModal from "@/app/(shared)/components/ShareModal";
 import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
-import Comments from "@/app/(shared)/components/Comments";
+// import Comments from "@/app/(shared)/components/Comments";
 import ModalContainer from "@/app/(shared)/components/ModalContainer";
 import ModalCloseButton from "@/app/(shared)/components/ModalCloseButton";
 import VideoPlayer from "@/app/(shared)/components/VideoPlayer";
@@ -59,9 +59,9 @@ function RecordingModal({ recording }: { recording: any }) {
                 />
               </div>
             </div>
-            <div className="px-6 pb-8 pt-4 lg:px-[75px] lg:pt-[20px] lg:pb-[40px]">
+            {/* <div className="px-6 pb-8 pt-4 lg:px-[75px] lg:pt-[20px] lg:pb-[40px]">
               <Comments identifier={recording._id} />
-            </div>
+            </div> */}
           </div>
         </ModalContainer>
       </DialogContent>
