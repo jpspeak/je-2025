@@ -8,7 +8,7 @@ import Link from "next/link";
 function ProjectTiles({ projects }: { projects: any[] }) {
   return (
     <div className="grid grid-cols-2 gap-[10px]">
-      {projects.map((project: any, i: number) => {
+      {projects.slice(0, 7).map((project: any, i: number) => {
         const gridClasses = (index: number) => {
           const position = index % 3; // Pattern repeats every 3 items
           if (position === 0) return "col-span-2"; // Full width
