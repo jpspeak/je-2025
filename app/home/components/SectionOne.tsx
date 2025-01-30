@@ -15,16 +15,17 @@ function ProjectTiles({ projects }: { projects: any[] }) {
           return "col-span-1"; // Single column
         };
         return (
-          <div
+          <Link
+            href={`/projects/${project.slug?.current}`}
             key={i}
-            className={cn("w-full relative pb-[100%]", gridClasses(i))}
+            className={cn("w-full block relative pb-[100%]", gridClasses(i))}
           >
             <Image
               src={urlForImage(project.mainImage)}
               alt={project.title}
               fill
             />
-          </div>
+          </Link>
         );
       })}
     </div>
