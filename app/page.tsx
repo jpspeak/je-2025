@@ -16,38 +16,9 @@ import IndustrySelectorClient from "./home/components/IndustrySelectorClient";
 import BrandSolutions from "./home/components/BrandSolutions";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://je.design"),
   title: {
-    template: "%s | Jeremy Ellsworth Designs LLC",
-    default:
+    absolute:
       "Jeremy Ellsworth Designs LLC | Premium Brand & Vehicle Wrap Design Services",
-  },
-  description:
-    "Transform your business with Jeremy Ellsworth Designs LLC's expert branding services. Specializing in custom logo design, vehicle wraps, and comprehensive brand identity solutions. Based in USA, serving clients worldwide. Visit je.design for innovative design solutions that make your brand stand out.",
-  keywords: [
-    "brand design",
-    "logo design",
-    "vehicle wraps",
-    "Jeremy Ellsworth Designs",
-    "brand identity",
-    "graphic design services",
-    "professional logo designer",
-    "custom vehicle wraps",
-    "business branding",
-    "creative design agency",
-  ],
-  alternates: {
-    canonical: "https://je.design",
-  },
-  openGraph: {
-    title:
-      "Jeremy Ellsworth Designs LLC | Premium Brand & Vehicle Wrap Design Services",
-    description:
-      "Transform your business with expert branding services. Specializing in custom logo design, vehicle wraps, and comprehensive brand identity solutions.",
-    url: "https://je.design",
-    siteName: "Jeremy Ellsworth Designs LLC",
-    locale: "en_US",
-    type: "website",
   },
 };
 

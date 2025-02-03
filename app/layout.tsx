@@ -48,11 +48,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://je.design"),
   title: {
     template: "%s | Jeremy Ellsworth Designs LLC",
-    default:
-      "Jeremy Ellsworth Designs LLC - Premium Brand & Vehicle Wrap Design Services",
+    default: "Jeremy Ellsworth Designs LLC",
   },
   description:
-    "Transform your brand with Jeremy Ellsworth Designs LLC. Expert brand identity, logo design, and vehicle wrap services. Based in USA, delivering world-class creative solutions that make businesses stand out.",
+    "Transform your brand with Jeremy Ellsworth Designs LLC. Expert brand identity, logo design, and vehicle wrap services that make your business stand out.",
   keywords: [
     "brand design agency",
     "logo design services",
@@ -123,10 +122,20 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#ffffff" />
-      </head>
-      <body
-        className={`${poppins.variable} ${funnelSans.variable} ${gilroy.variable} ${deliciousHandrawn.variable} font-funnel-sans overflow-x-hidden`}
-      >
+        <meta name="application-name" content="Jeremy Ellsworth Designs LLC" />
+        <Script
+          id="structured-data-website"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Jeremy Ellsworth Designs LLC",
+              alternateName: "JE Designs",
+              url: "https://je.design",
+            }),
+          }}
+        />
         <Script
           id="structured-data"
           type="application/ld+json"
@@ -162,6 +171,10 @@ export default function RootLayout({
             }),
           }}
         />
+      </head>
+      <body
+        className={`${poppins.variable} ${funnelSans.variable} ${gilroy.variable} ${deliciousHandrawn.variable} font-funnel-sans overflow-x-hidden`}
+      >
         {children}
         {project}
         <CalComModal />
