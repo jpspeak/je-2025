@@ -30,7 +30,7 @@ function IndustrySelectorClient({
   return (
     <Select
       onValueChange={handleIndustryChange}
-      defaultValue={searchParams.get("industry") || ""}
+      value={searchParams.get("industry") || ""}
     >
       <SelectTrigger
         aria-label="Open industry options"
