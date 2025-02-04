@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Home from "@/app/(shared)/components/Home";
 import { getHomePageSetting } from "@/sanity/query/homePageSetting";
 import { getProjects } from "@/sanity/query/project";
@@ -14,7 +14,7 @@ async function ProjectLayout({ children }: { children: React.ReactNode }) {
   const reviewsMobile = await getReviews({ limit: 2 });
   const reviewsDesktop = await getReviews({ limit: 6 });
   return (
-    <div>
+    <Suspense>
       <Home
         homePageSetting={homePageSetting}
         projects={projects}
@@ -22,7 +22,7 @@ async function ProjectLayout({ children }: { children: React.ReactNode }) {
         reviewsDesktop={reviewsDesktop}
       />
       {children}
-    </div>
+    </Suspense>
   );
 }
 
