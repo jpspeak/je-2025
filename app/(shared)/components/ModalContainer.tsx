@@ -14,7 +14,6 @@ function ModalContainer({ children }: ComponentProps<"div">) {
 
   const handleBack = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
-      console.log("Clicked directly on the target element!");
       if (canGoBack) {
         router.back();
       } else {
