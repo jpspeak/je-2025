@@ -12,7 +12,7 @@ function Hero({
   industrySlug,
 }: {
   homePageSetting: any;
-  industrySlug: string;
+  industrySlug?: string;
 }) {
   const heroImage =
     homePageSetting?.heroImages?.find(
