@@ -18,9 +18,8 @@ function ModalCloseButton({
   const [canGoBack, setCanGoBack] = useState(false);
 
   useEffect(() => {
-    // Check if document.referrer belongs to the same origin
-    const isSameOrigin = document.referrer.startsWith(window.location.origin);
-    setCanGoBack(isSameOrigin);
+    const storedPrevPath = sessionStorage.getItem("prevPath");
+    setCanGoBack(!!storedPrevPath);
   }, []);
 
   const handleBack = () => {
