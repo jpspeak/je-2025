@@ -12,7 +12,6 @@ import ModalCloseButton from "../../../(shared)/components/ModalCloseButton";
 import CalComModalTrigger from "@/app/(shared)/components/CalComModalTrigger";
 import { formatDate } from "@/app/(shared)/lib/utils";
 import Link from "next/link";
-// import Comments from "@/app/(shared)/components/Comments";
 import ModalContainer from "../../../(shared)/components/ModalContainer";
 import ProjectModal2Images from "./ProjectModal2Images";
 

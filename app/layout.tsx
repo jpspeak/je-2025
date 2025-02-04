@@ -6,6 +6,7 @@ import CalComModal from "./(shared)/components/CalComModal";
 import { Toaster } from "sonner";
 import NavbarMobile from "./(shared)/components/NavbarMobile";
 import Script from "next/script";
+import PathTracker from "./(shared)/components/PathTracker";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -183,6 +184,7 @@ export default function RootLayout({
           visibleToasts={1}
         />
         <NavbarMobile />
+        <PathTracker />
       </body>
     </html>
   );
