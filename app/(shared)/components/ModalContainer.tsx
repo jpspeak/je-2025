@@ -12,11 +12,13 @@ function ModalContainer({ children }: ComponentProps<"div">) {
     setCanGoBack(!!storedPrevPath);
   }, []);
 
-  const handleBack = () => {
-    if (canGoBack) {
-      router.back();
-    } else {
-      router.push("/"); // Redirect to homepage if no internal history
+  const handleBack = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      if (canGoBack) {
+        router.back();
+      } else {
+        router.push("/"); // Redirect to homepage if no internal history
+      }
     }
   };
   return (
