@@ -22,6 +22,7 @@
     "@sanity/vision": "^3.65.1",
     "@smastrom/react-rating": "^1.5.0",
     "@uidotdev/usehooks": "^2.4.1",
+    "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "disqus-react": "^1.1.5",

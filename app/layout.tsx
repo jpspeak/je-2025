@@ -7,6 +7,7 @@ import { Toaster } from "sonner";
 import NavbarMobile from "./(shared)/components/NavbarMobile";
 import Script from "next/script";
 import PathTracker from "./(shared)/components/PathTracker";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -185,6 +186,7 @@ export default function RootLayout({
         />
         <NavbarMobile />
         <PathTracker />
+        <SpeedInsights />
       </body>
     </html>
   );
