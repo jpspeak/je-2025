@@ -8,6 +8,7 @@ import NavbarMobile from "./(shared)/components/NavbarMobile";
 import Script from "next/script";
 import PathTracker from "./(shared)/components/PathTracker";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -188,6 +189,7 @@ export default function RootLayout({
         <PathTracker />
         <SpeedInsights />
       </body>
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
     </html>
   );
 }
