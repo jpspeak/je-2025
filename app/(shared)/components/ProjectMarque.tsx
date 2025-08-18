@@ -12,6 +12,9 @@ function ProjectItem({ project }: { project: any }) {
     <Link
       href={`/projects/${project.slug?.current}`}
       className="relative w-full pb-[100%] bg-muted inline-block"
+      data-gtm-id="project-marquee-item"
+      data-gtm-type="item"
+      data-gtm-placement="project-marquee"
     >
       <Image
         src={src}

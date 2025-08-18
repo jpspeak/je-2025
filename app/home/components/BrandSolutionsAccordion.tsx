@@ -53,7 +53,12 @@ async function BrandSolutionsAccordion({ solutions }: { solutions: any[] }) {
     >
       {brandSolutionCategories.map((brandSolutionCategory, i) => (
         <AccordionItem key={i} value={String(i)}>
-          <AccordionTrigger className="text-[20px] items-center px-0 leading-tight lg:text-[22px] !no-underline py-[20px] lg:px-0 lg:py-[31px] font-gilroy font-bold border-b-0">
+          <AccordionTrigger
+            className="text-[20px] items-center px-0 leading-tight lg:text-[22px] !no-underline py-[20px] lg:px-0 lg:py-[31px] font-gilroy font-bold border-b-0"
+            data-gtm-id="solutions-accordion-item"
+            data-gtm-type="accordion"
+            data-gtm-placement="creative-solutions"
+          >
             <p className="max-w-[300px] lg:max-w-full">
               {brandSolutionCategory}
             </p>

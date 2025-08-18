@@ -86,6 +86,9 @@ export function SliderFullScreen({
                 e.stopPropagation();
                 swiperRef.current?.slideNext();
               }}
+              data-gtm-id="reviews-slider-next"
+              data-gtm-type="control"
+              data-gtm-placement="reviews"
             ></button>
           </div>
         )}

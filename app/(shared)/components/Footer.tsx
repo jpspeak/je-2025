@@ -24,6 +24,9 @@ function Footer() {
               variant="secondary"
               containerclass="h-full bg-black relative left-1/2 -translate-x-1/2 -rotate-[8deg] -top-[10px] w-max relative z-[1]"
               className="flex gap-[11px] h-[60px] pl-[37px] pr-[30px] text-[20px]"
+              data-gtm-id="lets-talk"
+              data-gtm-type="cta"
+              data-gtm-placement="footer"
             >
               <span>Let&apos;s talk</span>
               <span className="relative pb-[10px]">
@@ -77,6 +80,9 @@ function Footer() {
                 <a
                   href="https://web.facebook.com/jnellsworth"
                   aria-label="Visit us on Facebook"
+                  data-gtm-id="facebook"
+                  data-gtm-type="link"
+                  data-gtm-placement="footer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -93,6 +99,9 @@ function Footer() {
                 <a
                   href="https://www.instagram.com/jnellsworth"
                   aria-label="Visit us on Instagram"
+                  data-gtm-id="instagram"
+                  data-gtm-type="link"
+                  data-gtm-placement="footer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -109,6 +118,9 @@ function Footer() {
                 <a
                   href="https://www.x.com/jnellsworth_"
                   aria-label="Visit us on X/Twitter"
+                  data-gtm-id="twitter"
+                  data-gtm-type="link"
+                  data-gtm-placement="footer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -125,6 +137,9 @@ function Footer() {
                 <a
                   href="https://g.co/kgs/E6KKgsQ"
                   aria-label="Visit us on Google"
+                  data-gtm-id="google"
+                  data-gtm-type="link"
+                  data-gtm-placement="footer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

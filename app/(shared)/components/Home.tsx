@@ -45,7 +45,12 @@ async function Home({
       <Projects
         initialProjects={projects}
         industrySelector={
-          <IndustrySelector Component={IndustrySelectorClient} />
+          <IndustrySelector
+            Component={IndustrySelectorClient}
+            data-gtm-id="industry-selector"
+            data-gtm-type="filter"
+            data-gtm-placement="brand-projects"
+          />
         }
       />
       {homePageSetting?.workInActionImages &&

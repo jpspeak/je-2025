@@ -26,6 +26,9 @@ export default function NavbarMobile() {
         variant="secondary"
         className="size-[60px] rounded-full p-0 shadow-sm"
         containerclass="flex justify-end"
+        data-gtm-id="book-a-call"
+        data-gtm-type="cta"
+        data-gtm-placement="floating"
       >
         <PhoneCall className="size-8 relative -left-[1px] -bottom-[1px]" />
       </CalComModalTrigger>

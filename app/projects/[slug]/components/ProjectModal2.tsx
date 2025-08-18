@@ -44,7 +44,12 @@ function ProjectModal2({
             </div>
 
             <div className="flex flex-col items-center">
-              <CalComModalTrigger className="flex lg:w-[70px] hover:bg-current bg-white items-center justify-center size-[70px] border-[1px] rounded-full border-muted">
+              <CalComModalTrigger
+                className="flex lg:w-[70px] hover:bg-current bg-white items-center justify-center size-[70px] border-[1px] rounded-full border-muted"
+                data-gtm-id="quote"
+                data-gtm-type="cta"
+                data-gtm-placement="project-page"
+              >
                 <Image
                   src="/assets/images/telephone-stroke-rounded.svg"
                   height="22"
@@ -111,6 +116,9 @@ function ProjectModal2({
                       key={i}
                       replace
                       href={`/projects/${project.slug?.current}`}
+                      data-gtm-id="similar-project-item"
+                      data-gtm-type="image"
+                      data-gtm-placement="project-page"
                     >
                       <Image
                         src={urlForImage(project.mainImage as any)}

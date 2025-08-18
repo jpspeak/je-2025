@@ -14,9 +14,11 @@ import { useRouter } from "next/navigation";
 function IndustrySelectorClient({
   className,
   options,
+  ...props
 }: {
   className?: string;
   options: any[];
+  [key: string]: any;
 }) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -27,6 +29,9 @@ function IndustrySelectorClient({
 
     router.replace(`/?${params.toString()}`, { scroll: false });
   };
+  const gtmProps = Object.fromEntries(
+    Object.entries(props).filter(([key]) => key.startsWith("data-gtm"))
+  );
   return (
     <Select
       onValueChange={handleIndustryChange}
@@ -38,6 +43,7 @@ function IndustrySelectorClient({
           "w-full lg:w-[250px] bg-transparent rounded-none",
           className
         )}
+        {...gtmProps}
       >
         <SelectValue placeholder="Choose Industry" />
       </SelectTrigger>

@@ -206,6 +206,9 @@ function ReviewCard({
                 key={i}
                 onClick={() => handleImageClick(i)}
                 className="relative w-full pb-[100%] border border-[#f0efed] cursor-zoom-in"
+                data-gtm-id="review-image"
+                data-gtm-type="image"
+                data-gtm-placement="review"
               >
                 <Image
                   src={urlForImage(image)}

@@ -55,6 +55,9 @@ function ProjectModal2Images({ project }: { project: any }) {
                   className="w-full object-cover cursor-zoom-in"
                   quality={100}
                   onClick={() => handleImageClick(i + 1)}
+                  data-gtm-id="project-page-image"
+                  data-gtm-type="image"
+                  data-gtm-placement="project-page"
                 />
               ))}
             </div>

@@ -17,6 +17,9 @@ function ReviewModal({ review }: { review: any }) {
           setIsOpen(true);
         }}
         className="size-[45px] grid place-items-center absolute rounded-full bg-white right-[20px] top-[20px] lg:bottom-[20px]"
+        data-gtm-id="review-modal-open"
+        data-gtm-type="modal"
+        data-gtm-placement="brand-projects"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

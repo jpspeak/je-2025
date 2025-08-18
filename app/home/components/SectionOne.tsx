@@ -16,6 +16,9 @@ function ProjectTiles({ projects }: { projects: any[] }) {
         };
         return (
           <Link
+            data-gtm-id="project-grid-item"
+            data-gtm-type="item"
+            data-gtm-placement="project-grid-mobile"
             href={`/projects/${project.slug?.current}`}
             key={i}
             className={cn("w-full block relative pb-[100%]", gridClasses(i))}
@@ -77,7 +80,14 @@ function SectionOne({
             </svg>
             <p className="font-light hidden lg:block text-[15px]">
               je.design now accepts Bitcoin, Litecoin, Solana and XRP -{" "}
-              <Link href={tickerLink || ""}>Learn more</Link>
+              <Link
+                href={tickerLink || ""}
+                data-gtm-id="learn-more-crypto"
+                data-gtm-type="cta"
+                data-gtm-placement="ticker"
+              >
+                Learn more
+              </Link>
             </p>
           </div>
         </div>
