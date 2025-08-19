@@ -116,6 +116,9 @@ function Hero({
                 variant="secondary"
                 containerclass="w-full max-w-[252px] lg:max-w-[172px]"
                 className="w-full lg:w-full"
+                data-gtm-id="book-a-call"
+                data-gtm-type="cta"
+                data-gtm-placement="hero"
               >
                 <span>Book a call</span>
                 <svg
@@ -137,7 +140,12 @@ function Hero({
                 href="/#pricing"
                 className="w-full max-w-[252px] lg:max-w-[172px]"
               >
-                <Button className="w-full max-w-[252px] lg:max-w-[172px] bg-white text-black">
+                <Button
+                  className="w-full max-w-[252px] lg:max-w-[172px] bg-white text-black"
+                  data-gtm-id="see-pricing"
+                  data-gtm-type="cta"
+                  data-gtm-placement="hero"
+                >
                   <span>See pricing</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

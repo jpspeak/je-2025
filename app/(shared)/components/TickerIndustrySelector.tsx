@@ -13,6 +13,7 @@ type TickerIndustrySelectorProps = {
 function TickerIndustrySelector({
   options,
   placeholder = "Choose your industry",
+  ...props
 }: TickerIndustrySelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -63,7 +64,9 @@ function TickerIndustrySelector({
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
+  const gtmProps = Object.fromEntries(
+    Object.entries(props).filter(([key]) => key.startsWith("data-gtm"))
+  );
   return (
     <div
       className="relative border-l border-[#606060] cursor-pointer"
@@ -71,6 +74,7 @@ function TickerIndustrySelector({
     >
       {/* Dropdown Trigger */}
       <div
+        {...gtmProps}
         className="text-white font-light w-full lg:w-[240px] px-[20px] h-[50px] lg:h-[55px] flex items-center justify-between gap-[10px] text-[15px]"
         onClick={toggleDropdown}
       >

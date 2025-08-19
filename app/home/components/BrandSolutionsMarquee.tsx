@@ -128,6 +128,9 @@ function BrandSolutionsMarquee({ solutions }: { solutions: any[] }) {
                     "w-max cursor-pointer font-gilroy font-bold text-[40px] py-[36px] border-b border-transparent text-[#d9dadc] whitespace-nowrap",
                     isActive && "border-black text-black"
                   )}
+                  data-gtm-id="solutions-filter"
+                  data-gtm-type="filter"
+                  data-gtm-placement="creative-solutions"
                 >
                   {brandSolutionCategory}
                 </li>

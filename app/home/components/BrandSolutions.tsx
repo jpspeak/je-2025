@@ -88,6 +88,9 @@ function BrandSolutions({ brandSolutions }: { brandSolutions: any }) {
               variant="secondary"
               containerclass="w-full max-w-[252px] lg:max-w-[172px]"
               className="w-full lg:w-full"
+              data-gtm-id="book-a-call"
+              data-gtm-type="cta"
+              data-gtm-placement="creative-solutions"
             >
               <span>Book a call</span>
               <svg
@@ -112,6 +115,9 @@ function BrandSolutions({ brandSolutions }: { brandSolutions: any }) {
               <Button
                 variant="outline"
                 className="w-full max-w-[252px] lg:max-w-[172px] bg-white text-black hover:bg-white hover:bg-opacity-80"
+                data-gtm-id="see-pricing"
+                data-gtm-type="cta"
+                data-gtm-placement="creative-solutions"
               >
                 <span>See pricing</span>
                 <svg

@@ -104,6 +104,9 @@ async function SectionFive({ faqs }: { faqs: any[] }) {
                   <CalComModalTrigger
                     containerclass="w-full lg:max-w-[158px]"
                     className="bg-secondary hover:bg-secondary/80 lg:w-full text-primary"
+                    data-gtm-id="im-ready"
+                    data-gtm-type="cta"
+                    data-gtm-placement="pricing"
                   >
                     I&apos;m ready
                   </CalComModalTrigger>
@@ -132,6 +135,9 @@ async function SectionFive({ faqs }: { faqs: any[] }) {
           <CalComModalTrigger
             className="h-[60px] lg:h-[90px] px-[26px] lg:px-[38px] bg-white border border-black w-full lg:w-full flex items-center justify-between text-black mt-[30px] hover:bg-white"
             containerclass="w-full"
+            data-gtm-id="custom-brand-sprint"
+            data-gtm-type="cta"
+            data-gtm-placement="pricing"
           >
             <span>Custom Brand Sprint</span>
             <Plus className="!size-[25px] shrink-0 transition-transform duration-200 plus" />
@@ -149,7 +155,12 @@ async function SectionFive({ faqs }: { faqs: any[] }) {
           >
             {faqs.map((faq, i) => (
               <AccordionItem key={faq._id} value={String(i)}>
-                <AccordionTrigger className="text-[20px] items-center px-0 leading-tight lg:text-[22px] !no-underline py-[20px] lg:px-0 lg:py-[31px] font-gilroy font-bold border-b-0">
+                <AccordionTrigger
+                  data-gtm-id="faq-item"
+                  data-gtm-type="faq"
+                  data-gtm-placement="faq"
+                  className="text-[20px] items-center px-0 leading-tight lg:text-[22px] !no-underline py-[20px] lg:px-0 lg:py-[31px] font-gilroy font-bold border-b-0"
+                >
                   <p className="max-w-[300px] lg:max-w-full">{faq.question}</p>
                 </AccordionTrigger>
                 <AccordionContent className="px-0 lg:p-0">

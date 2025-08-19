@@ -96,6 +96,9 @@ function Projects({
                 <Link
                   href={`/projects/${project.slug?.current}`}
                   className="absolute w-full h-full"
+                  data-gtm-id="project-grid-item"
+                  data-gtm-type="item"
+                  data-gtm-placement="brand-projects"
                 >
                   <Image
                     loader={() => src}

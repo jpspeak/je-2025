@@ -26,7 +26,12 @@ function ShareModal({ pathname }: { pathname: string }) {
   return (
     <Dialog modal>
       <DialogTrigger asChild>
-        <button className="flex bg-white items-center justify-center size-[70px] border-[1px] rounded-full border-[#e2e2e2]">
+        <button
+          data-gtm-id="share-project"
+          data-gtm-type="cta"
+          data-gtm-placement="project-page"
+          className="flex bg-white items-center justify-center size-[70px] border-[1px] rounded-full border-[#e2e2e2]"
+        >
           <Image
             src="/assets/images/share-05-solid-sharp.svg"
             height="22"

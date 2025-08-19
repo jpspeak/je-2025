@@ -21,7 +21,13 @@ function Ticker({ link }: { link: string }) {
 
         <p className="hidden lg:block text-[15px] font-light">
           je.design now accepts Bitcoin, Litecoin, Solana and XRP -{" "}
-          <Link href={link} className="text-[#fff619]">
+          <Link
+            href={link}
+            className="text-[#fff619]"
+            data-gtm-id="learn-more-crypto"
+            data-gtm-type="cta"
+            data-gtm-placement="ticker"
+          >
             Learn more
           </Link>
         </p>
@@ -44,7 +50,12 @@ function Ticker({ link }: { link: string }) {
             />
           </svg>
         </button> */}
-        <IndustrySelector Component={TickerIndustrySelector} />
+        <IndustrySelector
+          Component={TickerIndustrySelector}
+          data-gtm-id="industry-selector"
+          data-gtm-type="filter"
+          data-gtm-placement="ticker"
+        />
         {/* <TickerIndustrySelector
           placeholder="Choose your industry"
           options={[

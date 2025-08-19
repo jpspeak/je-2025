@@ -35,6 +35,8 @@ function SectionTwo({ team }: { team: any[] }) {
         <div className="top-0 w-full h-full hidden lg:block border-y border-[#e9eaec]">
           <div className="container mx-auto pt-[100px] pb-[168px] relative overflow-y-visible">
             <Link
+              data-gtm-id="reviews-spinner-link"
+              data-gtm-type="link"
               href="/#reviews"
               className="bg-[#fff600] hidden lg:grid absolute size-[180px] place-items-center rounded-full -top-[20%] -right-[6%]"
             >
@@ -113,6 +115,9 @@ function SectionTwo({ team }: { team: any[] }) {
                           "border-black text-black font-semibold"
                       )}
                       onClick={() => setSelectedDepartment(department)}
+                      data-gtm-id="team-filter"
+                      data-gtm-type="filter"
+                      data-gtm-placement="team"
                     >
                       {department}
                     </li>

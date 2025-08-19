@@ -35,10 +35,19 @@ function SectionFour() {
                 <CalComModalTrigger
                   containerclass="w-1/2 lg:w-[172px]"
                   className="lg:w-full"
+                  data-gtm-id="book-a-call"
+                  data-gtm-type="cta"
+                  data-gtm-placement="innovating-beyond-boundaries"
                 >
                   Book a call
                 </CalComModalTrigger>
-                <Link href="/#pricing" className="w-1/2 lg:w-[172px]">
+                <Link
+                  href="/#pricing"
+                  className="w-1/2 lg:w-[172px]"
+                  data-gtm-id="see-pricing"
+                  data-gtm-type="cta"
+                  data-gtm-placement="innovating-beyond-boundaries"
+                >
                   <Button variant="outline" className="w-full">
                     See pricing
                   </Button>
